@@ -396,6 +396,54 @@ section {
   gap: 28px;
 }
 
+.hero-name-meaning {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+.hero-name-meaning span {
+  font-style: normal;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feature-card--hero {
+  background: linear-gradient(135deg, rgba(124,58,237,0.04) 0%, rgba(59,130,246,0.03) 100%);
+  border-color: rgba(124,58,237,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card--hero::before {
+  content: 'KEY FEATURE';
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--font-display);
+}
+
+.feature-card em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--purple);
+}
+
 .stat {
   display: flex;
   flex-direction: column;
