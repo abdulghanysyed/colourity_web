@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colourity — Your Personal AI Stylist</title>
+  <meta name="description" content="Colourity is an AI-powered digital wardrobe app that helps you organize your clothes, create color-coordinated outfits, and get smart styling recommendations — all from your phone." />
+  <meta name="keywords" content="AI wardrobe, outfit recommender, digital wardrobe, AI stylist, color matching, fashion app, outfit planner" />
+  <meta property="og:title" content="Colourity — Your Personal AI Stylist" />
+  <meta property="og:description" content="Photograph your clothes, let AI do the styling. Colourity builds your digital wardrobe and creates perfect outfits from what you already own." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://colourity.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Colourity Logo" class="nav-logo-img" />
+        <span>Colourity</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#audience">Who It's For</a>
+        <a href="#notify" class="nav-cta">Get Early Access</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features" class="mobile-link">Features</a>
+      <a href="#how-it-works" class="mobile-link">How It Works</a>
+      <a href="#audience" class="mobile-link">Who It's For</a>
+      <a href="#notify" class="mobile-link mobile-cta">Get Early Access</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Coming Soon to Android
+      </div>
+      <h1 class="hero-title">
+        Your Personal<br />
+        <span class="gradient-text">AI Stylist,</span><br />
+        Powered by Your Wardrobe.
+      </h1>
+      <p class="hero-subtitle">
+        Photograph your clothes. Let AI organize, match, and style them for you.
+        Colourity turns your existing wardrobe into unlimited outfit possibilities.
+      </p>
+      <div class="hero-actions">
+        <a href="#notify" class="btn-primary" id="hero-notify-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Get Notified at Launch
+        </a>
+        <a href="#how-it-works" class="btn-secondary">
+          See How It Works
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">AI</span>
+          <span class="stat-label">Powered Styling</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">9+</span>
+          <span class="stat-label">Smart Features</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Outfit Combos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-glow"></div>
+      <img src="hero_mockup.png" alt="Colourity app showing digital wardrobe" class="hero-phone" />
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features" id="features">
+    <div class="section-header reveal">
+      <div class="section-tag">Features</div>
+      <h2>Everything Your Wardrobe Needs</h2>
+      <p>Nine powerful AI-driven features designed to transform how you dress — every single day.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card reveal" style="--delay: 0ms">
+        <div class="feature-icon" style="--icon-color: #7C3AED">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <h3>AI Garment Recognition</h3>
+        <p>Simply photograph any clothing item. Our AI instantly identifies the type, color, pattern, and style — no manual tagging needed.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 60ms">
+        <div class="feature-icon" style="--icon-color: #3B82F6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>Automatic Wardrobe Organization</h3>
+        <p>Your clothes are automatically sorted by category, color, season, and occasion — so you always know what you own.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 120ms">
+        <div class="feature-icon" style="--icon-color: #14B8A6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3>Intelligent Color Matching</h3>
+        <p>Get outfit recommendations based on color theory and your personal style — tops, bottoms, shoes, and accessories, all perfectly matched.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 180ms">
+        <div class="feature-icon" style="--icon-color: #8B5CF6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Occasion-Based Suggestions</h3>
+        <p>Tell Colourity where you're headed — Work, Casual, Party, Travel, Date Night — and get outfits perfectly suited to the occasion.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 240ms">
+        <div class="feature-icon" style="--icon-color: #06B6D4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+        </div>
+        <h3>Weather-Aware Recommendations</h3>
+        <p>Colourity checks the weather and ensures your outfit is not just stylish but appropriate for the day's conditions.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 300ms">
+        <div class="feature-icon" style="--icon-color: #EC4899">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        </div>
+        <h3>Mix-and-Match Generation</h3>
+        <p>Discover unexpected outfit combinations you never thought of. Colourity's AI explores your entire wardrobe to find hidden gems.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 360ms">
+        <div class="feature-icon" style="--icon-color: #F59E0B">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <h3>Wishlist & Shopping Integration</h3>
+        <p>Identify gaps in your wardrobe and get suggestions for pieces that will complement what you already own. Smart shopping, simplified.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 420ms">
+        <div class="feature-icon" style="--icon-color: #10B981">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Style Insights & Analytics</h3>
+        <p>Discover your personal style patterns — which colors you wear most, underused items, and personalized tips to refresh your look.</p>
+      </div>
+
+      <div class="feature-card reveal" style="--delay: 480ms">
+        <div class="feature-icon" style="--icon-color: #6366F1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3>Secure Cloud Sync</h3>
+        <p>Your digital wardrobe is safely backed up and synced across all your devices. Your style travels with you, everywhere.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="hiw-bg-gradient"></div>
+    <div class="section-header reveal">
+      <div class="section-tag">How It Works</div>
+      <h2>Three Steps to a Smarter Wardrobe</h2>
+      <p>Getting started with Colourity takes minutes, not hours.</p>
+    </div>
+
+    <div class="steps-container">
+      <div class="step reveal" style="--delay: 0ms">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <h3>Photograph Your Clothes</h3>
+          <p>Open the app, point your camera at any garment, and snap a photo. Our AI instantly recognizes it — fabric, color, cut, and category.</p>
+        </div>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step reveal" style="--delay: 150ms">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>AI Builds Your Wardrobe</h3>
+          <p>Colourity organizes everything automatically — sorting by color, season, and occasion. Your complete wardrobe, always at your fingertips.</p>
+        </div>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step reveal" style="--delay: 300ms">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Get Personalized Outfits</h3>
+          <p>Tell Colourity your occasion, the weather, or your mood — and receive beautiful, color-coordinated outfit suggestions in seconds.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-visual reveal">
+      <img src="feature_mockup.png" alt="Colourity app feature screens" class="hiw-image" />
+    </div>
+  </section>
+
+  <!-- ========== AUDIENCE ========== -->
+  <section class="audience" id="audience">
+    <div class="section-header reveal">
+      <div class="section-tag">Who It's For</div>
+      <h2>Made for Everyone with a Wardrobe</h2>
+      <p>Whether you're a fashion enthusiast or just want to get dressed faster — Colourity has you covered.</p>
+    </div>
+
+    <div class="audience-grid">
+      <div class="audience-card reveal" style="--delay: 0ms">
+        <div class="audience-emoji">👗</div>
+        <h3>Fashion Enthusiasts</h3>
+        <p>Discover new combinations from your existing collection and express your style with confidence every day.</p>
+      </div>
+      <div class="audience-card reveal" style="--delay: 100ms">
+        <div class="audience-emoji">💼</div>
+        <h3>Working Professionals</h3>
+        <p>Never stress over what to wear to work again. Get polished, occasion-appropriate looks in seconds every morning.</p>
+      </div>
+      <div class="audience-card reveal" style="--delay: 200ms">
+        <div class="audience-emoji">🎓</div>
+        <h3>Students</h3>
+        <p>Make the most out of a limited wardrobe budget. Mix and match smarter with what you already own.</p>
+      </div>
+      <div class="audience-card reveal" style="--delay: 300ms">
+        <div class="audience-emoji">🛍️</div>
+        <h3>Online Shoppers</h3>
+        <p>Visualize how new pieces fit with your existing wardrobe before buying — shop smarter, not harder.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EMAIL NOTIFY ========== -->
+  <section class="notify" id="notify">
+    <div class="notify-bg-orb"></div>
+    <div class="notify-card reveal">
+      <div class="notify-badge">🚀 Early Access</div>
+      <h2>Be the First to Know When Colourity Launches</h2>
+      <p>Join our early access list and get notified the moment Colourity is available on Android. Zero spam, just your launch notification.</p>
+
+      <form class="notify-form" id="notifyForm" action="https://formspree.io/f/mrewjyla" method="POST">
+        <div class="form-row">
+          <input
+            type="text"
+            name="name"
+            id="notify-name"
+            placeholder="Your name"
+            autocomplete="given-name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="notify-email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+          />
+          <button type="submit" class="btn-notify" id="notify-submit-btn">
+            <span class="btn-text">Notify Me</span>
+            <span class="btn-spinner" style="display:none">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+            </span>
+          </button>
+        </div>
+        <p class="form-privacy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Your email is safe with us. No spam, ever. Unsubscribe anytime.
+        </p>
+        <div class="form-success" id="formSuccess" style="display:none">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          You're on the list! We'll reach out when Colourity launches. 🎉
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">
+          <img src="logo.png" alt="Colourity" class="nav-logo-img" />
+          <span>Colourity</span>
+        </a>
+        <p>Your Personal AI Stylist, Powered by Your Wardrobe.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#notify">Early Access</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="mailto:hello@colourity.com">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Colourity. All rights reserved.</p>
+      <p>Coming soon on <strong>Android</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
