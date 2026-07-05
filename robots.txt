@@ -1,0 +1,31 @@
+# Colourity robots.txt
+# Allow all crawlers — including AI crawlers — full access.
+# Being crawlable is required for search and Generative Engine Optimization (GEO).
+
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap location
+Sitemap: https://colourity.com/sitemap.xml
