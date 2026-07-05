@@ -1,0 +1,12 @@
+# Temporary screenshots and debug logs
+*.png
+!hero_mockup.png
+!feature_mockup.png
+!logo.png
+
+# Scripts & logs
+*.py
+*.log
+verify_howitworks.png
+verify_hero.png
+verify_features.png
