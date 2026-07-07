@@ -1,0 +1,28 @@
+/* =====================================================
+   COLOURITY — JavaScript for Privacy Page
+   ===================================================== */
+
+// --- Navbar scroll effect ---
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+
+// --- Mobile hamburger menu ---
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+});
