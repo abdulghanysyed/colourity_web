@@ -151,7 +151,7 @@ section {
 }
 
 .nav-logo-brand {
-  height: 28px;
+  height: 35px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -977,7 +977,7 @@ section {
 }
 
 .footer-logo img {
-  /* logo_footer.png is already transparent and white */
+  height: 28px;
 }
 
 .footer-brand {
