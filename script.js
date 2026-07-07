@@ -153,3 +153,28 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     }
   });
 });
+
+// --- How It Works Interactive Steps ---
+const steps = document.querySelectorAll('.step');
+const hiwImages = document.querySelectorAll('.hiw-image');
+
+if (steps.length && hiwImages.length) {
+  steps.forEach(step => {
+    const activateStep = () => {
+      steps.forEach(s => s.classList.remove('active'));
+      step.classList.add('active');
+      
+      const stepNum = step.getAttribute('data-step');
+      hiwImages.forEach(img => {
+        if (img.getAttribute('id') === `hiw-img-${stepNum}`) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+    };
+
+    step.addEventListener('click', activateStep);
+    step.addEventListener('mouseenter', activateStep);
+  });
+}
