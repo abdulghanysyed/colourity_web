@@ -977,7 +977,7 @@ section {
 }
 
 .footer-logo img {
-  filter: brightness(0) invert(1);
+  /* logo_footer.png is already transparent and white */
 }
 
 .footer-brand {
