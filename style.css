@@ -705,7 +705,8 @@ section {
   position: relative;
   width: 100%;
   max-width: 360px;
-  aspect-ratio: 9/16;
+  height: 0;
+  padding-bottom: 177.78%; /* 9:16 aspect ratio */
   margin: 40px auto 0;
 }
 
@@ -975,8 +976,8 @@ section {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.footer-logo span {
-  color: white;
+.footer-logo img {
+  filter: brightness(0) invert(1);
 }
 
 .footer-brand {

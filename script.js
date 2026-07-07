@@ -61,7 +61,7 @@ notifyForm.addEventListener('submit', async (e) => {
 
   try {
     const formData = new FormData(notifyForm);
-    const response = await fetch(action, {
+    const response = await fetch(notifyForm.action, {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
@@ -83,7 +83,20 @@ notifyForm.addEventListener('submit', async (e) => {
       showError(errorMsg);
     }
   } catch (err) {
-    showError('Network error. Please check your connection and try again.');
+    console.error('Form submission error:', err);
+    
+    // Check if we are running locally via file:// protocol
+    const isFileProtocol = window.location.protocol === 'file:';
+    const message = isFileProtocol 
+      ? 'CORS restriction detected (local file://). Submitting form...'
+      : 'Network error or ad-blocker detected. Submitting form...';
+    
+    showError(message);
+    
+    // Fallback to standard form submission which bypasses CORS and ad-blockers
+    setTimeout(() => {
+      notifyForm.submit();
+    }, 1200);
   } finally {
     btnText.style.display = 'inline';
     btnSpinner.style.display = 'none';
