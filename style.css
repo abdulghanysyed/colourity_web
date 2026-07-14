@@ -1552,5 +1552,43 @@ section {
   font-family: monospace;
 }
 
+/* --- Article Table styling --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 36px 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: var(--card-bg);
+  text-align: left;
+}
+
+.article-table th, .article-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-table th {
+  background: var(--gradient-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.article-table tr:last-child td {
+  border-bottom: none;
+}
+
+.article-table tr:hover td {
+  background: rgba(124, 58, 237, 0.02);
+}
+
+
 
 
