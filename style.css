@@ -507,11 +507,13 @@ section {
   width: 100%;
   max-width: 520px;
   object-fit: contain;
-  border-radius: 24px;
+  border-radius: 28px;
+  border: 10px solid #1E2937; /* Sleek dark bezel */
   filter: drop-shadow(0 30px 60px rgba(124,58,237,0.25));
   animation: phone-float 6s ease-in-out infinite;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  background: #FFFFFF;
 }
 
 @keyframes phone-float {
@@ -718,6 +720,7 @@ section {
   height: 100%;
   object-fit: contain;
   border-radius: var(--radius-xl);
+  border: 8px solid #1E2937; /* Sleek dark bezel for steps */
   box-shadow: var(--shadow-lg);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -725,6 +728,7 @@ section {
   transition: opacity 0.4s ease-in-out;
   pointer-events: none;
   z-index: 1;
+  background: #FFFFFF;
 }
 
 .hiw-image.active {
