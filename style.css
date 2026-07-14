@@ -1371,3 +1371,15 @@ section {
   text-decoration: underline;
 }
 
+/* --- Article Image styling --- */
+.article-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 36px auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+
