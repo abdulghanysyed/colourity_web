@@ -505,7 +505,7 @@ section {
 
 .hero-phone {
   width: 100%;
-  max-width: 520px;
+  max-width: 420px;
   object-fit: contain;
   border-radius: 28px;
   border: 10px solid #1E2937; /* Sleek dark bezel */
