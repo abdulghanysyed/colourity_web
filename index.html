@@ -129,7 +129,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1.0.4" />
+  <link rel="stylesheet" href="style.css?v=1.0.5" />
 </head>
 <body>
 
@@ -223,6 +223,97 @@
         <strong>Colourity</strong> is an Android app powered by Colourity AI that analyses your skin tone to identify which colours suit you best, then recommends outfit combinations from your own wardrobe or connects you to matching items on Myntra, Amazon, and Flipkart.
         It is designed for the Indian market and will launch as a free download.
       </p>
+    </div>
+  </section>
+
+  <!-- ========== INTERACTIVE SEASON TESTER ========== -->
+  <section class="season-tester" id="season-tester">
+    <div class="section-header reveal">
+      <div class="section-tag">Interactive Preview</div>
+      <h2>Test Your Colours Instantly</h2>
+      <p>Select your skin depth and undertone to preview how Colourity matches ethnic and casual garments to your personal season.</p>
+    </div>
+
+    <div class="tester-container reveal">
+      <div class="tester-controls">
+        <div class="control-group">
+          <h4>1. Select Skin Depth</h4>
+          <div class="control-tabs" id="depth-tabs">
+            <button class="tab-btn active" data-depth="fair">Fair</button>
+            <button class="tab-btn" data-depth="medium">Wheatish</button>
+            <button class="tab-btn" data-depth="dusky">Dusky</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h4>2. Select Undertone</h4>
+          <div class="control-tabs" id="undertone-tabs">
+            <button class="tab-btn active" data-undertone="warm">Warm (Golden/Olive)</button>
+            <button class="tab-btn" data-undertone="cool">Cool (Rosy/Pink)</button>
+          </div>
+        </div>
+
+        <div class="tester-info">
+          <div class="season-badge" id="season-badge">Spring Season</div>
+          <h3 id="season-title">Bright Spring</h3>
+          <p id="season-desc">Your complexion is illuminated by bright, clear, warm shades with golden bases. You look radiant in peaches, warm coral, butter yellows, and light warm greens.</p>
+          <a href="#notify" class="tester-cta">
+            Get early access to scan your face with AI
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="tester-visualization">
+        <div class="viz-header">
+          <span>Personal Palette Swatches</span>
+          <div class="palette-dots" id="palette-dots">
+            <!-- Generated dynamically -->
+          </div>
+        </div>
+        
+        <div class="garment-grid" id="garment-grid">
+          <div class="garment-card">
+            <div class="garment-preview" id="garment-1-preview">
+              <svg viewBox="0 0 100 120" width="60" height="72" fill="currentColor">
+                <path d="M50,12 C52,12 53,13 54,15 L56,34 C56,34 50,32 44,34 L46,15 C47,13 48,12 50,12 Z" />
+                <path d="M44,34 C44,34 50,32 56,34 L78,95 C78,98 75,100 72,100 L28,100 C25,100 22,98 22,95 L44,34 Z" />
+              </svg>
+            </div>
+            <div class="garment-info">
+              <span class="garment-type">Anarkali Suit</span>
+              <span class="garment-color" id="garment-1-color">Coral Orange</span>
+            </div>
+          </div>
+          
+          <div class="garment-card">
+            <div class="garment-preview" id="garment-2-preview">
+              <svg viewBox="0 0 100 120" width="60" height="72" fill="currentColor">
+                <path d="M35,15 L65,15 L65,75 C65,77 63,79 61,79 L39,79 C37,79 35,77 35,75 L35,15 Z" />
+                <path d="M35,28 L15,48 L22,55 L35,40 L35,28 Z" />
+                <path d="M65,28 L85,48 L78,55 L65,40 L65,28 Z" />
+                <path d="M50,15 L50,30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="garment-info">
+              <span class="garment-type">Casual Kurta</span>
+              <span class="garment-color" id="garment-2-color">Turmeric Yellow</span>
+            </div>
+          </div>
+          
+          <div class="garment-card">
+            <div class="garment-preview" id="garment-3-preview">
+              <svg viewBox="0 0 100 120" width="60" height="72" fill="currentColor">
+                <path d="M30,15 C30,15 40,18 50,18 C60,18 70,15 70,15 L86,35 C88,38 86,41 83,41 L73,41 L73,95 C73,98 70,100 67,100 L33,100 C30,100 27,98 27,95 L27,41 L17,41 C14,41 12,38 14,35 L30,15 Z" />
+              </svg>
+            </div>
+            <div class="garment-info">
+              <span class="garment-type">Casual Tee</span>
+              <span class="garment-color" id="garment-3-color">Warm Mint</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
