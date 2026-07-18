@@ -18,3 +18,8 @@
 verify_howitworks.png
 verify_hero.png
 verify_features.png
+
+# Environment & Credentials Security
+.env.meta
+.env
+
