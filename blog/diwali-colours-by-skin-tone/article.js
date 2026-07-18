@@ -1,5 +1,5 @@
 /* =====================================================
-   COLOURITY — JavaScript for Blog Article Page
+   COLOURITY &mdash; JavaScript for Blog Article Page
    ===================================================== */
 
 const nav = document.getElementById('nav');
