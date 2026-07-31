@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Colourity Core — How Colourity Thinks</title>
+  <meta name="description" content="An interactive cinematic experience exploring the Colourity Core: the intelligence that matches outfits and builds everyday confidence." />
+  <link rel="icon" type="image/png" href="../logo.png" />
+  
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== BACKGROUND GLOWS & PARTICLES ========== -->
+  <div class="aurora-bg">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+  </div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../logo_header.png" alt="Colourity" class="nav-logo-brand" height="35" />
+      </a>
+      <div class="nav-links">
+        <a href="../#features">Features</a>
+        <a href="../#how-it-works">How It Works</a>
+        <a href="../blog/">Blog</a>
+        <a href="#" class="nav-link active">✨ The Core</a>
+        <a href="../#notify" class="nav-cta">Get Early Access</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../#features" class="mobile-link">Features</a>
+      <a href="../#how-it-works" class="mobile-link">How It Works</a>
+      <a href="../blog/" class="mobile-link">Blog</a>
+      <a href="#" class="mobile-link active">✨ The Core</a>
+      <a href="../#notify" class="mobile-link mobile-cta">Get Early Access</a>
+    </div>
+  </nav>
+
+  <!-- ========== INTERACTIVE EXPERIENCE WRAPPER ========== -->
+  <main class="experience-container">
+    
+    <!-- Simulation Tag -->
+    <div class="simulation-tag reveal">
+      <span class="tag-pulse"></span>
+      Interactive Simulation
+    </div>
+
+    <!-- ========== SECTION 1: THE WARDROBE ========== -->
+    <section class="story-section active" id="sec-wardrobe">
+      <div class="section-content text-center">
+        <h1 class="headline fade-in">Every wardrobe has a story.</h1>
+        <p class="subheadline fade-in-delay-1">Open it.</p>
+        
+        <!-- Interactive Wardrobe SVG -->
+        <div class="wardrobe-container fade-in-delay-2">
+          <div class="wardrobe" id="main-wardrobe">
+            <div class="wardrobe-door door-left"></div>
+            <div class="wardrobe-door door-right"></div>
+            <div class="wardrobe-interior">
+              <div class="interior-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-glow fade-in-delay-3" id="btn-open-wardrobe">Begin the Journey</button>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: THE CORE AWAKENS ========== -->
+    <section class="story-section" id="sec-core">
+      <div class="section-content text-center">
+        <h2 class="section-title">The Colourity Core</h2>
+        <p class="section-desc">Drag any garment into the Core to witness how Colourity matches your wardrobe.</p>
+        
+        <!-- Simulated Floating Garments Container -->
+        <div class="garment-field" id="garment-field">
+          <!-- White Shirt -->
+          <div class="draggable-garment" data-type="shirt" style="top: 25%; left: 15%;">
+            <svg viewBox="0 0 100 100" class="garment-svg">
+              <path d="M30,20 L40,15 L50,22 L60,15 L70,20 L80,45 L70,50 L65,35 L65,85 L35,85 L35,35 L30,50 L20,45 Z" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            </svg>
+            <span class="garment-label">White Shirt</span>
+          </div>
+
+          <!-- Blue Kurta -->
+          <div class="draggable-garment" data-type="kurta" style="top: 22%; right: 18%;">
+            <svg viewBox="0 0 100 100" class="garment-svg">
+              <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.8)" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
+              <path d="M50,22 L50,45" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="garment-label">Blue Kurta</span>
+          </div>
+
+          <!-- Navy Blazer -->
+          <div class="draggable-garment" data-type="blazer" style="top: 60%; left: 10%;">
+            <svg viewBox="0 0 100 100" class="garment-svg">
+              <path d="M25,20 L50,15 L75,20 L80,55 L70,55 L68,32 L68,85 L32,85 L32,32 L30,55 L20,55 Z" fill="rgba(30,41,59,0.9)" stroke="rgba(51,65,85,0.6)" stroke-width="1.5"/>
+              <path d="M38,20 L50,45 L62,20" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            </svg>
+            <span class="garment-label">Navy Blazer</span>
+          </div>
+
+          <!-- Black Jeans -->
+          <div class="draggable-Jeans" style="display:none;"></div> <!-- Keep placeholder for selector consistency -->
+          <div class="draggable-garment" data-type="jeans" style="top: 65%; right: 12%;">
+            <svg viewBox="0 0 100 100" class="garment-svg">
+              <path d="M30,15 L70,15 L75,85 L58,85 L50,45 L42,85 L25,85 Z" fill="rgba(15,23,42,0.95)" stroke="rgba(30,41,59,0.6)" stroke-width="1.5"/>
+            </svg>
+            <span class="garment-label">Black Jeans</span>
+          </div>
+
+          <!-- Silk Saree -->
+          <div class="draggable-garment" data-type="saree" style="top: 45%; left: 80%;">
+            <svg viewBox="0 0 100 100" class="garment-svg">
+              <path d="M30,20 C40,10 60,10 70,20 L75,80 C65,90 35,90 25,80 Z" fill="rgba(236,72,153,0.85)" stroke="rgba(244,114,182,0.5)" stroke-width="1.5"/>
+              <path d="M30,20 L75,60" stroke="rgba(253,224,71,0.6)" stroke-width="3"/>
+            </svg>
+            <span class="garment-label">Silk Saree</span>
+          </div>
+        </div>
+
+        <!-- The Living Core Orb -->
+        <div class="core-orbit">
+          <div class="core-breather" id="colourity-core">
+            <div class="core-glow"></div>
+            <div class="core-ring"></div>
+            <div class="core-status" id="core-status-text">Understanding...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3: THE SPECIALISTS ========== -->
+    <section class="story-section" id="sec-specialists">
+      <div class="specialist-stage">
+        
+        <!-- Specialist 1: Iris -->
+        <div class="specialist-slide active" id="slide-iris" data-theme="iris">
+          <div class="specialist-info">
+            <div class="spec-icon">👁</div>
+            <h3>Iris</h3>
+            <span class="spec-title">Vision Specialist</span>
+            <p class="spec-quote">"I find every garment."</p>
+          </div>
+          <div class="spec-visual">
+            <div class="vision-scan-box" id="iris-scan-box">
+              <div class="scan-laser"></div>
+              <svg viewBox="0 0 100 120" class="scan-garment-svg" id="iris-garment-outline">
+                <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              </svg>
+              <div class="detection-tag spec-tag-1">✔ Kurta Detected</div>
+              <div class="detection-tag spec-tag-2">✔ Medium Weight</div>
+              <div class="detection-tag spec-tag-3">✔ Long Sleeve</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 2: Chroma -->
+        <div class="specialist-slide" id="slide-chroma" data-theme="chroma">
+          <div class="specialist-info">
+            <div class="spec-icon">🎨</div>
+            <h3>Chroma</h3>
+            <span class="spec-title">Colour Specialist</span>
+            <p class="spec-quote">"I understand colours beyond simple names."</p>
+          </div>
+          <div class="spec-visual">
+            <div class="colour-flow-container">
+              <div class="liquid-gradients">
+                <div class="liquid-drop drop-blue" style="background: #3B82F6;"></div>
+                <div class="liquid-drop drop-beige" style="background: #F5F5DC;"></div>
+                <div class="liquid-drop drop-white" style="background: #FFFFFF;"></div>
+              </div>
+              <div class="palette-swatch-list">
+                <div class="swatch-card" style="--color: #3B82F6;"><span>Navy Blue</span></div>
+                <div class="swatch-card" style="--color: #E2E8F0;"><span>Warm Beige</span></div>
+                <div class="swatch-card" style="--color: #FFFFFF;"><span>Ivory White</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 3: Stitch -->
+        <div class="specialist-slide" id="slide-stitch" data-theme="stitch">
+          <div class="specialist-info">
+            <div class="spec-icon">🧵</div>
+            <h3>Stitch</h3>
+            <span class="spec-title">Wardrobe Specialist</span>
+            <p class="spec-quote">"I remember everything you already own."</p>
+          </div>
+          <div class="spec-visual">
+            <div class="wardrobe-thread-container">
+              <svg class="thread-network" viewBox="0 0 200 200">
+                <circle cx="50" cy="50" r="6" fill="#14B8A6" />
+                <circle cx="150" cy="40" r="6" fill="#14B8A6" />
+                <circle cx="100" cy="150" r="6" fill="#14B8A6" />
+                <circle cx="170" cy="140" r="6" fill="#14B8A6" />
+                
+                <path d="M50,50 Q100,20 150,40" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" />
+                <path d="M150,40 Q120,95 100,150" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" />
+                <path d="M100,150 Q135,145 170,140" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" stroke-dasharray="4 4" />
+              </svg>
+              <div class="thread-toast">
+                <span class="toast-indicator"></span>
+                Existing Blue Kurta Detected — Duplicate Avoided
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 4: Aura -->
+        <div class="specialist-slide" id="slide-aura" data-theme="aura">
+          <div class="specialist-info">
+            <div class="spec-icon">✨</div>
+            <h3>Aura</h3>
+            <span class="spec-title">Styling Specialist</span>
+            <p class="spec-quote">"I create outfits you'll love wearing."</p>
+          </div>
+          <div class="spec-visual">
+            <div class="styling-outfit-container">
+              <div class="outfit-snap-box">
+                <!-- Top garment -->
+                <div class="snap-garment snap-top">
+                  <svg viewBox="0 0 100 100" width="60">
+                    <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.85)" stroke="rgba(96,165,250,0.6)" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <!-- Bottom garment -->
+                <div class="snap-garment snap-bottom">
+                  <svg viewBox="0 0 100 100" width="55">
+                    <path d="M30,15 L70,15 L75,85 L58,85 L50,45 L42,85 L25,85 Z" fill="rgba(226,232,240,0.9)" stroke="rgba(203,213,225,0.7)" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="aura-bubble">"I think you'll like this."</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4: THE PIPELINE ========== -->
+    <section class="story-section" id="sec-pipeline">
+      <div class="section-content text-center">
+        <h2 class="section-title">The Decision Pipeline</h2>
+        <p class="section-desc">Every recommendation is engineered through a structured sequence of analysis nodes.</p>
+
+        <!-- Dynamic Pipeline Nodes -->
+        <div class="pipeline-container">
+          <div class="pipeline-line"></div>
+          
+          <div class="pipeline-nodes">
+            <div class="pipe-node active" data-node="vision">
+              <div class="node-dot"></div>
+              <span class="node-label">Vision</span>
+            </div>
+            <div class="pipe-node" data-node="colours">
+              <div class="node-dot"></div>
+              <span class="node-label">Colours</span>
+            </div>
+            <div class="pipe-node" data-node="recognition">
+              <div class="node-dot"></div>
+              <span class="node-label">Recognition</span>
+            </div>
+            <div class="pipe-node" data-node="memory">
+              <div class="node-dot"></div>
+              <span class="node-label">Memory</span>
+            </div>
+            <div class="pipe-node" data-node="matching">
+              <div class="node-dot"></div>
+              <span class="node-label">Matching</span>
+            </div>
+            <div class="pipe-node" data-node="styling">
+              <div class="node-dot"></div>
+              <span class="node-label">Styling</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Decision Counter Overlay -->
+          <div class="decision-counter-panel">
+            <div class="counter-step" id="counter-step-text">Understanding Colours...</div>
+            <div class="counter-number" id="counter-number-val">8</div>
+            <div class="counter-unit">Decisions Made</div>
+          </div>
+        </div>
+
+        <h3 class="pipeline-headline hidden-reveal" id="pipeline-final-headline">
+          37 intelligent decisions.<br />
+          <span class="gradient-text">One effortless recommendation.</span>
+        </h3>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5: WHY DIFFERENT ========== -->
+    <section class="story-section" id="sec-different">
+      <div class="compare-container">
+        
+        <!-- App comparison Left -->
+        <div class="compare-card compare-left">
+          <span class="compare-tag">Most Apps</span>
+          <h4>Store clothes.</h4>
+          <p>A static digital box of images requiring manual tagging and folders.</p>
+          <div class="compare-graphic">
+            <div class="static-folder">📁 Wardrobe Folder</div>
+          </div>
+        </div>
+
+        <!-- App comparison Right -->
+        <div class="compare-card compare-right">
+          <span class="compare-tag gradient-text">Colourity Core</span>
+          <h4>Understands clothes.</h4>
+          <p>A living engine that maps, matches, and evolves with your style profile.</p>
+          <div class="compare-graphic">
+            <div class="intelligent-loop">
+              <span class="loop-step">Store</span>
+              <span class="loop-arrow">&rarr;</span>
+              <span class="loop-step">Recognise</span>
+              <span class="loop-arrow">&rarr;</span>
+              <span class="loop-step">Remember</span>
+              <span class="loop-arrow">&rarr;</span>
+              <span class="loop-step text-purple">Match</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 6: THE MEMORY ========== -->
+    <section class="story-section" id="sec-memory">
+      <div class="section-content text-center">
+        <h2 class="section-title">The Memory</h2>
+        <p class="section-desc">Every outfit teaches the Core something new. Not about fashion. About you.</p>
+
+        <div class="memory-grid">
+          <!-- Monday slot -->
+          <div class="memory-day active">
+            <span class="day-name">Monday</span>
+            <div class="day-item-circle">
+              <svg viewBox="0 0 100 100" width="36">
+                <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.85)"/>
+              </svg>
+            </div>
+            <span class="day-label">Blue Kurta</span>
+          </div>
+
+          <!-- Friday slot -->
+          <div class="memory-day active">
+            <span class="day-name">Friday</span>
+            <div class="day-item-circle">
+              <svg viewBox="0 0 100 100" width="36">
+                <path d="M25,20 L50,15 L75,20 L80,55 L70,55 L68,32 L68,85 L32,85 L32,32 L30,55 L20,55 Z" fill="rgba(30,41,59,0.9)"/>
+              </svg>
+            </div>
+            <span class="day-label">Navy Blazer</span>
+          </div>
+
+          <!-- Learning output -->
+          <div class="memory-insight-card">
+            <div class="insight-pulse"></div>
+            <p class="insight-text">"I noticed you love wearing navy shades on weekdays."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 7: THE MORNING STORY ========== -->
+    <section class="story-section" id="sec-story">
+      <div class="story-backdrop">
+        <div class="story-spotlight"></div>
+        <div class="story-narrative text-center">
+          <p class="narrative-small">Monday Morning.</p>
+          <h2 class="narrative-headline">"I have clothes... but nothing feels right."</h2>
+          
+          <div class="narrative-transition">
+            <div class="transition-core-pulse"></div>
+            <p class="narrative-quote">Confidence begins long before you get dressed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 8: TRANSFORMATION ========== -->
+    <section class="story-section" id="sec-transformation">
+      <div class="transform-sequence">
+        
+        <div class="transform-step" id="step-messy">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h5>Messy Closet</h5>
+            <div class="step-visual-messy">
+              <!-- chaotic overlaps of garments -->
+              <span class="mess-item" style="transform: rotate(15deg) translate(-20px, 10px);">👚</span>
+              <span class="mess-item" style="transform: rotate(-35deg) translate(30px, -15px);">👖</span>
+              <span class="mess-item" style="transform: rotate(45deg) translate(10px, 30px);">👗</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="transform-step" id="step-organized">
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h5>Organised Core</h5>
+            <div class="step-visual-organized">
+              <!-- neatly categorized layout -->
+              <div class="organized-slot">👚 Tops</div>
+              <div class="organized-slot">👖 Bottoms</div>
+              <div class="organized-slot">👟 Shoes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transform-step" id="step-matched">
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h5>Perfect Match</h5>
+            <div class="step-visual-matched">
+              <div class="matched-outfit-glow">
+                <span>👚 Blue Kurta</span>
+                <span class="plus-sign">+</span>
+                <span>👖 Cream Palazzo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 9: THE INVISIBLE WORK ========== -->
+    <section class="story-section" id="sec-invisible">
+      <div class="section-content text-center">
+        <h2 class="section-title">Thousands of tiny decisions.</h2>
+        <p class="section-desc">Complexity flows together to deliver ultimate styling simplicity.</p>
+        
+        <div class="invisible-work-canvas-container">
+          <canvas id="collision-canvas"></canvas>
+          <div class="outfit-merge-overlay" id="merged-outfit-silhouette">
+            <!-- Outlines forming a perfect matching attire -->
+            <svg viewBox="0 0 100 120" width="160" height="200" fill="none" stroke="#FFFFFF" stroke-width="1.5">
+              <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" class="svg-glow-path" />
+              <path d="M35,85 L65,85 L70,120 L58,120 L50,95 L42,120 L30,120 Z" class="svg-glow-path" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 10: THE PHILOSOPHY GRID ========== -->
+    <section class="story-section" id="sec-philosophy">
+      <div class="section-content text-center">
+        <h2 class="section-title">The Styling Dimensions</h2>
+        <p class="section-desc">Hover to inspect the core parameters Colourity understands about your wardrobe.</p>
+        
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <span class="card-icon">👚</span>
+            <h4>Garments</h4>
+            <p>Understands collars, hemlines, sleeve lengths, and necklines.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="card-icon">🎨</span>
+            <h4>Colours</h4>
+            <p>Analyzes precise HSL values, warm vs. cool undertone compatibility.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="card-icon">🧵</span>
+            <h4>Patterns</h4>
+            <p>Matches floral, stripes, plains, and traditional prints cleanly.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="card-icon">🧥</span>
+            <h4>Materials</h4>
+            <p>Distinguishes chiffon draping from stiff silk structure compatibility.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="card-icon">✨</span>
+            <h4>Wardrobe Match</h4>
+            <p>Scans existing items to pair with color harmony rules.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="card-icon">👤</span>
+            <h4>Color Profile</h4>
+            <p>Connects clothing directly to your seasonal colour analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 11: THE ENDING ========== -->
+    <section class="story-section" id="sec-ending">
+      <div class="ending-stage text-center">
+        
+        <div class="ending-text-group">
+          <p class="ending-line fade-line">Less searching.</p>
+          <p class="ending-line fade-line">Less shopping.</p>
+          <p class="ending-line fade-line">Less guessing.</p>
+          <p class="ending-line fade-line text-purple">More confidence.</p>
+          
+          <p class="ending-line fade-line mt-64">One wardrobe.</p>
+          <p class="ending-line fade-line text-blue">Infinite possibilities.</p>
+
+          <p class="ending-line fade-line mt-64 text-muted">Your wardrobe has always had answers.</p>
+          <p class="ending-line fade-line">Colourity simply helps you see them.</p>
+        </div>
+
+        <!-- The Morphing Core & Logo Container -->
+        <div class="ending-branding-morph">
+          <div class="morphing-core-dot" id="morphing-dot"></div>
+          
+          <!-- Vector Logo Outline to reveal itself -->
+          <div class="morph-logo-wrap" id="morph-logo-wrap">
+            <svg viewBox="0 0 200 60" width="180" height="54" class="logo-svg-draw">
+              <!-- Infinity-shaped loop -->
+              <path d="M30,30 C20,15 5,30 20,45 C35,30 50,15 65,30 C80,45 95,30 85,15" fill="none" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" class="logo-infinity-path" />
+              <!-- Brand Name Text -->
+              <text x="80" y="38" font-family="'Outfit', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" class="logo-text-fade">colourity</text>
+              <defs>
+                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7C3AED" />
+                  <stop offset="50%" stop-color="#3B82F6" />
+                  <stop offset="100%" stop-color="#14B8A6" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div class="final-cta-wrap" id="final-cta-wrap">
+          <p class="final-tagline">Ready to discover yours?</p>
+          <a href="../#notify" class="btn-glow-large">Download Colourity</a>
+          
+          <div class="final-philosophy">
+            <p class="philosophy-quote">"The Colourity Core never tells you what to wear. It helps you discover what already feels like you."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
