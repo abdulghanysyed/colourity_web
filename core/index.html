@@ -50,28 +50,29 @@
     </div>
   </nav>
 
-  <!-- ========== INTERACTIVE EXPERIENCE WRAPPER ========== -->
+  <!-- ========== CONTINUOUS SINGLE-PAGE WRAPPER ========== -->
   <main class="experience-container">
     
     <!-- Simulation Tag -->
-    <div class="simulation-tag reveal">
+    <div class="simulation-tag">
       <span class="tag-pulse"></span>
       Interactive Simulation
     </div>
 
     <!-- ========== SECTION 1: THE WARDROBE ========== -->
-    <section class="story-section active" id="sec-wardrobe">
+    <section class="story-section continuous-section" id="sec-wardrobe">
       <div class="section-content text-center">
         <h1 class="headline fade-in">Every wardrobe has a story.</h1>
         <p class="subheadline fade-in-delay-1">Open it.</p>
         
-        <!-- Interactive Wardrobe SVG -->
+        <!-- Interactive Wardrobe with Real Fashion Photos -->
         <div class="wardrobe-container fade-in-delay-2">
           <div class="wardrobe" id="main-wardrobe">
             <div class="wardrobe-door door-left"></div>
             <div class="wardrobe-door door-right"></div>
             <div class="wardrobe-interior">
               <div class="interior-glow"></div>
+              <img src="real_blue_kurta.jpg" alt="Real Kurta" class="interior-garment-preview" />
             </div>
           </div>
         </div>
@@ -81,54 +82,55 @@
     </section>
 
     <!-- ========== SECTION 2: THE CORE AWAKENS ========== -->
-    <section class="story-section" id="sec-core">
+    <section class="story-section continuous-section" id="sec-core">
       <div class="section-content text-center">
         <h2 class="section-title">The Colourity Core</h2>
-        <p class="section-desc">Drag any garment into the Core to witness how Colourity matches your wardrobe.</p>
+        <p class="section-desc">Drag any real garment into the Core to witness how Colourity matches your wardrobe.</p>
         
-        <!-- Simulated Floating Garments Container -->
+        <!-- Simulated Floating Real Garments Container -->
         <div class="garment-field" id="garment-field">
           <!-- White Shirt -->
-          <div class="draggable-garment" data-type="shirt" style="top: 25%; left: 15%;">
-            <svg viewBox="0 0 100 100" class="garment-svg">
-              <path d="M30,20 L40,15 L50,22 L60,15 L70,20 L80,45 L70,50 L65,35 L65,85 L35,85 L35,35 L30,50 L20,45 Z" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-            </svg>
+          <div class="draggable-garment" data-type="shirt" style="top: 20%; left: 12%;">
+            <div class="real-garment-card">
+              <img src="real_white_shirt.jpg" alt="White Shirt" class="real-garment-img" />
+              <div class="hsl-ring"></div>
+            </div>
             <span class="garment-label">White Shirt</span>
           </div>
 
           <!-- Blue Kurta -->
-          <div class="draggable-garment" data-type="kurta" style="top: 22%; right: 18%;">
-            <svg viewBox="0 0 100 100" class="garment-svg">
-              <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.8)" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
-              <path d="M50,22 L50,45" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <div class="draggable-garment" data-type="kurta" style="top: 18%; right: 15%;">
+            <div class="real-garment-card">
+              <img src="real_blue_kurta.jpg" alt="Blue Kurta" class="real-garment-img" />
+              <div class="hsl-ring"></div>
+            </div>
             <span class="garment-label">Blue Kurta</span>
           </div>
 
           <!-- Navy Blazer -->
-          <div class="draggable-garment" data-type="blazer" style="top: 60%; left: 10%;">
-            <svg viewBox="0 0 100 100" class="garment-svg">
-              <path d="M25,20 L50,15 L75,20 L80,55 L70,55 L68,32 L68,85 L32,85 L32,32 L30,55 L20,55 Z" fill="rgba(30,41,59,0.9)" stroke="rgba(51,65,85,0.6)" stroke-width="1.5"/>
-              <path d="M38,20 L50,45 L62,20" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-            </svg>
+          <div class="draggable-garment" data-type="blazer" style="top: 58%; left: 8%;">
+            <div class="real-garment-card">
+              <img src="real_navy_blazer.jpg" alt="Navy Blazer" class="real-garment-img" />
+              <div class="hsl-ring"></div>
+            </div>
             <span class="garment-label">Navy Blazer</span>
           </div>
 
           <!-- Black Jeans -->
-          <div class="draggable-Jeans" style="display:none;"></div> <!-- Keep placeholder for selector consistency -->
-          <div class="draggable-garment" data-type="jeans" style="top: 65%; right: 12%;">
-            <svg viewBox="0 0 100 100" class="garment-svg">
-              <path d="M30,15 L70,15 L75,85 L58,85 L50,45 L42,85 L25,85 Z" fill="rgba(15,23,42,0.95)" stroke="rgba(30,41,59,0.6)" stroke-width="1.5"/>
-            </svg>
+          <div class="draggable-garment" data-type="jeans" style="top: 62%; right: 10%;">
+            <div class="real-garment-card">
+              <img src="real_black_jeans.jpg" alt="Black Jeans" class="real-garment-img" />
+              <div class="hsl-ring"></div>
+            </div>
             <span class="garment-label">Black Jeans</span>
           </div>
 
           <!-- Silk Saree -->
-          <div class="draggable-garment" data-type="saree" style="top: 45%; left: 80%;">
-            <svg viewBox="0 0 100 100" class="garment-svg">
-              <path d="M30,20 C40,10 60,10 70,20 L75,80 C65,90 35,90 25,80 Z" fill="rgba(236,72,153,0.85)" stroke="rgba(244,114,182,0.5)" stroke-width="1.5"/>
-              <path d="M30,20 L75,60" stroke="rgba(253,224,71,0.6)" stroke-width="3"/>
-            </svg>
+          <div class="draggable-garment" data-type="saree" style="top: 40%; left: 78%;">
+            <div class="real-garment-card">
+              <img src="real_silk_saree.jpg" alt="Silk Saree" class="real-garment-img" />
+              <div class="hsl-ring"></div>
+            </div>
             <span class="garment-label">Silk Saree</span>
           </div>
         </div>
@@ -145,7 +147,7 @@
     </section>
 
     <!-- ========== SECTION 3: THE SPECIALISTS ========== -->
-    <section class="story-section" id="sec-specialists">
+    <section class="story-section continuous-section" id="sec-specialists">
       <div class="specialist-stage">
         
         <!-- Specialist 1: Iris -->
@@ -159,9 +161,7 @@
           <div class="spec-visual">
             <div class="vision-scan-box" id="iris-scan-box">
               <div class="scan-laser"></div>
-              <svg viewBox="0 0 100 120" class="scan-garment-svg" id="iris-garment-outline">
-                <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-              </svg>
+              <img src="real_blue_kurta.jpg" alt="Iris Real Scan" class="scan-real-img" />
               <div class="detection-tag spec-tag-1">✔ Kurta Detected</div>
               <div class="detection-tag spec-tag-2">✔ Medium Weight</div>
               <div class="detection-tag spec-tag-3">✔ Long Sleeve</div>
@@ -180,12 +180,12 @@
           <div class="spec-visual">
             <div class="colour-flow-container">
               <div class="liquid-gradients">
-                <div class="liquid-drop drop-blue" style="background: #3B82F6;"></div>
+                <div class="liquid-drop drop-blue" style="background: #1D4ED8;"></div>
                 <div class="liquid-drop drop-beige" style="background: #F5F5DC;"></div>
                 <div class="liquid-drop drop-white" style="background: #FFFFFF;"></div>
               </div>
               <div class="palette-swatch-list">
-                <div class="swatch-card" style="--color: #3B82F6;"><span>Navy Blue</span></div>
+                <div class="swatch-card" style="--color: #1D4ED8;"><span>Navy Blue</span></div>
                 <div class="swatch-card" style="--color: #E2E8F0;"><span>Warm Beige</span></div>
                 <div class="swatch-card" style="--color: #FFFFFF;"><span>Ivory White</span></div>
               </div>
@@ -203,15 +203,12 @@
           </div>
           <div class="spec-visual">
             <div class="wardrobe-thread-container">
+              <div class="thread-image-pair">
+                <img src="real_blue_kurta.jpg" alt="Kurta" class="thread-img img-1" />
+                <img src="real_emerald_lehenga.jpg" alt="Lehenga" class="thread-img img-2" />
+              </div>
               <svg class="thread-network" viewBox="0 0 200 200">
-                <circle cx="50" cy="50" r="6" fill="#14B8A6" />
-                <circle cx="150" cy="40" r="6" fill="#14B8A6" />
-                <circle cx="100" cy="150" r="6" fill="#14B8A6" />
-                <circle cx="170" cy="140" r="6" fill="#14B8A6" />
-                
-                <path d="M50,50 Q100,20 150,40" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" />
-                <path d="M150,40 Q120,95 100,150" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" />
-                <path d="M100,150 Q135,145 170,140" stroke="rgba(20,184,166,0.3)" stroke-width="1.5" fill="none" class="connecting-thread" stroke-dasharray="4 4" />
+                <path d="M50,100 Q100,30 150,100" stroke="#14B8A6" stroke-width="2.5" fill="none" class="connecting-thread" />
               </svg>
               <div class="thread-toast">
                 <span class="toast-indicator"></span>
@@ -232,17 +229,13 @@
           <div class="spec-visual">
             <div class="styling-outfit-container">
               <div class="outfit-snap-box">
-                <!-- Top garment -->
+                <!-- Top garment photo -->
                 <div class="snap-garment snap-top">
-                  <svg viewBox="0 0 100 100" width="60">
-                    <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.85)" stroke="rgba(96,165,250,0.6)" stroke-width="1.5"/>
-                  </svg>
+                  <img src="real_blue_kurta.jpg" alt="Top Kurta" class="snap-img" />
                 </div>
-                <!-- Bottom garment -->
+                <!-- Bottom garment photo -->
                 <div class="snap-garment snap-bottom">
-                  <svg viewBox="0 0 100 100" width="55">
-                    <path d="M30,15 L70,15 L75,85 L58,85 L50,45 L42,85 L25,85 Z" fill="rgba(226,232,240,0.9)" stroke="rgba(203,213,225,0.7)" stroke-width="1.5"/>
-                  </svg>
+                  <img src="real_black_jeans.jpg" alt="Bottom Jeans" class="snap-img" />
                 </div>
               </div>
               <div class="aura-bubble">"I think you'll like this."</div>
@@ -254,7 +247,7 @@
     </section>
 
     <!-- ========== SECTION 4: THE PIPELINE ========== -->
-    <section class="story-section" id="sec-pipeline">
+    <section class="story-section continuous-section" id="sec-pipeline">
       <div class="section-content text-center">
         <h2 class="section-title">The Decision Pipeline</h2>
         <p class="section-desc">Every recommendation is engineered through a structured sequence of analysis nodes.</p>
@@ -306,7 +299,7 @@
     </section>
 
     <!-- ========== SECTION 5: WHY DIFFERENT ========== -->
-    <section class="story-section" id="sec-different">
+    <section class="story-section continuous-section" id="sec-different">
       <div class="compare-container">
         
         <!-- App comparison Left -->
@@ -341,7 +334,7 @@
     </section>
 
     <!-- ========== SECTION 6: THE MEMORY ========== -->
-    <section class="story-section" id="sec-memory">
+    <section class="story-section continuous-section" id="sec-memory">
       <div class="section-content text-center">
         <h2 class="section-title">The Memory</h2>
         <p class="section-desc">Every outfit teaches the Core something new. Not about fashion. About you.</p>
@@ -351,9 +344,7 @@
           <div class="memory-day active">
             <span class="day-name">Monday</span>
             <div class="day-item-circle">
-              <svg viewBox="0 0 100 100" width="36">
-                <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" fill="rgba(59,130,246,0.85)"/>
-              </svg>
+              <img src="real_blue_kurta.jpg" alt="Monday Kurta" class="memory-photo" />
             </div>
             <span class="day-label">Blue Kurta</span>
           </div>
@@ -362,9 +353,7 @@
           <div class="memory-day active">
             <span class="day-name">Friday</span>
             <div class="day-item-circle">
-              <svg viewBox="0 0 100 100" width="36">
-                <path d="M25,20 L50,15 L75,20 L80,55 L70,55 L68,32 L68,85 L32,85 L32,32 L30,55 L20,55 Z" fill="rgba(30,41,59,0.9)"/>
-              </svg>
+              <img src="real_navy_blazer.jpg" alt="Friday Blazer" class="memory-photo" />
             </div>
             <span class="day-label">Navy Blazer</span>
           </div>
@@ -379,7 +368,7 @@
     </section>
 
     <!-- ========== SECTION 7: THE MORNING STORY ========== -->
-    <section class="story-section" id="sec-story">
+    <section class="story-section continuous-section" id="sec-story">
       <div class="story-backdrop">
         <div class="story-spotlight"></div>
         <div class="story-narrative text-center">
@@ -395,7 +384,7 @@
     </section>
 
     <!-- ========== SECTION 8: TRANSFORMATION ========== -->
-    <section class="story-section" id="sec-transformation">
+    <section class="story-section continuous-section" id="sec-transformation">
       <div class="transform-sequence">
         
         <div class="transform-step" id="step-messy">
@@ -403,10 +392,9 @@
             <span class="step-num">01</span>
             <h5>Messy Closet</h5>
             <div class="step-visual-messy">
-              <!-- chaotic overlaps of garments -->
-              <span class="mess-item" style="transform: rotate(15deg) translate(-20px, 10px);">👚</span>
-              <span class="mess-item" style="transform: rotate(-35deg) translate(30px, -15px);">👖</span>
-              <span class="mess-item" style="transform: rotate(45deg) translate(10px, 30px);">👗</span>
+              <img src="real_white_shirt.jpg" alt="Messy 1" class="mess-photo photo-1" />
+              <img src="real_black_jeans.jpg" alt="Messy 2" class="mess-photo photo-2" />
+              <img src="real_silk_saree.jpg" alt="Messy 3" class="mess-photo photo-3" />
             </div>
           </div>
         </div>
@@ -416,10 +404,9 @@
             <span class="step-num">02</span>
             <h5>Organised Core</h5>
             <div class="step-visual-organized">
-              <!-- neatly categorized layout -->
               <div class="organized-slot">👚 Tops</div>
               <div class="organized-slot">👖 Bottoms</div>
-              <div class="organized-slot">👟 Shoes</div>
+              <div class="organized-slot">👗 Ethnic</div>
             </div>
           </div>
         </div>
@@ -430,9 +417,9 @@
             <h5>Perfect Match</h5>
             <div class="step-visual-matched">
               <div class="matched-outfit-glow">
-                <span>👚 Blue Kurta</span>
+                <img src="real_blue_kurta.jpg" alt="Kurta" class="matched-photo" />
                 <span class="plus-sign">+</span>
-                <span>👖 Cream Palazzo</span>
+                <img src="real_white_shirt.jpg" alt="Bottom" class="matched-photo" />
               </div>
             </div>
           </div>
@@ -442,7 +429,7 @@
     </section>
 
     <!-- ========== SECTION 9: THE INVISIBLE WORK ========== -->
-    <section class="story-section" id="sec-invisible">
+    <section class="story-section continuous-section" id="sec-invisible">
       <div class="section-content text-center">
         <h2 class="section-title">Thousands of tiny decisions.</h2>
         <p class="section-desc">Complexity flows together to deliver ultimate styling simplicity.</p>
@@ -450,18 +437,14 @@
         <div class="invisible-work-canvas-container">
           <canvas id="collision-canvas"></canvas>
           <div class="outfit-merge-overlay" id="merged-outfit-silhouette">
-            <!-- Outlines forming a perfect matching attire -->
-            <svg viewBox="0 0 100 120" width="160" height="200" fill="none" stroke="#FFFFFF" stroke-width="1.5">
-              <path d="M35,15 L45,15 L50,22 L55,15 L65,15 L80,35 L70,40 L65,30 L65,85 L35,85 L35,30 L30,40 L20,35 Z" class="svg-glow-path" />
-              <path d="M35,85 L65,85 L70,120 L58,120 L50,95 L42,120 L30,120 Z" class="svg-glow-path" />
-            </svg>
+            <img src="real_blue_kurta.jpg" alt="Merged Real Outfit" class="merged-real-photo" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== SECTION 10: THE PHILOSOPHY GRID ========== -->
-    <section class="story-section" id="sec-philosophy">
+    <section class="story-section continuous-section" id="sec-philosophy">
       <div class="section-content text-center">
         <h2 class="section-title">The Styling Dimensions</h2>
         <p class="section-desc">Hover to inspect the core parameters Colourity understands about your wardrobe.</p>
@@ -502,7 +485,7 @@
     </section>
 
     <!-- ========== SECTION 11: THE ENDING ========== -->
-    <section class="story-section" id="sec-ending">
+    <section class="story-section continuous-section" id="sec-ending">
       <div class="ending-stage text-center">
         
         <div class="ending-text-group">
@@ -525,9 +508,7 @@
           <!-- Vector Logo Outline to reveal itself -->
           <div class="morph-logo-wrap" id="morph-logo-wrap">
             <svg viewBox="0 0 200 60" width="180" height="54" class="logo-svg-draw">
-              <!-- Infinity-shaped loop -->
               <path d="M30,30 C20,15 5,30 20,45 C35,30 50,15 65,30 C80,45 95,30 85,15" fill="none" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" class="logo-infinity-path" />
-              <!-- Brand Name Text -->
               <text x="80" y="38" font-family="'Outfit', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" class="logo-text-fade">colourity</text>
               <defs>
                 <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">

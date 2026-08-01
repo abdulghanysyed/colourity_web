@@ -1,11 +1,11 @@
 /* =====================================================
-   THE COLOURITY CORE — Interactive Script
+   THE COLOURITY CORE — Continuous Scroll & Real Imagery Script
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===================================================
-  // 1. BACKGROUND PARTICLES CANVAS
+  // 1. ANTIGRAVITY PARTICLES CANVAS ENGINE
   // ===================================================
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas.getContext('2d');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let height = canvas.height = window.innerHeight;
 
   const particles = [];
-  const particleCount = 60;
+  const particleCount = 70;
   let mouse = { x: null, y: null, active: false };
 
   class Particle {
@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
       this.size = Math.random() * 2.5 + 0.5;
       this.speedY = Math.random() * 0.8 + 0.2;
       this.speedX = Math.random() * 0.4 - 0.2;
-      this.alpha = Math.random() * 0.5 + 0.1;
+      this.alpha = Math.random() * 0.5 + 0.15;
     }
     update() {
       this.y -= this.speedY;
       this.x += this.speedX;
 
-      // Mouse influence
+      // Antigravity Mouse Force
       if (mouse.active && mouse.x !== null) {
         const dx = this.x - mouse.x;
         const dy = this.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          const force = (120 - dist) / 120;
-          this.x += (dx / dist) * force * 1.5;
-          this.y += (dy / dist) * force * 1.5;
+        if (dist < 140) {
+          const force = (140 - dist) / 140;
+          this.x += (dx / dist) * force * 2;
+          this.y += (dy / dist) * force * 2;
         }
       }
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mouse.active = false;
   });
 
-  // Main canvas loop
+  // Main RAF loop
   function animateParticles() {
     ctx.clearRect(0, 0, width, height);
     particles.forEach(p => {
@@ -93,45 +93,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ===================================================
-  // 2. WARDROBE OPENING & SECTION TRANSITIONS
+  // 2. WARDROBE OPENING TRIGGER
   // ===================================================
   const wardrobe = document.getElementById('main-wardrobe');
   const btnOpen = document.getElementById('btn-open-wardrobe');
-  const secWardrobe = document.getElementById('sec-wardrobe');
-  const secCore = document.getElementById('sec-core');
 
   btnOpen.addEventListener('click', () => {
     wardrobe.classList.add('open');
     btnOpen.disabled = true;
 
-    // Transition to Core section after doors open
+    // Smooth scroll down to Core section
     setTimeout(() => {
-      secWardrobe.classList.remove('active');
-      secCore.classList.add('active');
-      initializeGarmentDragging();
-    }, 1800);
+      document.getElementById('sec-core').scrollIntoView({ behavior: 'smooth' });
+    }, 1200);
   });
 
 
   // ===================================================
-  // 3. MAGNETIC GARMENT DRAGGING & CORE INGESTION
+  // 3. REAL PHOTO GARMENT MAGNETIC DRAG & CORE INGESTION
   // ===================================================
   const coreOrb = document.getElementById('colourity-core');
   const statusText = document.getElementById('core-status-text');
-  const secSpecialists = document.getElementById('sec-specialists');
 
   function initializeGarmentDragging() {
     const garments = document.querySelectorAll('.draggable-garment');
-    const coreBounds = coreOrb.getBoundingClientRect();
-    const coreCenterX = coreBounds.left + coreBounds.width / 2;
-    const coreCenterY = coreBounds.top + coreBounds.height / 2;
 
     garments.forEach(g => {
       let isDragging = false;
       let startX, startY;
       let shiftX = 0, shiftY = 0;
 
-      // Start drag
       const dragStart = (e) => {
         isDragging = true;
         g.style.transition = 'none';
@@ -142,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         g.style.cursor = 'grabbing';
       };
 
-      // Move drag
       const dragMove = (e) => {
         if (!isDragging) return;
         const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
@@ -152,7 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         g.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
 
-        // Magnetic Attraction Check
+        // Magnetic Attraction to Core
+        const coreBounds = coreOrb.getBoundingClientRect();
+        const coreCenterX = coreBounds.left + coreBounds.width / 2;
+        const coreCenterY = coreBounds.top + coreBounds.height / 2;
+
         const bounds = g.getBoundingClientRect();
         const gCenterX = bounds.left + bounds.width / 2;
         const gCenterY = bounds.top + bounds.height / 2;
@@ -161,8 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dy = coreCenterY - gCenterY;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 130) {
-          // Snap magnetically into Core
+        if (dist < 140) {
           isDragging = false;
           g.style.pointerEvents = 'none';
           g.style.transition = 'all 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
@@ -173,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      // End drag
       const dragEnd = () => {
         if (!isDragging) return;
         isDragging = false;
@@ -194,24 +186,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  initializeGarmentDragging();
+
   function triggerCoreIngestion() {
     coreOrb.classList.add('active');
     statusText.textContent = 'Understanding...';
 
-    // 0.5s anticipating pause -> transition to Specialists
+    // Smooth scroll down to Specialists section after pause
     setTimeout(() => {
-      secCore.classList.remove('active');
-      secSpecialists.classList.add('active');
+      document.getElementById('sec-specialists').scrollIntoView({ behavior: 'smooth' });
       runSpecialistSlides();
     }, 1500);
   }
 
 
   // ===================================================
-  // 4. SPECIALISTS TIMELINE CONTROLLER
+  // 4. SPECIALISTS SLIDER CONTROLLER
   // ===================================================
   const slides = document.querySelectorAll('.specialist-slide');
-  const secPipeline = document.getElementById('sec-pipeline');
 
   function runSpecialistSlides() {
     let currentSlide = 0;
@@ -222,12 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentSlide < slides.length) {
         slides[currentSlide].classList.add('active');
         currentSlide++;
-        setTimeout(showNextSlide, 3500); // 3.5s per specialist
+        setTimeout(showNextSlide, 3500);
       } else {
-        // Move to Pipeline after final specialist
-        secSpecialists.classList.remove('active');
-        secPipeline.classList.add('active');
-        triggerPipelineSection();
+        // Smooth scroll to Decision Pipeline
+        document.getElementById('sec-pipeline').scrollIntoView({ behavior: 'smooth' });
       }
     };
 
@@ -236,14 +226,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ===================================================
-  // 5. THE PIPELINE & DECISION COUNTER
+  // 5. DECISION PIPELINE & COUNTER
   // ===================================================
   const pipeNodes = document.querySelectorAll('.pipe-node');
   const countStepText = document.getElementById('counter-step-text');
   const countNumVal = document.getElementById('counter-number-val');
   const finalPipelineHeader = document.getElementById('pipeline-final-headline');
+  let pipelineTriggered = false;
 
   function triggerPipelineSection() {
+    if (pipelineTriggered) return;
+    pipelineTriggered = true;
+
     let activeIdx = 0;
     
     const countSequence = [
@@ -258,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (activeIdx < pipeNodes.length) {
         pipeNodes[activeIdx].classList.add('active');
 
-        // Dynamically adjust counter based on node indices
         if (activeIdx < 2) {
           countStepText.textContent = countSequence[0].step;
           animateNumber(parseInt(countNumVal.textContent), countSequence[0].number, 400);
@@ -273,11 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
         activeIdx++;
         setTimeout(cycleNodes, 800);
       } else {
-        // Show final layout
         setTimeout(() => {
           finalPipelineHeader.classList.add('visible');
-          // Proceed automatically to final sections after 3s
-          setTimeout(activateScrollSections, 2500);
         }, 600);
       }
     };
@@ -301,57 +291,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }, stepTime);
   }
 
-  function activateScrollSections() {
-    // Show remaining sections on scroll
-    const secDifferent = document.getElementById('sec-different');
-    const secMemory = document.getElementById('sec-memory');
-    const secStory = document.getElementById('sec-story');
-    const secTransformation = document.getElementById('sec-transformation');
-    const secInvisible = document.getElementById('sec-invisible');
-    const secPhilosophy = document.getElementById('sec-philosophy');
-    const secEnding = document.getElementById('sec-ending');
-
-    const scrollSections = [secDifferent, secMemory, secStory, secTransformation, secInvisible, secPhilosophy, secEnding];
-    scrollSections.forEach(sec => {
-      sec.style.display = 'flex';
-    });
-
-    // Scroll down smoothly to show comparative philosophy
-    secDifferent.scrollIntoView({ behavior: 'smooth' });
-
-    initializeCollisionCanvas();
-    setupIntersectionObserver();
-  }
-
 
   // ===================================================
-  // 6. SCROLL DETECTORS & INTERSECTION OBSERVERS
+  // 6. CONTINUOUS SCROLL OBSERVER FOR ALL SECTIONS
   // ===================================================
-  function setupIntersectionObserver() {
-    const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    };
+  const observerOptions = {
+    threshold: 0.25,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          
-          if (entry.target.id === 'sec-invisible') {
-            triggerParticleCollision();
-          }
-          if (entry.target.id === 'sec-ending') {
-            triggerBrandingEnding();
-          }
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+
+        if (entry.target.id === 'sec-pipeline') {
+          triggerPipelineSection();
         }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.story-section').forEach(sec => {
-      sectionObserver.observe(sec);
+        if (entry.target.id === 'sec-invisible') {
+          triggerParticleCollision();
+        }
+        if (entry.target.id === 'sec-ending') {
+          triggerBrandingEnding();
+        }
+      }
     });
-  }
+  }, observerOptions);
+
+  document.querySelectorAll('.story-section').forEach(sec => {
+    sectionObserver.observe(sec);
+  });
 
 
   // ===================================================
@@ -364,6 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initializeCollisionCanvas() {
     collisionCanvas = document.getElementById('collision-canvas');
+    if (!collisionCanvas) return;
     colCtx = collisionCanvas.getContext('2d');
     collisionCanvas.width = collisionCanvas.parentElement.clientWidth;
     collisionCanvas.height = 360;
@@ -384,7 +354,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       update() {
         if (isColliding) {
-          // Gravity pull to center target
           const dx = this.targetX - this.x;
           const dy = this.targetY - this.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
@@ -398,8 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         this.x += this.vx;
         this.y += this.vy;
-        
-        // Bounce on wall bounds
+
         if (!isColliding) {
           if (this.x < 0 || this.x > collisionCanvas.width) this.vx *= -1;
           if (this.y < 0 || this.y > collisionCanvas.height) this.vy *= -1;
@@ -413,7 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Populate
     for (let i = 0; i < 150; i++) {
       collisionParticles.push(new ColParticle());
     }
@@ -429,11 +396,14 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCollision();
   }
 
+  initializeCollisionCanvas();
+
   function triggerParticleCollision() {
+    if (isColliding) return;
     isColliding = true;
     setTimeout(() => {
-      // Fade in the merged silhouette outline
-      document.getElementById('merged-outfit-silhouette').classList.add('merged');
+      const mergedEl = document.getElementById('merged-outfit-silhouette');
+      if (mergedEl) mergedEl.classList.add('merged');
       cancelAnimationFrame(collisionFrameId);
     }, 2000);
   }
@@ -445,12 +415,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const morphDot = document.getElementById('morphing-dot');
   const morphLogoWrap = document.getElementById('morph-logo-wrap');
   const finalCtaWrap = document.getElementById('final-cta-wrap');
+  let endingTriggered = false;
 
   function triggerBrandingEnding() {
-    // 1. Reveal Core Dot
+    if (endingTriggered) return;
+    endingTriggered = true;
+
     morphDot.style.opacity = '1';
     
-    // 2. Shrink dot and fade lines
     setTimeout(() => {
       const textLines = document.querySelectorAll('.fade-line');
       textLines.forEach((line, idx) => {
@@ -458,20 +430,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, 500);
 
-    // 3. Morph dot -> logo start position
     setTimeout(() => {
       morphDot.style.transform = 'translate(-48px, 0px) scale(0.6)';
       morphDot.style.background = '#7C3AED';
     }, 4500);
 
-    // 4. Reveal & draw logo paths
     setTimeout(() => {
       morphDot.style.opacity = '0';
       morphLogoWrap.classList.add('active');
       morphLogoWrap.style.opacity = '1';
     }, 6000);
 
-    // 5. Fade in the call-to-action button
     setTimeout(() => {
       finalCtaWrap.classList.add('active');
     }, 7500);
