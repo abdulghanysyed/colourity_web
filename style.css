@@ -1918,6 +1918,67 @@ section {
   background: rgba(124, 58, 237, 0.02);
 }
 
+/* =====================================================
+   FIXED FLOATING SOCIAL SHARE BAR (DESKTOP & MOBILE)
+   ===================================================== */
+.fixed-social-share {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  padding: 12px 10px;
+  border-radius: 50px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12), 0 4px 12px rgba(124,58,237,0.08);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fixed-social-share .share-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.fixed-social-share .share-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.share-btn.whatsapp { background: #25D366; }
+.share-btn.pinterest { background: #E60023; }
+.share-btn.facebook { background: #1877F2; }
+.share-btn.twitter { background: #000000; }
+.share-btn.linkedin { background: #0A66C2; }
+.share-btn.native-share { background: var(--gradient); }
+
+@media (max-width: 992px) {
+  .fixed-social-share {
+    left: 50%;
+    top: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    padding: 8px 16px;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  }
+}
+
 
 
 
