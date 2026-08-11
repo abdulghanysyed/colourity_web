@@ -2423,6 +2423,214 @@ section {
   }
 }
 
+/* =====================================================
+   INTERACTIVE ECOSYSTEM — .eco-*
+   ===================================================== */
+.eco-container {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 48px auto 0 auto;
+}
+
+/* Left column: stage navigation */
+.eco-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.eco-stage {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Vertical connector line between stages */
+.eco-stage-connector {
+  position: absolute;
+  left: 21px;
+  top: 56px;
+  width: 2px;
+  height: calc(100% - 12px);
+  background: var(--border);
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.eco-stage.active .eco-stage-connector,
+.eco-stage:hover .eco-stage-connector {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+.eco-stage-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px 18px 0;
+  border-radius: var(--radius-lg);
+  transition: background 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.eco-stage:hover .eco-stage-inner,
+.eco-stage.active .eco-stage-inner {
+  background: rgba(124, 58, 237, 0.04);
+}
+
+.eco-stage-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--border);
+  min-width: 44px;
+  line-height: 1;
+  padding-top: 2px;
+  transition: color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.eco-stage.active .eco-stage-num,
+.eco-stage:hover .eco-stage-num {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.eco-stage-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eco-stage-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.eco-stage.active .eco-stage-label,
+.eco-stage:hover .eco-stage-label {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.eco-stage-desc {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.eco-stage.active .eco-stage-desc,
+.eco-stage:hover .eco-stage-desc {
+  color: var(--text-primary);
+}
+
+.eco-stage-link {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--purple);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, color 0.2s ease;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.eco-stage.active .eco-stage-link,
+.eco-stage:hover .eco-stage-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.eco-stage-link:hover {
+  color: var(--blue);
+}
+
+/* Right column: image panel */
+.eco-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255,255,255,0.5);
+  background: #f0ece8;
+}
+
+.eco-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  z-index: 1;
+}
+
+.eco-img.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.eco-img.previous {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  transition: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .eco-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .eco-visual {
+    order: -1; /* image first on mobile */
+    aspect-ratio: 16/9;
+  }
+  .eco-stage-connector {
+    display: none;
+  }
+  .eco-stage-inner {
+    padding: 14px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+  }
+  .eco-stage.active .eco-stage-inner,
+  .eco-stage:hover .eco-stage-inner {
+    border-color: rgba(124, 58, 237, 0.3);
+    background: rgba(124, 58, 237, 0.03);
+  }
+  .eco-stage-link {
+    opacity: 1;
+    transform: none;
+  }
+  .eco-stages {
+    gap: 10px;
+  }
+}
+
+
 
 
 

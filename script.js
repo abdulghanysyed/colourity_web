@@ -430,3 +430,40 @@ if (depthBtns.length && undertoneBtns.length) {
   updateSeasonTester();
 }
 
+// --- Ecosystem Interactive Stages ---
+(function initEcosystem() {
+  const ecoStages = document.querySelectorAll('.eco-stage');
+  const ecoImgs   = document.querySelectorAll('.eco-img');
+  if (!ecoStages.length || !ecoImgs.length) return;
+
+  let currentEco = 1;
+
+  const activateEco = (num) => {
+    const prevNum = currentEco;
+    currentEco = num;
+
+    // Update stage highlighting
+    ecoStages.forEach(s => {
+      s.classList.toggle('active', parseInt(s.getAttribute('data-eco')) === num);
+    });
+
+    // Crossfade images using previous/active pattern
+    ecoImgs.forEach(img => {
+      const id = parseInt(img.id.replace('eco-img-', ''));
+      img.classList.remove('active', 'previous');
+      if (id === num)     img.classList.add('active');
+      else if (id === prevNum) img.classList.add('previous');
+    });
+  };
+
+  ecoStages.forEach(stage => {
+    const num = parseInt(stage.getAttribute('data-eco'));
+    stage.addEventListener('mouseenter', () => activateEco(num));
+    stage.addEventListener('click',      () => activateEco(num));
+  });
+
+  // Initialize state 1
+  activateEco(1);
+})();
+
+

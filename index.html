@@ -257,69 +257,79 @@
   </section>
 
   <!-- =====================================================
-       SECTION 4: ONE SYSTEM. FOUR WAYS TO MAKE BETTER DECISIONS.
+       SECTION 4: THE COLOURITY ECOSYSTEM
        ===================================================== -->
   <section class="capabilities-section" id="capabilities">
     <div class="section-header reveal">
       <div class="section-tag">The Colourity Ecosystem</div>
-      <h2>One System. Four Ways to Make Better Decisions.</h2>
-      <p>Colourity connects your colours, your wardrobe, your outfits and your shopping decisions into one personal styling system.</p>
+      <h2>Your Colours. Your Wardrobe. Your Decisions.</h2>
+      <p>Colourity connects the colours that suit you, the clothes you own, the outfits you create and the pieces you consider buying.</p>
     </div>
 
-    <!-- Connected flow visual -->
-    <div class="ecosystem-flow reveal">
-      <div class="ecosystem-node">
-        <div class="ecosystem-node-icon">🎨</div>
-        <div class="ecosystem-node-label">YOUR COLOURS</div>
-        <div class="ecosystem-node-desc">Know which colours work for you.</div>
-        <a href="color-analysis/" class="ecosystem-node-link">Personal Colour Analysis &rarr;</a>
-      </div>
-      <div class="ecosystem-arrow-v">↓</div>
-      <div class="ecosystem-node">
-        <div class="ecosystem-node-icon">👗</div>
-        <div class="ecosystem-node-label">YOUR WARDROBE</div>
-        <div class="ecosystem-node-desc">Know what you already own.</div>
-        <a href="digital-wardrobe/" class="ecosystem-node-link">Digital Wardrobe &rarr;</a>
-      </div>
-      <div class="ecosystem-arrow-v">↓</div>
-      <div class="ecosystem-node">
-        <div class="ecosystem-node-icon">✨</div>
-        <div class="ecosystem-node-label">YOUR OUTFIT</div>
-        <div class="ecosystem-node-desc">Know what to wear.</div>
-        <a href="outfit-planner/" class="ecosystem-node-link">AI Outfit Planner &rarr;</a>
-      </div>
-      <div class="ecosystem-arrow-v">↓</div>
-      <div class="ecosystem-node ecosystem-node--accent">
-        <div class="ecosystem-node-icon">🛍️</div>
-        <div class="ecosystem-node-label">YOUR PURCHASE</div>
-        <div class="ecosystem-node-desc">Know whether something new fits your wardrobe.</div>
-        <a href="scan-before-you-buy/" class="ecosystem-node-link">Scan Before You Buy &rarr;</a>
-      </div>
-    </div>
+    <!-- Single interactive ecosystem — stages on left, visual on right -->
+    <div class="eco-container reveal">
 
-    <!-- Four capability cards — compact, connection-focused -->
-    <div class="ecosystem-cards reveal">
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-step">01</div>
-        <h3><a href="color-analysis/">Personal Colour Analysis</a></h3>
-        <p>Know which colours work for you — mapped to your unique skin tone and undertone.</p>
-      </div>
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-step">02</div>
-        <h3><a href="digital-wardrobe/">Digital Wardrobe</a></h3>
-        <p>Know what you already own — every garment catalogued by colour, category and formality.</p>
-      </div>
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-step">03</div>
-        <h3><a href="outfit-planner/">AI Outfit Planner</a></h3>
-        <p>Know what to wear — intelligent outfit combinations built from your colour palette and wardrobe.</p>
-      </div>
-      <div class="ecosystem-card ecosystem-card--accent">
-        <div class="ecosystem-card-step">04</div>
-        <h3><a href="scan-before-you-buy/">Scan Before You Buy</a></h3>
-        <p>Know whether something new fits your wardrobe — before you spend a single rupee.</p>
-      </div>
-    </div>
+      <!-- Stage navigation -->
+      <div class="eco-stages">
+
+        <div class="eco-stage active" data-eco="1">
+          <div class="eco-stage-connector"></div>
+          <div class="eco-stage-inner">
+            <div class="eco-stage-num">01</div>
+            <div class="eco-stage-body">
+              <div class="eco-stage-label">YOUR COLOURS</div>
+              <div class="eco-stage-desc">Know which colours work for you.</div>
+              <a href="color-analysis/" class="eco-stage-link">Personal Colour Analysis &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="eco-stage" data-eco="2">
+          <div class="eco-stage-connector"></div>
+          <div class="eco-stage-inner">
+            <div class="eco-stage-num">02</div>
+            <div class="eco-stage-body">
+              <div class="eco-stage-label">YOUR WARDROBE</div>
+              <div class="eco-stage-desc">Know what you already own.</div>
+              <a href="digital-wardrobe/" class="eco-stage-link">Digital Wardrobe &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="eco-stage" data-eco="3">
+          <div class="eco-stage-connector"></div>
+          <div class="eco-stage-inner">
+            <div class="eco-stage-num">03</div>
+            <div class="eco-stage-body">
+              <div class="eco-stage-label">YOUR OUTFIT</div>
+              <div class="eco-stage-desc">Know what to wear.</div>
+              <a href="outfit-planner/" class="eco-stage-link">AI Outfit Planner &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="eco-stage" data-eco="4">
+          <div class="eco-stage-inner">
+            <div class="eco-stage-num">04</div>
+            <div class="eco-stage-body">
+              <div class="eco-stage-label">YOUR PURCHASE</div>
+              <div class="eco-stage-desc">Know whether something new fits.</div>
+              <a href="scan-before-you-buy/" class="eco-stage-link">Scan Before You Buy &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.eco-stages -->
+
+      <!-- Visual panel -->
+      <div class="eco-visual">
+        <img src="assets/pillar/color-analysis-style.webp"   alt="Personal colour analysis — colours that work for you"            class="eco-img active" id="eco-img-1" width="560" height="420" loading="lazy" />
+        <img src="assets/pillar/digital-wardrobe-real-life.webp" alt="Digital wardrobe — the clothes you already own"               class="eco-img"        id="eco-img-2" width="560" height="420" loading="lazy" />
+        <img src="assets/pillar/outfit-planner-combination.webp" alt="AI Outfit Planner — a complete coordinated outfit"            class="eco-img"        id="eco-img-3" width="560" height="420" loading="lazy" />
+        <img src="assets/pillar/scan-before-buy-shopping.webp"   alt="Scan Before You Buy — evaluate a new piece against your closet" class="eco-img"      id="eco-img-4" width="560" height="420" loading="lazy" />
+      </div><!-- /.eco-visual -->
+
+    </div><!-- /.eco-container -->
   </section>
 
   <!-- =====================================================
