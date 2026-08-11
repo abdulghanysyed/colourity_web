@@ -423,34 +423,6 @@ section {
   background-clip: text;
 }
 
-.feature-card--hero {
-  background: linear-gradient(135deg, rgba(124,58,237,0.04) 0%, rgba(59,130,246,0.03) 100%);
-  border-color: rgba(124,58,237,0.25);
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card--hero::before {
-  content: 'KEY FEATURE';
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-family: var(--font-display);
-}
-
-.feature-card em {
-  font-style: italic;
-  font-weight: 600;
-  color: var(--purple);
-}
-
 .stat {
   display: flex;
   flex-direction: column;
@@ -577,66 +549,6 @@ section {
   .hero-stage-img {
     transition: none !important;
   }
-}
-
-/* =====================================================
-   FEATURES
-   ===================================================== */
-.features {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.feature-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-  animation-delay: var(--delay);
-}
-
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(124,58,237,0.2);
-}
-
-.feature-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--icon-color) 12%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.feature-icon svg {
-  width: 26px;
-  height: 26px;
-  stroke: var(--icon-color);
-}
-
-.feature-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
 }
 
 /* =====================================================
@@ -1420,9 +1332,6 @@ section {
    RESPONSIVE
    ===================================================== */
 @media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .audience-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1485,10 +1394,6 @@ section {
     display: flex;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
   .audience-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1531,6 +1436,10 @@ section {
 
   section {
     padding: 72px 20px;
+  }
+
+  .problem-card {
+    padding: 40px 28px;
   }
 }
 
@@ -2040,14 +1949,18 @@ section {
 /* =====================================================
    HOMEPAGE 12-SECTION REDESIGN & PILLAR PAGES STYLES
    ===================================================== */
+.problem-section {
+  background: linear-gradient(160deg, #FAF7FF 0%, #F5F9FF 100%);
+}
+
 .problem-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 48px 40px;
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-xl);
+  padding: 64px 56px;
+  box-shadow: var(--shadow-lg);
   text-align: center;
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -2056,16 +1969,18 @@ section {
 .problem-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; height: 4px;
+  top: 0; left: 0; right: 0; height: 5px;
   background: var(--gradient);
 }
 
 .problem-quote {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
   color: var(--purple);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .pillar-feature-row {
