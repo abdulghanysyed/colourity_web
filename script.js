@@ -204,12 +204,14 @@ function initHeroStoryteller() {
   const stageDurations = [3500, 3500, 4500]; // 3.5s Colours, 3.5s Wardrobe, 4.5s Outfit
 
   const setHeroStage = (index) => {
+    const prevIndex = currentHeroStage;
     currentHeroStage = index;
     heroImages.forEach((img, i) => {
+      img.classList.remove('active', 'previous');
       if (i === index) {
         img.classList.add('active');
-      } else {
-        img.classList.remove('active');
+      } else if (i === prevIndex) {
+        img.classList.add('previous');
       }
     });
     heroChips.forEach((chip, i) => {
