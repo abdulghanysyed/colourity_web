@@ -1980,6 +1980,222 @@ section {
   }
 }
 
+/* =====================================================
+   HOMEPAGE 12-SECTION REDESIGN & PILLAR PAGES STYLES
+   ===================================================== */
+.problem-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: var(--gradient);
+}
+
+.problem-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+.pillar-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 80px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-feature-row.reverse {
+  direction: rtl;
+}
+
+.pillar-feature-row.reverse > * {
+  direction: ltr;
+}
+
+.pillar-feature-text h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.pillar-feature-text p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.pillar-feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--purple);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: gap 0.2s ease;
+}
+
+.pillar-feature-link:hover {
+  gap: 12px;
+}
+
+.pillar-feature-img-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.pillar-feature-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.concept-flow-box {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: white;
+  border-radius: var(--radius-xl);
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.concept-flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.concept-chip {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.concept-arrow {
+  color: var(--teal-light);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.synergy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.synergy-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.synergy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.synergy-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.showcase-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.showcase-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.showcase-card-body {
+  padding: 24px;
+}
+
+.showcase-card-body h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.showcase-card-body p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .pillar-feature-row {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+  .pillar-feature-row.reverse {
+    direction: ltr;
+  }
+  .concept-flow-steps {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
 
 
 
