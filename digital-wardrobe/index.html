@@ -19,6 +19,7 @@
   <meta property="og:image" content="https://colourity.com/assets/pillar/digital-wardrobe-hero.webp" />
   <meta property="og:site_name" content="Colourity" />
 
+  <!-- ===== SCHEMA.ORG: WebPage ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,10 +35,98 @@
   }
   </script>
 
+  <!-- ===== SCHEMA.ORG: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://colourity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Digital Wardrobe",
+        "item": "https://colourity.com/digital-wardrobe/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a digital wardrobe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A digital wardrobe is a digital representation of the clothes and accessories you already own — organised, viewable, and usable without physically searching through your closet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to manually add every item?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Colourity's Garment Scanning automatically identifies category, colour, pattern, and formality from a photograph, so you don't need to tag items by hand. You can also add items from a product photo where supported."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Colourity scan my clothes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Photograph a garment in the Colourity app, and Colourity AI automatically analyses it and adds it to your Wardrobe Library — no manual tagging required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information can Colourity identify from a garment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Colourity identifies category, colour, pattern, and formality from a photographed garment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add clothing using a product photo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Colourity supports adding garments from a product photo — for example, an image shared in from a shopping app — with the same automatic attribute extraction as a photographed garment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a garment isn't recognised correctly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The garment is still saved to your Wardrobe Library, where each item has its own detail view showing its photo and attributes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a digital wardrobe help with outfit planning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once your wardrobe is digitised, Colourity's Outfit Planner can use those garments to build outfit combinations for you — colour harmony, pattern compatibility, and formality computed from the attributes already extracted, rather than decided fresh each time."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.5" />
+  <link rel="stylesheet" href="../style.css?v=1.1.6" />
 </head>
 <body>
 
@@ -59,57 +148,254 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../color-analysis/" class="mobile-link">Color Analysis</a>
+      <a href="../digital-wardrobe/" class="mobile-link">Digital Wardrobe</a>
+      <a href="../outfit-planner/" class="mobile-link">Outfit Planner</a>
+      <a href="../scan-before-you-buy/" class="mobile-link">Scan Before Buy</a>
+      <a href="../blog/" class="mobile-link">Blog</a>
+      <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="mobile-link mobile-cta" target="_blank" rel="noopener">Get Colourity</a>
+    </div>
   </nav>
 
   <!-- ========== HERO HEADER ========== -->
   <header style="padding: 140px 24px 60px 24px; text-align: center; background: var(--gradient-soft);">
     <div style="max-width: 800px; margin: 0 auto;">
       <span class="section-tag">Colourity Feature Pillar</span>
-      <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px;">Digital Wardrobe Library</h1>
-      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 660px; margin: 0 auto 24px auto; line-height: 1.6;">Turn your physical closet into a searchable, organized digital wardrobe library in your pocket.</p>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px;">Digital Wardrobe</h1>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 24px auto; line-height: 1.6;">Turn the clothes you already own into an organised, searchable digital wardrobe that you can actually use.</p>
       <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-primary" target="_blank" rel="noopener">Get Colourity On Google Play</a>
     </div>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main style="max-width: 1000px; margin: 0 auto; padding: 60px 24px;">
-    <div style="text-align: center; margin-bottom: 60px;">
+
+    <div style="text-align: center; margin-bottom: 72px;">
       <img src="../assets/pillar/digital-wardrobe-hero.webp" alt="Organized digital wardrobe with luxury silk garments" style="max-width: 720px; width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" width="720" height="540" loading="eager" />
     </div>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Searchable Wardrobe Organization</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Photograph your kurtas, sarees, trousers, shirts, and footwear. Colourity automatically categorises each piece by category, colour, pattern, and formality—creating a structured digital closet you can search in seconds.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/digital-wardrobe-collection.webp" alt="Organized wardrobe collection showing separated garment items" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 2. WHAT IS A DIGITAL WARDROBE? ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">The Basics</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is a Digital Wardrobe?</h2>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 28px;">
+        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">A digital wardrobe is a digital representation of the clothes and accessories you already own — letting you organise, view, and use your wardrobe without physically searching through your closet.</p>
       </div>
-    </section>
-
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Unlocking Hidden Wardrobe Versatility</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Most people wear only 20% of their clothes repeatedly. Digitising your closet reveals unworn combinations and staple wardrobe items that easily pair with multiple tops and bottoms.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/digital-wardrobe-versatility.webp" alt="Versatile wardrobe staple shirt demonstrating multiple outfit combinations" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
-      </div>
-    </section>
-
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Real-Life Closet Organization</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Streamline your morning routine. Instead of pulling physical clothes off hangers to experiment, plan your outfits digitally from your couch or during travel.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/digital-wardrobe-real-life.webp" alt="Realistic modern closet styling scene" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
-      </div>
-    </section>
-
-    <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 60px;">
-      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">Related Masterclass Guides</h3>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0;">
-        <li><a href="../blog/capsule-wardrobe-indian-men/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Capsule Wardrobe for Indian Men &rarr;</a></li>
-        <li><a href="../blog/restyle-ethnic-suit-multiple-wedding-functions/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Restyle Ethnic Suits Across Wedding Functions &rarr;</a></li>
-        <li><a href="../blog/restyle-heavy-saree-5-ways/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Restyle a Heavy Silk Saree 5 Ways &rarr;</a></li>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Most people don't need more clothes — they need a better view of what they already have. A digital wardrobe exists to solve a few very ordinary, very common problems:</p>
+      <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 32px; padding: 0; margin: 0;">
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>Forgetting what you actually own</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>Clothes sitting unworn for months</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>Struggling to remember combinations</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>Buying duplicates you already have</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>General wardrobe overwhelm</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>Not knowing what's available while shopping</li>
       </ul>
     </section>
 
+    <!-- ===== 3. WHY DIGITISE YOUR CLOSET? ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">Why It Matters</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Why Digitise Your Closet?</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 720px;">A physical closet and a digital wardrobe give you two very different views of the same clothes.</p>
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="synergy-card" style="text-align: left;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Physical Closet</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">You see whatever happens to be at eye level, on top, or at the front of the rail — everything else is easy to forget.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left; border-color: rgba(124,58,237,0.35);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--purple); margin-bottom: 10px;">Digital Wardrobe</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">You see your entire wardrobe at once, as an organised collection — the same foundation you'll later use for outfit planning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. HOW GARMENT SCANNING WORKS ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">How It Works</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How Garment Scanning Works</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; max-width: 720px;">Digitising a garment takes three steps — the goal is less manual organising, not more.</p>
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="synergy-num">01</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Photograph</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Take a photograph of the garment in the Colourity app.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">02</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Automatically Analyse</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Colourity identifies category, colour, pattern, and formality — no manual tagging required.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">03</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Save to Your Wardrobe</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">The garment becomes part of your digital Wardrobe Library, ready whenever you need it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. ADD FROM ANYWHERE ===== -->
+    <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
+      <span class="section-tag">Beyond Your Closet</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Add From Anywhere</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; margin: 0 auto;">You don't necessarily need to photograph every garment yourself. Colourity also supports adding an item straight from a product photo — such as an image shared in from a shopping app — with the same automatic category, colour, pattern, and formality extraction as a photographed garment.</p>
+    </section>
+
+    <!-- ===== 6. WHAT YOUR DIGITAL WARDROBE CONTAINS ===== -->
+    <div class="pillar-feature-row">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Inside Your Library</span>
+        <h3>What Your Digital Wardrobe Contains</h3>
+        <p>Every scanned or added garment lives in your personal Wardrobe Library, viewable and manageable at any time. Each item gets its own detail view, showing its photo alongside the attributes Colourity identified — category, colour, pattern, and formality.</p>
+        <p>It's your closet, structured — not a photo dump, and not a generic catalogue.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/digital-wardrobe-collection.webp" alt="Organized wardrobe collection showing separated garment items by category" width="680" height="510" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 7. SEE WHAT YOU ALREADY OWN ===== -->
+    <div class="pillar-feature-row reverse">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Visibility</span>
+        <h3>See What You Already Own</h3>
+        <p>Most people wear a small fraction of their wardrobe on repeat, simply because the rest is out of sight. Once your closet is digitised, you can browse it as a whole — often noticing pieces you'd genuinely forgotten you owned.</p>
+        <p>"I forgot I owned this." "I didn't realise I had so many navy pieces." "I can finally see my wardrobe as a whole." This section is about that visibility — actually combining those pieces into outfits is what <a href="../outfit-planner/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Outfit Planner</a> is for.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/digital-wardrobe-versatility.webp" alt="Wardrobe garments laid out together, revealing pieces easy to forget when stored in a closet" width="680" height="510" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 8. REAL-LIFE USES ===== -->
+    <div class="pillar-feature-row" style="margin-bottom: 48px;">
+      <div class="pillar-feature-text">
+        <span class="section-tag">In Practice</span>
+        <h3>Real-Life Uses</h3>
+        <p>Streamline your morning routine. Instead of pulling physical clothes off hangers to experiment, browse your wardrobe digitally from your couch, during travel, or whenever it's useful.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/digital-wardrobe-real-life.webp" alt="Realistic modern closet styling scene" width="680" height="510" loading="lazy" />
+      </div>
+    </div>
+    <div class="synergy-grid" style="margin-bottom: 80px; margin-top: 0;">
+      <div class="synergy-card" style="text-align: left;">
+        <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Before Shopping</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Check what you already own before adding to it.</p>
+      </div>
+      <div class="synergy-card" style="text-align: left;">
+        <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Before Travel</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">See what clothing you have available before you pack.</p>
+      </div>
+      <div class="synergy-card" style="text-align: left;">
+        <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Before an Occasion</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Understand which relevant pieces you already own.</p>
+      </div>
+      <div class="synergy-card" style="text-align: left;">
+        <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">When It Feels Overwhelming</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Browse your wardrobe digitally instead of searching physically.</p>
+      </div>
+    </div>
+
+    <!-- ===== 10. FAQ ===== -->
+    <section class="faq" style="border-radius: var(--radius-xl); margin: 0 -24px 80px -24px; padding: 72px 24px;">
+      <div class="faq-bg"></div>
+      <div class="section-header">
+        <span class="section-tag">Common Questions</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 10px 0 0 0;">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is a digital wardrobe?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>A digital wardrobe is a digital representation of the clothes and accessories you already own — letting you organise, view, and use your wardrobe without physically searching through your closet.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I have to manually add every item?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. Colourity's Garment Scanning automatically identifies category, colour, pattern, and formality from a photograph, so you don't need to tag items by hand. You can also add items from a product photo where supported.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does Colourity scan my clothes?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Photograph a garment in the Colourity app, and Colourity AI automatically analyses it and adds it to your Wardrobe Library — no manual tagging required.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What information can Colourity identify from a garment?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Colourity identifies category, colour, pattern, and formality from a photographed garment.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I add clothing using a product photo?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Colourity supports adding garments from a product photo — for example, an image shared in from a shopping app — with the same automatic attribute extraction as a photographed garment.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What happens if a garment isn't recognised correctly?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The garment is still saved to your Wardrobe Library, where each item has its own detail view showing its photo and attributes.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does a digital wardrobe help with outfit planning?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Once your wardrobe is digitised, Colourity's Outfit Planner can use those garments to build outfit combinations for you — colour harmony, pattern compatibility, and formality computed from the attributes already extracted, rather than decided fresh each time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. YOUR WARDROBE IS THE FOUNDATION → OUTFIT PLANNER ===== -->
+    <div style="text-align: center; background: var(--gradient-soft); padding: 56px 24px; border-radius: var(--radius-xl); margin-bottom: 48px;">
+      <h2 style="font-size: 1.9rem; font-weight: 800; margin-bottom: 14px;">Your Wardrobe Is the Foundation</h2>
+      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">A digital wardrobe becomes more useful once it can be used to plan outfits. Now that you know what you own, the next question is: what should you wear?</p>
+      <a href="../outfit-planner/" class="pillar-feature-link" style="justify-content: center; font-size: 1.05rem; margin-bottom: 20px;">
+        See how Outfit Planner works
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+      <div style="display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 12px;">
+        <a href="../color-analysis/" style="color: var(--text-secondary); font-size: 0.92rem; text-decoration: none; border-bottom: 1px solid var(--border);">Already know your colours? &rarr; Color Analysis</a>
+        <a href="../scan-before-you-buy/" style="color: var(--text-secondary); font-size: 0.92rem; text-decoration: none; border-bottom: 1px solid var(--border);">Thinking about buying something new? &rarr; Scan Before You Buy</a>
+      </div>
+    </div>
+
+    <!-- ===== 11. RELATED MASTERCLASS GUIDES ===== -->
+    <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 60px;">
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">Related Masterclass Guides</h3>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0;">
+        <li><a href="../blog/capsule-wardrobe-by-colour-season/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Capsule Wardrobe by Colour Season &rarr;</a></li>
+        <li><a href="../blog/restyle-ethnic-suit-multiple-wedding-functions/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Restyle Ethnic Suits Across Wedding Functions &rarr;</a></li>
+        <li><a href="../blog/how-to-organize-indian-wardrobe-by-color-palette/" style="color: var(--purple); font-weight: 600; text-decoration: none;">How to Organise an Indian Wardrobe by Colour Palette &rarr;</a></li>
+      </ul>
+    </section>
+
+    <!-- ===== 12. CTA ===== -->
     <div style="text-align: center; background: var(--gradient-soft); padding: 48px 24px; border-radius: var(--radius-xl);">
       <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Start Digitising Your Closet Today</h2>
       <p style="color: var(--text-secondary); margin-bottom: 24px;">Download Colourity on Android to get started for free.</p>
@@ -153,5 +439,6 @@
     </div>
   </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>

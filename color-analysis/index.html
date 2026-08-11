@@ -19,6 +19,7 @@
   <meta property="og:image" content="https://colourity.com/assets/pillar/color-analysis-hero.webp" />
   <meta property="og:site_name" content="Colourity" />
 
+  <!-- ===== SCHEMA.ORG: WebPage ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,10 +35,90 @@
   }
   </script>
 
+  <!-- ===== SCHEMA.ORG: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://colourity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Color Analysis",
+        "item": "https://colourity.com/color-analysis/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is personal colour analysis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Personal colour analysis is the process of identifying which clothing colours are most flattering for your individual skin undertone, depth, and contrast — so the colours you wear work with your complexion rather than against it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between warm, cool, and neutral undertones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Warm undertones lean golden or olive and are typically complemented by earthy, golden-based colours. Cool undertones lean pink or rosy and are typically complemented by blue-based colours. Neutral undertones sit between the two and can usually wear a broader mix of both. Colourity identifies which of these best describes you during your Colour Scan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is seasonal colour analysis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seasonal colour analysis groups undertone, depth, and contrast into a small set of named palettes, often described using season names like 'autumn' or 'winter'. Colourity determines your seasonal palette but describes it to you in plain, human language rather than technical season names."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I wear colours outside my palette?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your colour palette shows you which colours are most likely to harmonise with your natural colouring — it isn't a restriction on what you're allowed to wear. Many people mix palette colours with personal favourites, especially for accessories or trend pieces."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I retake my colour analysis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can retake your Colour Scan in the Colourity app at any time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI colour analysis the same as a professional colour consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI colour analysis, like Colourity's Colour Scan, uses your phone to instantly analyse your skin undertone and generate a personalised palette without booking an appointment. It's built to give accessible, structured guidance rather than to replace a bespoke in-person consultation for those who want one."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.5" />
+  <link rel="stylesheet" href="../style.css?v=1.1.6" />
 </head>
 <body>
 
@@ -59,6 +140,14 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../color-analysis/" class="mobile-link">Color Analysis</a>
+      <a href="../digital-wardrobe/" class="mobile-link">Digital Wardrobe</a>
+      <a href="../outfit-planner/" class="mobile-link">Outfit Planner</a>
+      <a href="../scan-before-you-buy/" class="mobile-link">Scan Before Buy</a>
+      <a href="../blog/" class="mobile-link">Blog</a>
+      <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="mobile-link mobile-cta" target="_blank" rel="noopener">Get Colourity</a>
+    </div>
   </nav>
 
   <!-- ========== HERO HEADER ========== -->
@@ -66,41 +155,257 @@
     <div style="max-width: 800px; margin: 0 auto;">
       <span class="section-tag">Colourity Feature Pillar</span>
       <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px;">AI Personal Colour Analysis</h1>
-      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 660px; margin: 0 auto 24px auto; line-height: 1.6;">Discover the exact clothing colours that illuminate your skin tone and undertone—backed by optical colour science, not guesswork.</p>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 24px auto; line-height: 1.6;">Personal colour analysis is the process of matching your clothing colours to your skin's natural undertone, depth, and contrast — so every outfit works with your complexion instead of against it. Colourity does this from a single scan.</p>
       <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-primary" target="_blank" rel="noopener">Get Colourity On Google Play</a>
     </div>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main style="max-width: 1000px; margin: 0 auto; padding: 60px 24px;">
-    <div style="text-align: center; margin-bottom: 60px;">
+
+    <div style="text-align: center; margin-bottom: 72px;">
       <img src="../assets/pillar/color-analysis-hero.webp" alt="Coordinated clothing colours arranged as a personal fashion palette" style="max-width: 720px; width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" width="720" height="540" loading="eager" />
     </div>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Understand Your Undertone &amp; Seasonal Palette</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Colourity AI evaluates your skin depth and undertone (warm golden/olive, cool rosy/pink, or neutral). It maps your complexion to a seasonal palette in human terms—such as warm mustard, peacock blue, and mehendi green—so you know exactly which shades bring out your natural radiance.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/color-analysis-palette.webp" alt="Fashion stylist colour analysis swatches board with luxury fabric drapes" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 2. WHAT IS PERSONAL COLOUR ANALYSIS? ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">The Basics</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is Personal Colour Analysis?</h2>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 28px;">
+        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">Personal colour analysis is a method of identifying which clothing and accessory colours are most flattering for an individual, based on the natural characteristics of their skin, hair, and eyes — not personal taste or trends.</p>
+      </div>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">If you've never come across it before, the idea is simple: everyone's colouring has a few fixed characteristics, and certain clothing colours work with those characteristics better than others. Colour analysis looks at four things:</p>
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="synergy-card" style="text-align: left; padding: 24px;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Undertone</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">The subtle warm, cool, or neutral cast beneath your skin's surface.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left; padding: 24px;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Depth</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">How light or deep your overall colouring is.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left; padding: 24px;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Contrast</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">How different your hair, skin, and eye colours are from one another.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left; padding: 24px;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Seasonal Palette</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">A named set of colours built from your undertone, depth, and contrast together.</p>
+        </div>
       </div>
     </section>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Translating Your Palette into Real Garments</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Wearing colours that clash with your natural undertone can make your complexion look tired or washed out. Personal colour analysis establishes your biological baseline, ensuring every kurta, shirt, saree, and jacket in your closet works in harmony with your face.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/color-analysis-outfit.webp" alt="Styled ethnic garment translated from personal colour palette" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 3. HOW COLOUR SCAN WORKS ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">How It Works</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How Colour Scan Works</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; max-width: 720px;">Colourity's Colour Scan turns this into a simple, three-step process — no appointment, no guesswork.</p>
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="synergy-num">01</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Scan</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Take a face scan in natural light, right from the Colourity app.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">02</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Analyse</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Colourity AI reads your skin's undertone and depth, and describes it in plain language — like "warm and deep" or "cool and vivid" — never confusing technical season jargon.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">03</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Discover Your Palette</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">You get a personalised set of colours in real fashion vocabulary — mustard, peacock blue, mehendi green — built around your own colouring.</p>
+        </div>
       </div>
     </section>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Elevating Everyday Styling Confidence</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Knowing your personal colours takes the guesswork out of daily dressing. Whether choosing an outfit for work or selecting a festive look for a family wedding, your colour profile ensures you feel confident in every room.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/color-analysis-style.webp" alt="Modern person wearing a perfectly colour coordinated outfit" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 4. UNDERSTAND YOUR UNDERTONE ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">The Foundation</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Understand Your Undertone</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 720px;">Undertone is the subtle colour beneath your skin's surface. It's different from how light or dark your skin is, and it's one of the biggest factors in whether a colour looks flattering or flat against your face.</p>
+      <div class="synergy-grid">
+        <div class="synergy-card" style="text-align: left;">
+          <div class="synergy-num" style="font-size: 1.5rem;">WARM</div>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0 0 12px 0;">Leans golden, peachy, or olive. Golden-based colours like mustard, rust, olive green, and warm coral tend to bring warmth and glow to warm undertones.</p>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;"><strong>Try:</strong> mustard, rust, olive</p>
+        </div>
+        <div class="synergy-card" style="text-align: left;">
+          <div class="synergy-num" style="font-size: 1.5rem;">COOL</div>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0 0 12px 0;">Leans pink, red, or bluish. Blue-based colours like true blue, berry, emerald, and cool grey tend to look crisp and clean against cool undertones.</p>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;"><strong>Try:</strong> berry, emerald, cool grey</p>
+        </div>
+        <div class="synergy-card" style="text-align: left;">
+          <div class="synergy-num" style="font-size: 1.5rem;">NEUTRAL</div>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0 0 12px 0;">Sits between warm and cool, with hints of both. Neutral undertones tend to have the most flexibility, working with a wider mix of golden- and blue-based colours.</p>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;"><strong>Try:</strong> most balanced tones</p>
+        </div>
       </div>
     </section>
 
+    <!-- ===== 5. UNDERSTAND CONTRAST & COLOUR DEPTH ===== -->
+    <div class="pillar-feature-row">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Going Deeper</span>
+        <h3>Understand Contrast &amp; Colour Depth</h3>
+        <p><strong>Depth</strong> describes how light or deep your overall colouring is, from fair to deep. <strong>Contrast</strong> describes how different your hair, skin, and eye colours are from each other — from low contrast (similar tones throughout) to high contrast (a strong difference, like dark hair with fair skin).</p>
+        <p>As a general starting point, higher-contrast colouring tends to suit clearer, more saturated colour combinations, while lower-contrast colouring tends to suit softer, more blended tones — though your exact Colourity palette accounts for your specific mix of undertone, depth, and contrast together, not just one factor alone.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-palette.webp" alt="Infographic explaining hair-to-skin contrast levels, showing high contrast (dark hair, fair skin) and low contrast (light hair, light skin) examples with best-in and avoid colour guidance" width="680" height="453" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 6. FROM PALETTE TO REAL CLOTHES ===== -->
+    <div class="pillar-feature-row reverse">
+      <div class="pillar-feature-text">
+        <span class="section-tag">In Practice</span>
+        <h3>From Palette to Real Clothes</h3>
+        <p>Knowing your palette only matters if it translates into what's actually in your wardrobe. A warm, deep palette might translate into mustard, rust, or olive green; a cool, vivid palette might lean toward berry, peacock blue, or emerald; a lighter neutral palette might favour cream, dusty rose, or soft grey.</p>
+        <p>These are examples of how a palette can translate into real, wearable pieces — not a claim that these exact colours suit everyone. The value of colour analysis is understanding which specific colours harmonise with <em>your</em> individual colouring, then applying that logic across the kurtas, sarees, shirts, and jackets already in your closet.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-outfit.webp" alt="Personal colour palette translated into five real styled outfits, showing neutrals, colours and accent swatches alongside the matching garments" width="680" height="453" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 7. YOUR COLOUR PASSPORT ===== -->
+    <div class="pillar-feature-row">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Your Result</span>
+        <h3>Your Colour Passport</h3>
+        <p>Once your Colour Scan is complete, Colourity builds your <strong>Colour Passport</strong> — a shareable summary card of your colour profile and best palette, described in plain language rather than technical season names.</p>
+        <p>It's built to be the thing you actually refer back to: a quick, saved reference for when you're shopping, packing, or simply deciding what to wear — instead of trying to remember your results from memory.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; max-width: 360px; margin: 0 auto;">
+          <div style="background: var(--gradient); padding: 22px 24px;">
+            <p style="color: rgba(255,255,255,0.85); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.7rem; margin: 0 0 6px 0;">Colourity</p>
+            <p style="color: white; font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; margin: 0;">Colour Passport</p>
+          </div>
+          <div style="padding: 26px 24px;">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin: 0 0 6px 0;">Your Season</p>
+            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--text-primary); margin: 0 0 22px 0;">Warm &amp; Deep</p>
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin: 0 0 12px 0;">Your Palette</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <span style="width: 36px; height: 36px; border-radius: 50%; background: #D9A441; display: inline-block; box-shadow: var(--shadow-sm);" title="Mustard"></span>
+              <span style="width: 36px; height: 36px; border-radius: 50%; background: #1B6B93; display: inline-block; box-shadow: var(--shadow-sm);" title="Peacock Blue"></span>
+              <span style="width: 36px; height: 36px; border-radius: 50%; background: #6B7A3A; display: inline-block; box-shadow: var(--shadow-sm);" title="Mehendi Green"></span>
+              <span style="width: 36px; height: 36px; border-radius: 50%; background: #7A2E4A; display: inline-block; box-shadow: var(--shadow-sm);" title="Berry"></span>
+              <span style="width: 36px; height: 36px; border-radius: 50%; background: #F0E6D2; border: 1px solid var(--border); display: inline-block; box-shadow: var(--shadow-sm);" title="Cream"></span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 14px;">Illustrative example — your own Colour Passport reflects your personal scan results.</p>
+      </div>
+    </div>
+
+    <!-- ===== 8. WHY SOME COLOURS WORK BETTER THAN OTHERS ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">Why It Matters</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Why Some Colours Work Better Than Others</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 720px;">The same colour can look completely different depending on who's wearing it — because it's reacting with your individual undertone, depth, and contrast, not existing in isolation.</p>
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="synergy-card" style="text-align: left; border-color: rgba(20,184,166,0.35);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--teal); margin-bottom: 10px;">When Colours Harmonise</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Colours drawn from your palette tend to make your complexion look brighter, more even, and more balanced — your face becomes the focal point instead of the outfit.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">When Colours Clash</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Colours pulling against your natural undertone can make your complexion look duller, more tired, or visually disconnected from the outfit — even when the item itself is well-made.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. EVERYDAY STYLING CONFIDENCE ===== -->
+    <div class="pillar-feature-row reverse" style="margin-bottom: 60px;">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Day To Day</span>
+        <h3>Everyday Styling Confidence</h3>
+        <p>Once you know your colours, everyday decisions get faster. Instead of second-guessing an outfit in the mirror, you're choosing from a set of colours you already know work for you — at work, on a casual weekend, or getting ready for a family wedding function.</p>
+        <p>The goal isn't a stricter dress code. It's fewer moments of doubt.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-style.webp" alt="Four everyday styling scenarios using the same colour palette: at work, on the go, date night, and weekend vibes" width="680" height="188" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 10. FAQ ===== -->
+    <section class="faq" style="border-radius: var(--radius-xl); margin: 0 -24px 80px -24px; padding: 72px 24px;">
+      <div class="faq-bg"></div>
+      <div class="section-header">
+        <span class="section-tag">Common Questions</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 10px 0 0 0;">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is personal colour analysis?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Personal colour analysis is the process of identifying which clothing colours are most flattering for your individual skin undertone, depth, and contrast — so the colours you wear work with your complexion rather than against it.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What's the difference between warm, cool, and neutral undertones?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Warm undertones lean golden or olive and are typically complemented by earthy, golden-based colours. Cool undertones lean pink or rosy and are typically complemented by blue-based colours. Neutral undertones sit between the two and can usually wear a broader mix of both. Colourity identifies which of these best describes you during your Colour Scan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is seasonal colour analysis?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Seasonal colour analysis groups undertone, depth, and contrast into a small set of named palettes, often described using season names like "autumn" or "winter". Colourity determines your seasonal palette but describes it to you in plain, human language rather than technical season names.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I wear colours outside my palette?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Your colour palette shows you which colours are most likely to harmonise with your natural colouring — it isn't a restriction on what you're allowed to wear. Many people mix palette colours with personal favourites, especially for accessories or trend pieces.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I retake my colour analysis?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you can retake your Colour Scan in the Colourity app at any time.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is AI colour analysis the same as a professional colour consultation?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>AI colour analysis, like Colourity's Colour Scan, uses your phone to instantly analyse your skin undertone and generate a personalised palette without booking an appointment. It's built to give accessible, structured guidance rather than to replace a bespoke in-person consultation for those who want one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 11. NEXT STEP ===== -->
+    <div style="text-align: center; background: var(--gradient-soft); padding: 56px 24px; border-radius: var(--radius-xl); margin-bottom: 48px;">
+      <h2 style="font-size: 1.9rem; font-weight: 800; margin-bottom: 14px;">Know Your Colours. Now Put Them to Work.</h2>
+      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">Once you know which colours suit you, the next step is understanding what's already sitting in your closet. Colourity's Digital Wardrobe turns your existing clothes into a searchable, colour-tagged closet — so you can see exactly which pieces already match your palette.</p>
+      <a href="../digital-wardrobe/" class="pillar-feature-link" style="justify-content: center; font-size: 1.05rem;">
+        See how Digital Wardrobe works
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+
+    <!-- ===== 12. RELATED MASTERCLASS GUIDES ===== -->
     <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 60px;">
       <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">Related Masterclass Guides</h3>
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0;">
@@ -110,9 +415,10 @@
       </ul>
     </section>
 
+    <!-- ===== 13. CTA ===== -->
     <div style="text-align: center; background: var(--gradient-soft); padding: 48px 24px; border-radius: var(--radius-xl);">
-      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Ready to Transform Your Style Routine?</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 24px;">Download Colourity on Android to get started for free.</p>
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">You Know Your Colours. Ready to Wear Them?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 24px;">Download Colourity on Android to get your personalised Colour Passport for free.</p>
       <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-glow-large" target="_blank" rel="noopener" style="padding: 16px 36px; font-weight: 700; border-radius: 50px; text-decoration: none;">Get Colourity App</a>
     </div>
   </main>
@@ -153,5 +459,6 @@
     </div>
   </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@
   <meta property="og:image" content="https://colourity.com/assets/pillar/scan-before-buy-hero.webp" />
   <meta property="og:site_name" content="Colourity" />
 
+  <!-- ===== SCHEMA.ORG: WebPage ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,10 +35,98 @@
   }
   </script>
 
+  <!-- ===== SCHEMA.ORG: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://colourity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scan Before You Buy",
+        "item": "https://colourity.com/scan-before-you-buy/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Scan Before You Buy do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scan Before You Buy lets you evaluate a potential clothing purchase against your existing wardrobe and colour profile before you decide whether to buy it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I check an item before buying it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can scan an item, or share in a product photo, before purchasing, and Colourity checks it against your wardrobe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it compare the new item with my existing wardrobe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. It checks whether the new item fits your colour profile and pairs with pieces you already own."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does it help me avoid buying clothes I won't use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By checking colour fit and wardrobe compatibility before you buy, Scan Before You Buy is designed to help you make more considered purchase decisions — not to guarantee you'll never make an unused purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if nothing in my wardrobe works with the item?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If a look is missing a piece, Shop the Gap can generate a live search link to a real retailer for the type and colour of item needed, rather than simply telling you not to buy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which retailers can I use through Colourity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Colourity generates search links to Myntra, Ajio, Amazon, and Flipkart. Colourity is not a marketplace — it points you to a search on these retailers rather than selling anything itself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see my previous shopping checks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Shopping History keeps a record of your past Scan Before You Buy checks."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.5" />
+  <link rel="stylesheet" href="../style.css?v=1.1.6" />
 </head>
 <body>
 
@@ -59,6 +148,14 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../color-analysis/" class="mobile-link">Color Analysis</a>
+      <a href="../digital-wardrobe/" class="mobile-link">Digital Wardrobe</a>
+      <a href="../outfit-planner/" class="mobile-link">Outfit Planner</a>
+      <a href="../scan-before-you-buy/" class="mobile-link">Scan Before Buy</a>
+      <a href="../blog/" class="mobile-link">Blog</a>
+      <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="mobile-link mobile-cta" target="_blank" rel="noopener">Get Colourity</a>
+    </div>
   </nav>
 
   <!-- ========== HERO HEADER ========== -->
@@ -66,50 +163,288 @@
     <div style="max-width: 800px; margin: 0 auto;">
       <span class="section-tag">Colourity Feature Pillar</span>
       <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px;">Scan Before You Buy</h1>
-      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 660px; margin: 0 auto 24px auto; line-height: 1.6;">Evaluate new clothes against your personal colour profile and existing wardrobe before spending money.</p>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 24px auto; line-height: 1.6;">Check whether something new works with the clothes you already own before adding it to your wardrobe.</p>
       <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-primary" target="_blank" rel="noopener">Get Colourity On Google Play</a>
     </div>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main style="max-width: 1000px; margin: 0 auto; padding: 60px 24px;">
-    <div style="text-align: center; margin-bottom: 60px;">
+
+    <div style="text-align: center; margin-bottom: 72px;">
       <img src="../assets/pillar/scan-before-buy-hero.webp" alt="Smart clothes shopping evaluation widget concept" style="max-width: 720px; width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" width="720" height="540" loading="eager" />
     </div>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Garment Evaluation Against Existing Closet</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Before buying a new shirt or saree online or in-store, evaluate it with Colourity. The app checks if the new item fits your colour profile and pairs with at least 3 pieces you already own—preventing impulse purchases that sit unworn.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/scan-before-buy-comparison.webp" alt="Garment evaluation comparison showing new item paired with existing wardrobe" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 2. A GREAT PIECE ISN'T ALWAYS A GREAT PURCHASE ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">The Problem</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">A Great Piece Isn't Always a Great Purchase</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 720px;">You see a shirt, jacket, trouser, or pair of shoes that looks great on its own. You buy it. Then, a few weeks later:</p>
+      <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 32px; padding: 0; margin: 0 0 24px 0;">
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>It doesn't work with your existing clothes</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>You have very few ways to wear it</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>You already own something similar</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>The colour doesn't integrate easily</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>It only works for one occasion</li>
+        <li style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; padding-left: 20px; position: relative;"><span style="position:absolute; left:0; color: var(--purple); font-weight:700;">—</span>It becomes another isolated piece</li>
+      </ul>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; box-shadow: var(--shadow-sm);">
+        <p style="font-size: 1rem; color: var(--text-primary); font-weight: 500; line-height: 1.6; margin: 0;">A good purchase isn't only about liking the item. It's also about how well the item fits into the wardrobe you already have.</p>
       </div>
     </section>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Versatility Scoring &amp; Retailer Gap Links</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">If a look is missing a specific piece—such as dark denim or formal shoes—Colourity's 'Shop the Gap' feature generates live keyword search links to major retailers like Myntra, Ajio, Amazon, and Flipkart so you only buy what fills a genuine wardrobe gap.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/scan-before-buy-versatility.webp" alt="Wardrobe gap versatility analysis visual" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 3. WHAT IS SCAN BEFORE YOU BUY? ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">The Basics</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is "Scan Before You Buy"?</h2>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm);">
+        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">Scan Before You Buy helps you evaluate a potential clothing purchase against your existing wardrobe before you decide whether to buy it.</p>
       </div>
     </section>
 
-    <section style="margin-bottom: 48px;">
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Smarter Purchase Decisions Every Time</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">Shopping with intention saves money and reduces closet clutter. By verifying color harmony and wardrobe integration before buying, every new addition strengthens your overall styling system.</p>
-      <div style="text-align: center; margin: 32px 0;">
-        <img src="../assets/pillar/scan-before-buy-shopping.webp" alt="Thoughtful fashion shopping purchase selection" style="max-width: 680px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="680" height="510" loading="lazy" />
+    <!-- ===== 4. HOW IT WORKS ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">How It Works</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How It Works</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; max-width: 720px;">Four steps stand between "I like this" and "I should buy this."</p>
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="synergy-num">01</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Choose the Item</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Select or scan the clothing item you're considering.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">02</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Check It Against Your Wardrobe</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Colourity evaluates the item using what it knows about your existing wardrobe.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">03</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Understand the Fit</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">See whether the new item can work with your existing pieces, and how versatile it may be.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="synergy-num">04</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Make Your Decision</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Use the information to make a more informed purchase decision.</p>
+        </div>
       </div>
     </section>
 
+    <!-- ===== 5. YOUR WARDROBE IS THE CONTEXT ===== -->
+    <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
+      <span class="section-tag">Before You Start</span>
+      <h2 style="font-size: 1.7rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">Your Wardrobe Is the Context</h2>
+      <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; margin: 0 auto 28px auto;">Scan Before You Buy becomes more useful once Colourity knows what you already own.</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 28px;">
+        <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 10px 20px;">Digital Wardrobe</span>
+        <span style="color: var(--text-muted);">+</span>
+        <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 10px 20px;">New Item</span>
+        <span style="color: var(--text-muted);">&darr;</span>
+        <span style="background: var(--gradient); color: white; border-radius: 50px; padding: 10px 20px;">Scan Before You Buy</span>
+      </div>
+      <p style="font-size: 0.95rem; color: var(--text-secondary);">Haven't built your wardrobe yet? <a href="../digital-wardrobe/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Start with Digital Wardrobe &rarr;</a></p>
+    </section>
+
+    <!-- ===== 6. EVALUATE A GARMENT AGAINST YOUR EXISTING CLOSET ===== -->
+    <div class="pillar-feature-row">
+      <div class="pillar-feature-text">
+        <span class="section-tag">The Check</span>
+        <h3>Evaluate a Garment Against Your Existing Closet</h3>
+        <p>Before buying a new shirt or saree online or in-store, evaluate it with Colourity. The app checks whether the new item fits your colour profile and how it relates to pieces you already own — potential combinations, colour relationships, and whether it overlaps with something you already have.</p>
+        <p>The question this answers isn't "does this look good?" It's "can I actually use this?"</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-comparison.webp" alt="Garment evaluation comparison showing new item paired with existing wardrobe" width="680" height="510" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 7. HOW MANY OUTFITS CAN THIS NEW PIECE UNLOCK? ===== -->
+    <div class="pillar-feature-row reverse">
+      <div class="pillar-feature-text">
+        <span class="section-tag">Versatility</span>
+        <h3>How Many Outfits Can This New Piece Actually Unlock?</h3>
+        <p>A garment that pairs with several pieces you already own gives you more useful combinations than one that only works with a single outfit. Colourity checks whether a potential purchase pairs with at least three pieces already in your wardrobe — a practical, concrete versatility check rather than a vague "more outfits is better" score.</p>
+      </div>
+      <div class="pillar-feature-img-wrapper">
+        <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-versatility.webp" alt="Wardrobe gap versatility analysis visual" width="680" height="510" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ===== 8. SHOP THE GAP ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">When It's a Yes</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Shop the Gap</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; max-width: 720px;">Sometimes the result isn't "don't buy this." Sometimes it identifies a genuinely useful gap in your wardrobe.</p>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 20px;">
+        <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">Example</p>
+        <p style="font-size: 1rem; color: var(--text-primary); line-height: 1.7; margin: 0;">You have navy trousers, white shirts, and brown shoes — but no versatile jacket to connect them. Shop the Gap identifies the missing piece type and colour, and generates a live search link to a real retailer for that item.</p>
+      </div>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px;">Where verified, these search links point to Myntra, Ajio, Amazon, and Flipkart. Colourity isn't a marketplace — it generates a fresh search for the type and colour of item needed, rather than selling anything itself.</p>
+    </section>
+
+    <!-- ===== 9. SHOP COMPLETE LOOK + SHOP SIMILAR ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">Other Ways to Shop</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Shop Complete Look + Shop Similar</h2>
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="synergy-card" style="text-align: left;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Shop Complete Look</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">From any outfit, jump to a retailer search for the pieces that complete that specific look.</p>
+        </div>
+        <div class="synergy-card" style="text-align: left;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Shop Similar</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Open a platform picker to search for alternatives similar to a specific garment, across all four marketplaces at once.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 10. SHOPPING HISTORY ===== -->
+    <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
+      <span class="section-tag">Ongoing, Not One-Off</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Keep Track of Your Shopping Decisions</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; margin: 0 auto;">Shopping History keeps a record of your past Scan Before You Buy checks — so evaluating a purchase becomes part of an ongoing shopping habit, not a one-time action you have to remember on your own.</p>
+    </section>
+
+    <!-- ===== 11. PRACTICAL SHOPPING EXAMPLE ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">In Practice</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 24px;">A Practical Example</h2>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div>
+          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">You Already Own</p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; display: flex; flex-direction: column; gap: 8px;">
+            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">Navy trousers</li>
+            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">White shirt</li>
+            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">Brown loafers</li>
+          </ul>
+          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">You're Considering</p>
+          <p style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500; margin: 0;">An olive jacket</p>
+        </div>
+        <div style="border-left: 1px solid var(--border); padding-left: 40px;">
+          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">The Better Question</p>
+          <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text-primary); margin: 0 0 20px 0; line-height: 1.5;">Not "do I like this jacket?" — but "how many useful combinations can I create with it?"</p>
+          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">Potential Result</p>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Olive jacket + navy trousers + white shirt + brown loafers &rarr; a potential complete look, built from one new piece and three you already own.</p>
+        </div>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">This is an illustrative example of the decision-making concept — not a claim that Colourity will necessarily recommend this exact combination for every wardrobe.</p>
+    </section>
+
+    <!-- ===== 12. MORE CONSIDERED PURCHASE DECISIONS ===== -->
+    <section style="margin-bottom: 80px;">
+      <div class="pillar-feature-row" style="margin-bottom: 0;">
+        <div class="pillar-feature-text">
+          <span class="section-tag">Why It's Worth Doing</span>
+          <h3>More Considered Purchase Decisions</h3>
+          <p>Checking how a new item fits your existing wardrobe can help you make more considered purchase decisions — seeing colour fit and versatility before you buy, rather than finding out after.</p>
+        </div>
+        <div class="pillar-feature-img-wrapper">
+          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-shopping.webp" alt="Thoughtful fashion shopping purchase selection" width="680" height="510" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 13. FAQ ===== -->
+    <section class="faq" style="border-radius: var(--radius-xl); margin: 0 -24px 80px -24px; padding: 72px 24px;">
+      <div class="faq-bg"></div>
+      <div class="section-header">
+        <span class="section-tag">Common Questions</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 10px 0 0 0;">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What does Scan Before You Buy do?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Scan Before You Buy helps you evaluate a potential clothing purchase against your existing wardrobe and colour profile before you decide whether to buy it.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I check an item before buying it?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. You can scan an item, or share in a product photo, before purchasing, and Colourity checks it against your wardrobe.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does it compare the new item with my existing wardrobe?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. It checks whether the new item fits your colour profile and pairs with pieces you already own.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does it help me avoid buying clothes I won't use?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>By checking colour fit and wardrobe compatibility before you buy, Scan Before You Buy is designed to help you make more considered purchase decisions — not to guarantee you'll never make an unused purchase.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What happens if nothing in my wardrobe works with the item?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>If a look is missing a piece, Shop the Gap can generate a live search link to a real retailer for the type and colour of item needed, rather than simply telling you not to buy.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Which retailers can I use through Colourity?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Colourity generates search links to Myntra, Ajio, Amazon, and Flipkart. Colourity is not a marketplace — it points you to a search on these retailers rather than selling anything itself.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I see my previous shopping checks?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Shopping History keeps a record of your past Scan Before You Buy checks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 14. COLOURITY'S COMPLETE DECISION JOURNEY ===== -->
+    <section style="margin-bottom: 60px; text-align: center;">
+      <span class="section-tag">The Full Picture</span>
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 28px;">Colourity's Complete Decision Journey</h2>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-family: var(--font-display); font-size: 0.9rem; font-weight: 700;">
+        <a href="../color-analysis/" style="color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px;">Know Your Colours</a>
+        <span style="color: var(--text-muted); font-weight: 400;">&rarr;</span>
+        <a href="../digital-wardrobe/" style="color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px;">Know Your Wardrobe</a>
+        <span style="color: var(--text-muted); font-weight: 400;">&rarr;</span>
+        <a href="../outfit-planner/" style="color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px;">Know What to Wear</a>
+        <span style="color: var(--text-muted); font-weight: 400;">&rarr;</span>
+        <span style="color: var(--purple);">Know What to Buy</span>
+      </div>
+    </section>
+
+    <!-- ===== 15. RELATED MASTERCLASS GUIDES ===== -->
     <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 60px;">
       <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">Related Masterclass Guides</h3>
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0;">
-        <li><a href="../blog/capsule-wardrobe-indian-men/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Building a Versatile Capsule Wardrobe &rarr;</a></li>
-        <li><a href="../blog/navratri-9-colours-style-guide/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Navratri 9 Colours Style Guide &rarr;</a></li>
-        <li><a href="../blog/top-5-colour-analysis-myths-busted/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Top 5 Colour Analysis Myths Busted &rarr;</a></li>
+        <li><a href="../blog/capsule-wardrobe-by-colour-season/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Building a Versatile Capsule Wardrobe &rarr;</a></li>
+        <li><a href="../blog/navratri-colours-by-skin-tone/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Navratri Colours by Skin Tone &rarr;</a></li>
+        <li><a href="../blog/indian-skin-tone-colour-myths-garments/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Indian Skin Tone &amp; Colour Myths &rarr;</a></li>
       </ul>
     </section>
 
+    <!-- ===== 16. CTA ===== -->
     <div style="text-align: center; background: var(--gradient-soft); padding: 48px 24px; border-radius: var(--radius-xl);">
       <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Make Smarter Shopping Decisions Today</h2>
       <p style="color: var(--text-secondary); margin-bottom: 24px;">Download Colourity on Android to get started for free.</p>
@@ -153,5 +488,6 @@
     </div>
   </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>
