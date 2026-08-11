@@ -510,44 +510,59 @@ section {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  visibility: hidden;
-  transform: scale(1.04);
-  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s step-end;
+  transform: scale(1.03);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-stage-img.active {
   opacity: 1;
-  visibility: visible;
   transform: scale(1);
-  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s step-start;
+  z-index: 2;
 }
 
 /* 3-State Stage Indicator Bar */
 .hero-stage-indicators {
+  position: relative;
+  z-index: 10;
   display: flex;
   gap: 10px;
   margin-top: 18px;
   justify-content: center;
+  pointer-events: auto;
 }
 
 .hero-stage-chip {
-  padding: 6px 14px;
+  position: relative;
+  z-index: 11;
+  padding: 8px 16px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-secondary);
   letter-spacing: 0.05em;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.hero-stage-chip:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
 }
 
 .hero-stage-chip.active {
   background: var(--gradient);
   color: white;
   border-color: transparent;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+}
   box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
 }
 
