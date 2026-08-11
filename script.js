@@ -47,72 +47,75 @@ document.querySelectorAll('.reveal').forEach(el => {
 // --- Email form submission via Formspree ---
 const notifyForm = document.getElementById('notifyForm');
 const submitBtn = document.getElementById('notify-submit-btn');
-const btnText = submitBtn.querySelector('.btn-text');
-const btnSpinner = submitBtn.querySelector('.btn-spinner');
 const formSuccess = document.getElementById('formSuccess');
 
-notifyForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
+if (notifyForm && submitBtn) {
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnSpinner = submitBtn.querySelector('.btn-spinner');
 
-  // Show loading state
-  btnText.style.display = 'none';
-  btnSpinner.style.display = 'flex';
-  submitBtn.disabled = true;
+  notifyForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  try {
-    const formData = new FormData(notifyForm);
-    const response = await fetch(notifyForm.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
+    // Show loading state
+    if (btnText) btnText.style.display = 'none';
+    if (btnSpinner) btnSpinner.style.display = 'flex';
+    submitBtn.disabled = true;
 
-    if (response.ok) {
-      // Show success
-      notifyForm.querySelector('.form-row').style.display = 'none';
-      notifyForm.querySelector('.form-privacy').style.display = 'none';
-      formSuccess.style.display = 'flex';
+    try {
+      const formData = new FormData(notifyForm);
+      const response = await fetch(notifyForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-      // Track with analytics if available
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'sign_up', { method: 'email_notify' });
+      if (response.ok) {
+        // Show success
+        const formRow = notifyForm.querySelector('.form-row');
+        const formPrivacy = notifyForm.querySelector('.form-privacy');
+        if (formRow) formRow.style.display = 'none';
+        if (formPrivacy) formPrivacy.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'flex';
+
+        // Track with analytics if available
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'sign_up', { method: 'email_notify' });
+        }
+      } else {
+        const data = await response.json();
+        const errorMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again.';
+        showError(errorMsg);
       }
-    } else {
-      const data = await response.json();
-      const errorMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again.';
-      showError(errorMsg);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      
+      const isFileProtocol = window.location.protocol === 'file:';
+      const message = isFileProtocol 
+        ? 'CORS restriction detected (local file://). Submitting form...'
+        : 'Network error or ad-blocker detected. Submitting form...';
+      
+      showError(message);
+      
+      setTimeout(() => {
+        notifyForm.submit();
+      }, 1200);
+    } finally {
+      if (btnText) btnText.style.display = 'inline';
+      if (btnSpinner) btnSpinner.style.display = 'none';
+      submitBtn.disabled = false;
     }
-  } catch (err) {
-    console.error('Form submission error:', err);
-    
-    // Check if we are running locally via file:// protocol
-    const isFileProtocol = window.location.protocol === 'file:';
-    const message = isFileProtocol 
-      ? 'CORS restriction detected (local file://). Submitting form...'
-      : 'Network error or ad-blocker detected. Submitting form...';
-    
-    showError(message);
-    
-    // Fallback to standard form submission which bypasses CORS and ad-blockers
-    setTimeout(() => {
-      notifyForm.submit();
-    }, 1200);
-  } finally {
-    btnText.style.display = 'inline';
-    btnSpinner.style.display = 'none';
-    submitBtn.disabled = false;
+  });
+
+  function showError(message) {
+    const existingError = notifyForm.querySelector('.form-error');
+    if (existingError) existingError.remove();
+
+    const errorEl = document.createElement('p');
+    errorEl.className = 'form-error';
+    errorEl.style.cssText = 'color:#EF4444;font-size:0.83rem;margin-top:10px;text-align:center;';
+    errorEl.textContent = message;
+    notifyForm.appendChild(errorEl);
   }
-});
-
-function showError(message) {
-  const existingError = notifyForm.querySelector('.form-error');
-  if (existingError) existingError.remove();
-
-  const errorEl = document.createElement('p');
-  errorEl.className = 'form-error';
-  errorEl.style.cssText = 'color:#EF4444;font-size:0.83rem;margin-top:10px;text-align:center;';
-  errorEl.textContent = message;
-  notifyForm.appendChild(errorEl);
 }
 
 // --- Smooth anchor scroll ---
