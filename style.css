@@ -1465,6 +1465,20 @@ section {
     flex-direction: column;
     gap: 28px;
   }
+
+  .concept-flow-box {
+    padding: 40px 20px;
+  }
+
+  .garment-grid {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .diff-photo-placeholder {
+    width: 100%;
+    max-width: 240px;
+  }
 }
 
 /* =====================================================
@@ -2076,15 +2090,24 @@ section {
   margin: 0 0 10px 0;
 }
 
-.concept-flow-vertical {
+/* =====================================================
+   CORE DIFFERENTIATOR — horizontal transformation flow
+   ===================================================== */
+.diff-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.diff-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-  margin-top: 44px;
 }
 
-.concept-flow-label {
+.diff-label {
   font-family: var(--font-display);
   font-size: 0.72rem;
   font-weight: 800;
@@ -2094,75 +2117,138 @@ section {
   margin-bottom: 18px;
 }
 
-.concept-flow-steps {
+.garment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 264px;
+}
+
+.garment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 14px 10px 12px;
+}
+
+.garment-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: calc(var(--radius-md) - 4px);
+  background: var(--swatch, #2a3550);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 0;
 }
 
-.concept-chip {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 16px 24px;
-  border-radius: var(--radius-md);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
+.garment-thumb--pending {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
 }
 
-.concept-arrow {
-  color: var(--teal-light);
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-.concept-flow-down {
-  font-size: 1.7rem;
-  line-height: 1;
-  color: rgba(255,255,255,0.3);
-  margin: 14px 0;
-}
-
-.concept-ai-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 26px;
-  border-radius: 50px;
-  background: var(--gradient);
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.95rem;
+.garment-thumb-pending-note {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  color: white;
-  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.35);
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  padding: 0 8px;
 }
 
-.concept-result-card {
-  margin-top: 14px;
-  max-width: 420px;
-  width: 100%;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.concept-result-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.concept-tagline {
-  margin: 40px 0 0 0;
+.garment-name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.diff-connector {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.diff-connector-line {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.35));
+}
+
+.diff-connector-chevron {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--teal-light);
+}
+
+.diff-ai-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 26px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16) 0%, rgba(59, 130, 246, 0.14) 50%, rgba(20, 184, 166, 0.16) 100%);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+}
+
+.diff-ai-badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.diff-ai-badge span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.diff-photo-placeholder {
+  width: 240px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  border: 1.5px dashed rgba(255, 255, 255, 0.28);
+  background: linear-gradient(160deg, rgba(124, 58, 237, 0.1), rgba(20, 184, 166, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.diff-photo-pending-note {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .diff-flow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .diff-connector {
+    flex-direction: column;
+  }
+  .diff-connector-line {
+    width: 1px;
+    height: 26px;
+  }
+  .diff-connector-chevron {
+    transform: rotate(90deg);
+  }
 }
 
 .synergy-grid {
@@ -2245,10 +2331,6 @@ section {
   }
   .pillar-feature-row.reverse {
     direction: ltr;
-  }
-  .concept-flow-steps {
-    flex-direction: column;
-    gap: 12px;
   }
 }
 

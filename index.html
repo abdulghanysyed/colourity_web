@@ -344,28 +344,66 @@
         Colourity combines the clothes you already own into complete looks that work together.
       </p>
 
-      <div class="concept-flow-vertical">
-        <div class="concept-flow-label">Your Closet</div>
-        <div class="concept-flow-steps">
-          <div class="concept-chip">👕 Top</div>
-          <div class="concept-arrow">+</div>
-          <div class="concept-chip">👖 Bottom</div>
-          <div class="concept-arrow">+</div>
-          <div class="concept-chip">👞 Shoes</div>
+      <div class="diff-flow">
+
+        <!-- WHAT YOU ALREADY OWN -->
+        <div class="diff-col diff-input">
+          <div class="diff-label">What You Already Own</div>
+          <div class="garment-grid">
+            <div class="garment-card">
+              <div class="garment-thumb garment-thumb--pending" style="--swatch:#1E2A45;">
+                <span class="garment-thumb-pending-note">Photo pending</span>
+              </div>
+              <span class="garment-name">Navy Blazer</span>
+            </div>
+            <div class="garment-card">
+              <div class="garment-thumb garment-thumb--pending" style="--swatch:#F3EDE1;">
+                <span class="garment-thumb-pending-note" style="color: rgba(15,23,42,0.55);">Photo pending</span>
+              </div>
+              <span class="garment-name">Cream Shirt</span>
+            </div>
+            <div class="garment-card">
+              <div class="garment-thumb garment-thumb--pending" style="--swatch:#2B3A55;">
+                <span class="garment-thumb-pending-note">Photo pending</span>
+              </div>
+              <span class="garment-name">Dark Denim Jeans</span>
+            </div>
+            <div class="garment-card">
+              <div class="garment-thumb garment-thumb--pending" style="--swatch:#6B4A34;">
+                <span class="garment-thumb-pending-note">Photo pending</span>
+              </div>
+              <span class="garment-name">Brown Leather Loafers</span>
+            </div>
+          </div>
         </div>
 
-        <div class="concept-flow-down" aria-hidden="true">↓</div>
-
-        <div class="concept-ai-badge">✨ Colourity AI</div>
-
-        <div class="concept-flow-down" aria-hidden="true">↓</div>
-
-        <div class="concept-result-card">
-          <img src="assets/visuals/outfits-from-existing-wardrobe.jpg" alt="Person wearing a complete outfit assembled from clothes she already owns" loading="lazy" />
+        <div class="diff-connector" aria-hidden="true">
+          <span class="diff-connector-line"></span>
+          <span class="diff-connector-chevron">&rsaquo;</span>
         </div>
+
+        <!-- COLOURITY AI -->
+        <div class="diff-col diff-ai-col">
+          <div class="diff-ai-badge">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4L12 3z" stroke="url(#diffAiGrad)" stroke-width="1.4" stroke-linejoin="round"/><path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14z" stroke="url(#diffAiGrad)" stroke-width="1.2" stroke-linejoin="round"/><defs><linearGradient id="diffAiGrad" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#7C3AED"/><stop offset="50%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#14B8A6"/></linearGradient></defs></svg>
+            <span>Colourity AI</span>
+          </div>
+        </div>
+
+        <div class="diff-connector" aria-hidden="true">
+          <span class="diff-connector-line"></span>
+          <span class="diff-connector-chevron">&rsaquo;</span>
+        </div>
+
+        <!-- YOUR COMPLETE LOOK -->
+        <div class="diff-col diff-output">
+          <div class="diff-label">Your Complete Look</div>
+          <div class="diff-photo-placeholder">
+            <span class="diff-photo-pending-note">Full-body outfit photo — pending<br />(navy blazer + cream shirt + dark jeans + brown loafers)</span>
+          </div>
+        </div>
+
       </div>
-
-      <p class="concept-tagline">More combinations. Less wardrobe frustration.</p>
     </div>
   </section>
 
