@@ -486,6 +486,12 @@ section {
   transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s ease-in-out;
   pointer-events: none;
   z-index: 1;
+  /* Subtle soft blend on the left edge only, so the image feathers into the
+     hero background instead of a hard rectangle. Kept to a thin band and
+     fully opaque immediately after so the crop, sharpness, and clothing
+     remain untouched. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 3%, #000 7%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 3%, #000 7%, #000 100%);
 }
 
 .hero-stage-img.previous {
@@ -1382,6 +1388,13 @@ section {
     justify-content: center;
   }
 
+  .hero-stage-img {
+    /* Hero stacks to a single column here, so the image no longer sits
+       beside the headline — keep it fully sharp with no edge fade. */
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
   .hero-phone {
     max-width: 85vw;
   }
@@ -2050,9 +2063,35 @@ section {
   background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
   color: white;
   border-radius: var(--radius-xl);
-  padding: 48px 32px;
+  padding: 56px 32px;
   text-align: center;
   box-shadow: var(--shadow-lg);
+}
+
+.concept-subhead {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.concept-flow-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 44px;
+}
+
+.concept-flow-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 18px;
 }
 
 .concept-flow-steps {
@@ -2061,7 +2100,7 @@ section {
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .concept-chip {
@@ -2078,6 +2117,52 @@ section {
   color: var(--teal-light);
   font-size: 1.5rem;
   font-weight: 800;
+}
+
+.concept-flow-down {
+  font-size: 1.7rem;
+  line-height: 1;
+  color: rgba(255,255,255,0.3);
+  margin: 14px 0;
+}
+
+.concept-ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 50px;
+  background: var(--gradient);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: white;
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.35);
+}
+
+.concept-result-card {
+  margin-top: 14px;
+  max-width: 420px;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.concept-result-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.concept-tagline {
+  margin: 40px 0 0 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
 }
 
 .synergy-grid {
