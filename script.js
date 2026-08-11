@@ -193,10 +193,12 @@ if (steps.length && hiwImages.length) {
 }
 
 // --- 3-Stage Hero Storyteller Visual Loop ---
-const heroImages = document.querySelectorAll('.hero-stage-img');
-const heroChips = document.querySelectorAll('.hero-stage-chip');
+function initHeroStoryteller() {
+  const heroImages = document.querySelectorAll('.hero-stage-img');
+  const heroChips = document.querySelectorAll('.hero-stage-chip');
 
-if (heroImages.length && heroChips.length) {
+  if (!heroImages.length || !heroChips.length) return;
+
   let currentHeroStage = 0;
   let heroTimer = null;
   const stageDurations = [3500, 3500, 4500]; // 3.5s Colours, 3.5s Wardrobe, 4.5s Outfit
@@ -204,38 +206,49 @@ if (heroImages.length && heroChips.length) {
   const setHeroStage = (index) => {
     currentHeroStage = index;
     heroImages.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
     });
     heroChips.forEach((chip, i) => {
-      chip.classList.toggle('active', i === index);
+      if (i === index) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
     });
   };
 
-  const startHeroLoop = () => {
-    // Respect prefers-reduced-motion
+  const scheduleNextStage = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setHeroStage(2); // Lock to State 3 (Outfit)
+      setHeroStage(2); // Lock to State 3
       return;
     }
-    
     if (heroTimer) clearTimeout(heroTimer);
     heroTimer = setTimeout(() => {
       const nextStage = (currentHeroStage + 1) % heroImages.length;
       setHeroStage(nextStage);
-      startHeroLoop();
+      scheduleNextStage();
     }, stageDurations[currentHeroStage]);
   };
 
   heroChips.forEach((chip, index) => {
     chip.addEventListener('click', () => {
       setHeroStage(index);
-      startHeroLoop();
+      scheduleNextStage();
     });
   });
 
-  // Start sequence
   setHeroStage(0);
-  startHeroLoop();
+  scheduleNextStage();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHeroStoryteller);
+} else {
+  initHeroStoryteller();
 }
 
 // --- Interactive Season Tester Widget Logic ---
