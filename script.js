@@ -192,6 +192,52 @@ if (steps.length && hiwImages.length) {
   });
 }
 
+// --- 3-Stage Hero Storyteller Visual Loop ---
+const heroImages = document.querySelectorAll('.hero-stage-img');
+const heroChips = document.querySelectorAll('.hero-stage-chip');
+
+if (heroImages.length && heroChips.length) {
+  let currentHeroStage = 0;
+  let heroTimer = null;
+  const stageDurations = [3500, 3500, 4500]; // 3.5s Colours, 3.5s Wardrobe, 4.5s Outfit
+
+  const setHeroStage = (index) => {
+    currentHeroStage = index;
+    heroImages.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+    heroChips.forEach((chip, i) => {
+      chip.classList.toggle('active', i === index);
+    });
+  };
+
+  const startHeroLoop = () => {
+    // Respect prefers-reduced-motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setHeroStage(2); // Lock to State 3 (Outfit)
+      return;
+    }
+    
+    if (heroTimer) clearTimeout(heroTimer);
+    heroTimer = setTimeout(() => {
+      const nextStage = (currentHeroStage + 1) % heroImages.length;
+      setHeroStage(nextStage);
+      startHeroLoop();
+    }, stageDurations[currentHeroStage]);
+  };
+
+  heroChips.forEach((chip, index) => {
+    chip.addEventListener('click', () => {
+      setHeroStage(index);
+      startHeroLoop();
+    });
+  });
+
+  // Start sequence
+  setHeroStage(0);
+  startHeroLoop();
+}
+
 // --- Interactive Season Tester Widget Logic ---
 const SEASON_DATA = {
   'fair-warm': {
