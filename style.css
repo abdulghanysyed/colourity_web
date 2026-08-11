@@ -706,9 +706,9 @@ section {
 .how-it-works .hiw-visual {
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 480px;
   height: 0;
-  padding-bottom: 177.78%; /* 9:16 aspect ratio */
+  padding-bottom: 75%; /* 4:3 aspect ratio */
   margin: 40px auto 0;
 }
 
@@ -718,21 +718,20 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: var(--radius-xl);
-  border: 8px solid #1E2937; /* Sleek dark bezel for steps */
+  border: none;
   box-shadow: var(--shadow-lg);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
   pointer-events: none;
   z-index: 1;
-  background: #FFFFFF;
 }
 
 .hiw-image.active {
   opacity: 1;
+  transform: scale(1);
   pointer-events: auto;
   z-index: 2;
 }
