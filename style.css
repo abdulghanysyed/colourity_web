@@ -1475,7 +1475,8 @@ section {
     max-width: 260px;
   }
 
-  .diff-photo-placeholder {
+  .diff-photo-placeholder,
+  .diff-photo-card {
     width: 100%;
     max-width: 240px;
   }
@@ -2143,6 +2144,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.garment-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .garment-thumb--pending {
@@ -2232,6 +2241,22 @@ section {
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
+}
+
+.diff-photo-card {
+  width: 240px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-lg);
+}
+
+.diff-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 900px) {
