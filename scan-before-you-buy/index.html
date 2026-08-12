@@ -103,7 +103,7 @@
       },
       {
         "@type": "Question",
-        "name": "Can it show whether a new item works with existing clothes?",
+        "name": "Can it show potential outfit combinations?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. It surfaces potential outfit combinations built by combining the new item with garments currently in your digital wardrobe."
@@ -111,7 +111,7 @@
       },
       {
         "@type": "Question",
-        "name": "How can I avoid buying clothes I won't wear?",
+        "name": "How can it help me make a more informed purchase?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "By evaluating colour compatibility, versatility, and existing closet overlap before purchasing, Scan Before You Buy gives you clear context so you can make more considered purchase decisions."
@@ -140,7 +140,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.8" />
+  <link rel="stylesheet" href="../style.css?v=1.1.9" />
 </head>
 <body>
 
@@ -192,95 +192,96 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main class="pillar-main">
 
-    <!-- ===== HERO VISUAL (IMAGE 01 — Natural Aspect Ratio) ===== -->
+    <!-- ===== 01 HERO VISUAL (IMAGE 01 — Natural Landscape Ratio) ===== -->
     <div style="text-align: center; margin-bottom: 64px;">
-      <img src="../assets/pillar/scan-before-buy-hero.webp" alt="Realistic Indian fashion shopper checking garment compatibility on smartphone in clothing store" style="max-width: 920px; width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border);" width="1024" height="1024" loading="eager" />
+      <img src="../assets/pillar/scan-before-buy-hero.webp" alt="Indian fashion shopper checking garment compatibility on smartphone in clothing store" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border);" width="1024" height="669" loading="eager" />
     </div>
 
-    <!-- ===== CORE USER JOURNEY FLOW (HTML/CSS) ===== -->
+    <!-- ===== CORE USER STORY SEQUENCE (HTML/CSS Flow) ===== -->
     <section style="margin-bottom: 72px; text-align: center;">
-      <span class="section-tag">The Decision Journey</span>
-      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 24px;">From Impulse to Intentional Choice</h2>
+      <span class="section-tag">Core User Story</span>
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin-bottom: 24px;">The Smart Shopping Journey</h2>
       
-      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: var(--text-primary); background: var(--white); padding: 24px; border-radius: var(--radius-xl); border: 1px solid var(--border); box-shadow: var(--shadow-sm); max-width: 1024px; margin: 0 auto;">
-        <span style="background: var(--bg); padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);">1. LIKED THE ITEM</span>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; color: var(--text-primary); background: var(--white); padding: 24px; border-radius: var(--radius-xl); border: 1px solid var(--border); box-shadow: var(--shadow-sm); max-width: 1024px; margin: 0 auto;">
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">1. I LIKE THIS ITEM</span>
         <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
-        <span style="background: var(--bg); padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);">2. SCAN / ADD ITEM</span>
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">2. SCAN / ADD IT</span>
         <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
-        <span style="background: var(--bg); padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);">3. CHECK WARDROBE</span>
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">3. CHECK WARDROBE</span>
         <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
-        <span style="background: var(--bg); padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);">4. UNDERSTAND FIT</span>
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">4. UNDERSTAND FIT</span>
         <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
-        <span style="background: var(--bg); padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);">5. OUTFIT POTENTIAL</span>
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">5. OUTFITS CREATED</span>
         <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
-        <span style="background: var(--gradient); color: white; padding: 8px 16px; border-radius: 20px;">6. INFORMED BUY</span>
+        <span style="background: var(--bg); padding: 8px 12px; border-radius: 20px; border: 1px solid var(--border);">6. CHECK GAP</span>
+        <span style="color: var(--purple); font-weight: 900;">&rarr;</span>
+        <span style="background: var(--gradient); color: white; padding: 8px 14px; border-radius: 20px;">7. INFORMED DECISION</span>
       </div>
     </section>
 
     <!-- ===== SECTION 1 — THE PROBLEM: A GREAT PIECE ISN'T ALWAYS A GREAT PURCHASE ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">The Shopping Dilemma</span>
+      <span class="section-tag">The Problem</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">A Great Piece Isn't Always a Great Purchase</h2>
       <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px; max-width: 760px;">
-        You see a garment online or in-store that looks great on the rack. But without knowing how it connects with your personal colour palette or closet inventory, impulse purchases often turn into unused wardrobe clutter:
+        You see a shirt, jacket, trouser, or pair of shoes that looks great on its own. You buy it. Then a few weeks later, it sits unworn because of these five common issues:
       </p>
 
-      <!-- 5 Concise HTML/CSS Problem Cards -->
+      <!-- 5 HTML/CSS Problem Cards Grid -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
         
         <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; box-shadow: var(--shadow-sm); text-align: left;">
           <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--purple); margin-bottom: 8px;">01</div>
           <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">COLOUR CLASH</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">It doesn't work with my existing colours or skin tone profile.</p>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">It doesn't work with my existing colours.</p>
         </div>
 
         <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; box-shadow: var(--shadow-sm); text-align: left;">
           <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--purple); margin-bottom: 8px;">02</div>
           <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">TOO SIMILAR</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I already own something very similar hanging in my closet.</p>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I already own something like it.</p>
         </div>
 
         <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; box-shadow: var(--shadow-sm); text-align: left;">
           <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--purple); margin-bottom: 8px;">03</div>
           <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">NOT VERSATILE</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I don't have enough ways to wear it with other items.</p>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I don't have enough ways to wear it.</p>
         </div>
 
         <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; box-shadow: var(--shadow-sm); text-align: left;">
           <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--purple); margin-bottom: 8px;">04</div>
-          <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">MISMATCH</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">It doesn't work with the rest of my personal closet style.</p>
+          <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">WARDROBE MISMATCH</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">It doesn't work with the rest of my closet.</p>
         </div>
 
         <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; box-shadow: var(--shadow-sm); text-align: left;">
           <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--purple); margin-bottom: 8px;">05</div>
           <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">REGRET</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I like it right now, but may rarely wear it after buying.</p>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">I like it now, but may not wear it later.</p>
         </div>
 
       </div>
     </section>
 
-    <!-- ===== SECTION 2 — WHAT IS "SCAN BEFORE YOU BUY"? (GEO Answer Box) ===== -->
+    <!-- ===== SECTION 2 — WHAT IS "SCAN BEFORE YOU BUY"? (Direct GEO Definition) ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">GEO Answer Guide</span>
+      <span class="section-tag">GEO &amp; SEO Definition</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is "Scan Before You Buy"?</h2>
       
-      <!-- Standalone GEO Definition -->
+      <!-- Direct Standalone Definition -->
       <div style="background: var(--white); border: 1.5px solid rgba(124, 58, 237, 0.3); border-radius: var(--radius-lg); padding: 32px 36px; box-shadow: var(--shadow-sm);">
-        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--purple); margin: 0 0 12px 0;">Definition</h3>
         <p style="font-size: 1.08rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">
-          <strong>Scan Before You Buy</strong> helps you evaluate a potential clothing or accessory purchase against your existing wardrobe, colour profile and style context before deciding whether to buy it.
+          Scan Before You Buy helps you evaluate a potential clothing or accessory purchase against your existing wardrobe, colour profile and style context before deciding whether to buy it.
         </p>
       </div>
     </section>
 
-    <!-- ===== SECTION 3 — HOW IT WORKS (Four-Step Process) ===== -->
+    <!-- ===== SECTION 3 — HOW IT WORKS (Four-Step Workflow) ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">Four-Step Process</span>
+      <span class="section-tag">Four Steps</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How It Works</h2>
       <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px; max-width: 720px;">
-        Four straightforward steps stand between "I like this" and "I should buy this."
+        Four steps stand between "I like this" and "I should buy this."
       </p>
 
       <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
@@ -288,7 +289,7 @@
         <div class="synergy-card" style="text-align: left; padding: 28px;">
           <div class="synergy-num" style="font-size: 1.5rem; margin-bottom: 10px;">01</div>
           <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">CHOOSE THE ITEM</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Take a photo or add the item you are considering online or in-store.</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Take a photo or add the item you are considering.</p>
         </div>
 
         <div class="synergy-card" style="text-align: left; padding: 28px;">
@@ -306,7 +307,7 @@
         <div class="synergy-card" style="text-align: left; padding: 28px;">
           <div class="synergy-num" style="font-size: 1.5rem; margin-bottom: 10px;">04</div>
           <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">MAKE YOUR DECISION</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Buy it, skip it, or look for a better option based on clear context.</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">Buy it, skip it, or look for a better option.</p>
         </div>
 
       </div>
@@ -314,10 +315,10 @@
 
     <!-- ===== SECTION 4 — YOUR WARDROBE IS THE CONTEXT (HTML/CSS Ecosystem) ===== -->
     <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
-      <span class="section-tag">System Synergy</span>
+      <span class="section-tag">Ecosystem Connection</span>
       <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Your Wardrobe Is the Context</h2>
       <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; margin: 0 auto 28px auto;">
-        Scan Before You Buy reaches its full potential when connected to your digitised closet inventory and skin tone profile.
+        Scan Before You Buy becomes more useful once Colourity knows what you already own.
       </p>
 
       <!-- HTML Flow Connector -->
@@ -336,22 +337,22 @@
       </p>
     </section>
 
-    <!-- ===== SECTION 5 — EVALUATE A GARMENT AGAINST YOUR EXISTING CLOSET (IMAGE 02) ===== -->
+    <!-- ===== SECTION 5 — EVALUATE A GARMENT (IMAGE 02) ===== -->
     <section style="margin-bottom: 80px;">
       <div class="pillar-feature-row">
         <div class="pillar-feature-text">
-          <span class="section-tag">Wardrobe Context</span>
+          <span class="section-tag">Wardrobe Evaluation</span>
           <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Evaluate a Garment Against Your Existing Closet</h3>
           <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
             Before buying a new shirt or saree online or in-store, evaluate it with Colourity. The app checks whether the new item fits your colour profile and how it relates to pieces you already own—potential combinations, colour relationships, and closet overlap.
           </p>
           <p style="font-size: 1.05rem; color: var(--purple); font-weight: 700; line-height: 1.6;">
-            The question this answers isn't "does this look good on the rack?" It's "will I actually use this?"
+            The question this answers isn't "does this look good on its own?" but "will this work with what I already own?"
           </p>
           
           <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; display: flex; flex-direction: column; gap: 8px;">
-            <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Skin undertone colour compatibility</li>
-            <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Style &amp; formality alignment</li>
+            <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Skin tone colour compatibility</li>
+            <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Style &amp; formality matching</li>
             <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Integration with existing tops &amp; bottoms</li>
             <li style="font-size: 0.94rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Realistic wear frequency evaluation</li>
           </ul>
@@ -359,28 +360,34 @@
         
         <div class="pillar-feature-img-wrapper">
           <!-- IMAGE 02 (Natural Aspect Ratio) -->
-          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-shopping.webp" alt="Evaluating a potential new garment against existing closet wardrobe items" width="1024" height="1024" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
+          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-evaluate.webp" alt="Shopper evaluating green shirt against existing closet wardrobe items using smartphone" width="994" height="1012" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 6 — HOW MANY OUTFITS CAN THIS NEW PIECE UNLOCK? (IMAGE 03) ===== -->
+    <!-- ===== SECTION 6 — OUTFIT POTENTIAL (IMAGE 03) ===== -->
     <section style="margin-bottom: 80px;">
       <div class="pillar-feature-row reverse">
         <div class="pillar-feature-text">
-          <span class="section-tag">Outfit Multiplier</span>
+          <span class="section-tag">Outfit Potential</span>
           <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How Many Outfits Can This New Piece Unlock?</h3>
           <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
             A good purchase should expand your wardrobe possibilities. A single versatile piece that pairs with multiple garments you already own gives you far more useful outfit options than an isolated impulse buy.
           </p>
-          <p style="font-size: 1.05rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
-            Colourity evaluates how a potential new item combines with your digitised wardrobe to unlock new looks—helping you think in terms of: <em>“One new piece &rarr; several useful outfits.”</em>
+          
+          <!-- HTML Callout: ONE NEW PIECE -> MULTIPLE POSSIBLE OUTFITS -->
+          <div style="background: var(--gradient-soft); border: 1.5px solid rgba(124,58,237,0.3); padding: 18px 24px; border-radius: var(--radius-lg); margin-top: 16px; font-family: var(--font-display); font-weight: 800; color: var(--purple); font-size: 1rem; text-align: center;">
+            ONE NEW PIECE &nbsp;&rarr;&nbsp; MULTIPLE POSSIBLE OUTFITS
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-top: 16px;">
+            Evaluate the new item based on the outfits you can create with clothes you already own.
           </p>
         </div>
         
         <div class="pillar-feature-img-wrapper">
           <!-- IMAGE 03 (Natural Aspect Ratio) -->
-          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-versatility.webp" alt="Versatility visual showing one new garment paired across multiple complete outfit looks" width="1200" height="896" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
+          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-potential.webp" alt="Terracotta shirt styled across multiple complete outfit combinations" width="998" height="1012" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
         </div>
       </div>
     </section>
@@ -388,32 +395,32 @@
     <!-- ===== SECTION 7 — SHOP THE GAP ===== -->
     <section style="margin-bottom: 80px;">
       <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
-        <span class="section-tag">Smart Recommendations</span>
+        <span class="section-tag">Smart Purchase Gap</span>
         <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Shop the Gap</h2>
         <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 760px;">
-          Sometimes the result of an evaluation isn't "don't buy this." Sometimes it identifies a genuinely useful gap that connects your existing clothes.
+          Sometimes the right purchase is not the most exciting piece—it is the piece that fills a genuine wardrobe gap.
         </p>
 
-        <!-- Example Box -->
+        <!-- Scenario Example Box -->
         <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 24px;">
-          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 10px 0;">PRACTICAL SCENARIO</p>
+          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 10px 0;">EXAMPLE</p>
           <p style="font-size: 0.98rem; color: var(--text-primary); line-height: 1.7; margin: 0 0 12px 0;">
-            <strong>You already own:</strong> Navy trousers, white shirt, and brown shoes. But you lack a versatile jacket to complete the outfit.
+            <strong>You already have:</strong> Navy trousers, white shirt, brown shoes — but lack a versatile jacket.
           </p>
           <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
-            <strong>Shop the Gap:</strong> Identifies the missing piece type and colour, generating a search link to real retailers for the item needed to connect your look.
+            <strong>Shop the Gap:</strong> Identifies the missing piece type and colour, generating a search link to real retailers for that exact item.
           </p>
         </div>
 
         <p style="font-size: 0.92rem; color: var(--text-muted); margin: 0;">
-          Search links point to Myntra, Ajio, Amazon, and Flipkart. Colourity is not a marketplace—it generates direct searches on established retailers.
+          Search links point to Myntra, Ajio, Amazon, and Flipkart. Colourity is not a marketplace—it generates live searches on established retailers.
         </p>
       </div>
     </section>
 
-    <!-- ===== SECTION 8 — SHOP COMPLETE LOOK + SHOP SIMILAR ===== -->
+    <!-- ===== SECTION 8 — SHOP COMPLETE LOOK / SHOP SIMILAR ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">Retailer Search Options</span>
+      <span class="section-tag">Action Cards</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Shop Complete Look + Shop Similar</h2>
       
       <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
@@ -422,7 +429,7 @@
           <div style="font-size: 1.5rem; margin-bottom: 10px;">✨</div>
           <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px;">Shop Complete Look</h3>
           <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
-            See the specific complementary pieces needed to complete an outfit recommendation and generate retailer searches for those exact items.
+            See the complementary pieces needed to create the outfit and generate retailer searches for those items.
           </p>
         </div>
 
@@ -430,39 +437,39 @@
           <div style="font-size: 1.5rem; margin-bottom: 10px;">🔍</div>
           <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px;">Shop Similar</h3>
           <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
-            Explore alternative garment options similar to a specific item across supported retailer search links when an original piece isn't ideal.
+            Explore alternatives that may work better with your wardrobe when the original item is not ideal.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- ===== SECTION 9 — KEEP TRACK OF YOUR SHOPPING DECISIONS ===== -->
+    <!-- ===== SECTION 9 — SHOPPING HISTORY ===== -->
     <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
       <span class="section-tag">Shopping Context</span>
       <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Keep Track of Your Shopping Decisions</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px; margin: 0 auto 16px auto;">
-        Past decisions give you valuable context for future purchases. Shopping History keeps a record of your past evaluations so you can build a more intentional, long-term wardrobe strategy.
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px; margin: 0 auto;">
+        Past decisions give you valuable context for future decisions. Shopping History keeps a record of your past Scan Before You Buy checks, so evaluating a purchase becomes part of an ongoing shopping strategy.
       </p>
     </section>
 
     <!-- ===== SECTION 10 — PRACTICAL EXAMPLE (IMAGE 04) ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">Shopping Scenario</span>
+      <span class="section-tag">Illustrative Scenario</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">A Practical Example</h2>
       
       <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 40px;">
         
         <!-- IMAGE 04 (Natural Aspect Ratio) -->
         <div style="text-align: center; margin-bottom: 32px;">
-          <img src="../assets/pillar/scan-before-buy-comparison.webp" alt="Shopping decision comparison evaluating a new navy blazer against existing wardrobe items" style="max-width: 800px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="1024" loading="lazy" />
+          <img src="../assets/pillar/scan-before-buy-practical.webp" alt="Shopper considering a navy blazer against her existing wardrobe items in store" style="max-width: 800px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="669" loading="lazy" />
         </div>
 
-        <!-- HTML Breakdown Cards -->
+        <!-- HTML Flow Cards -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
           
           <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">SHOPPING SCENARIO</p>
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">1. SHOPPING INPUTS</p>
             <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 8px;">Considering Item: <span style="font-weight: 500; color: var(--text-secondary);">Navy Blazer</span></p>
             <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">Existing Wardrobe:</p>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
@@ -473,19 +480,17 @@
           </div>
 
           <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid rgba(124, 58, 237, 0.3);">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">EVALUATION RESULT</p>
-            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--text-primary); margin: 0 0 12px 0; line-height: 1.4;">
-              Strong Wardrobe Compatibility + Multiple Outfit Pairings = Potentially Useful Purchase
-            </p>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              The blazer connects with multiple existing pieces, creating 3+ complete looks for work and events.
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">2. EVALUATION OUTCOME</p>
+            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">Does the new blazer work with what I already own?</p>
+            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--purple); margin: 10px 0; line-height: 1.4;">
+              Strong Wardrobe Compatibility + Multiple Outfit Combinations = Potentially Useful Purchase
             </p>
           </div>
 
         </div>
 
         <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 20px 0 0 0;">
-          Note: This is an illustrative shopping scenario demonstrating system logic—not a static guarantee for every closet.
+          Note: This is an illustrative shopping scenario demonstrating system logic—not a static guarantee for every wardrobe.
         </p>
 
       </div>
@@ -495,19 +500,23 @@
     <section style="margin-bottom: 80px;">
       <div class="pillar-feature-row" style="margin-bottom: 0;">
         <div class="pillar-feature-text">
-          <span class="section-tag">Thoughtful Shopping</span>
+          <span class="section-tag">Intentional Shopping</span>
           <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">More Considered Purchase Decisions</h3>
           <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-            The goal is not to stop buying clothes altogether. The goal is to shop with better context and confidence.
+            The goal is NOT to stop shopping. The goal is to shop with better context.
           </p>
-          <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
-            A useful purchase works with your existing wardrobe, wears well across multiple situations, adds something meaningful to your style, and reduces unnecessary duplication.
-          </p>
+          <p style="font-size: 0.98rem; color: var(--text-primary); font-weight: 700; margin-bottom: 8px;">A useful purchase should ideally:</p>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li style="font-size: 0.92rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Work with your existing wardrobe</li>
+            <li style="font-size: 0.92rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Be wearable in multiple situations</li>
+            <li style="font-size: 0.92rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Add something meaningful to your closet</li>
+            <li style="font-size: 0.92rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">✓ Reduce unnecessary duplication</li>
+          </ul>
         </div>
         
         <div class="pillar-feature-img-wrapper">
           <!-- IMAGE 05 (Natural Aspect Ratio) -->
-          <img class="pillar-feature-img" src="../assets/visuals/scan-before-you-buy.jpg" alt="Confident shopper making an intentional, considered clothing purchase decision" width="1024" height="683" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
+          <img class="pillar-feature-img" src="../assets/pillar/scan-before-buy-considered.webp" alt="Confident shopper making an intentional clothing purchase decision over a curated wardrobe flatlay" width="998" height="1012" loading="lazy" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);" />
         </div>
       </div>
     </section>
@@ -601,7 +610,7 @@
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Can it show whether a new item works with existing clothes?
+            Can it show potential outfit combinations?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
@@ -611,7 +620,7 @@
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            How can I avoid buying clothes I won't wear?
+            How can it help me make a more informed purchase?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
