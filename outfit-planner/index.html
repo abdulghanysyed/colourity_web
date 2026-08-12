@@ -502,42 +502,85 @@
       </div>
     </section>
 
-    <!-- ===== 9. PRACTICAL EXAMPLE (Visual + HTML Structural Breakdown) ===== -->
+    <!-- ===== 9. PRACTICAL EXAMPLE (2-Stage Workflow Demonstration) ===== -->
     <section style="margin-bottom: 80px;">
       <span class="section-tag">Workflow Demonstration</span>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">A Practical Example</h2>
       
       <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 40px; margin-bottom: 24px;">
         
-        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
-        <div style="text-align: center; margin-bottom: 32px;">
-          <img src="../assets/pillar/outfit-planner-practical.webp" alt="Practical outfit example showing navy shirt plus beige chinos plus brown loafers combining into a complete look" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="305" loading="lazy" />
+        <!-- 2-Stage Workflow Visual & HTML Connector -->
+        <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; margin-bottom: 40px; background: var(--bg); padding: 32px 28px; border-radius: var(--radius-xl); border: 1px solid var(--border);">
+          
+          <!-- STEP 1: WHAT YOU ALREADY OWN -->
+          <div style="text-align: center;">
+            <span style="font-family: var(--font-display); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; color: var(--purple); text-transform: uppercase; display: block; margin-bottom: 8px;">
+              STEP 1 — WHAT YOU ALREADY OWN
+            </span>
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--white); margin-bottom: 14px; box-shadow: var(--shadow-sm);">
+              <img src="../assets/pillar/outfit-practical-inputs.webp" alt="Step 1: Your Wardrobe Inputs (Navy Shirt, Beige Chinos, Brown Loafers)" style="width: 100%; height: auto; display: block;" width="1024" height="335" loading="lazy" />
+            </div>
+            <!-- HTML Item Labels -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--text-primary);">
+              <span style="background: var(--white); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border);">Navy Shirt</span>
+              <span style="background: var(--white); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border);">Beige Chinos</span>
+              <span style="background: var(--white); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border);">Brown Loafers</span>
+              <span style="background: var(--white); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border);">Watch / Accessory</span>
+            </div>
+          </div>
+
+          <!-- HTML/CSS CONNECTOR ARROW -->
+          <div style="text-align: center; padding: 12px 0;">
+            <div style="background: var(--white); border: 1.5px solid rgba(124,58,237,0.3); border-radius: var(--radius-lg); padding: 16px 14px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; gap: 6px;">
+              <span style="font-family: var(--font-display); font-size: 0.68rem; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">YOUR WARDROBE</span>
+              <span style="color: var(--purple); font-size: 1.4rem; font-weight: 900;">&darr;</span>
+              <span style="font-family: var(--font-display); font-size: 0.72rem; font-weight: 800; color: var(--purple); background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">COLOURITY AI</span>
+              <span style="color: var(--purple); font-size: 1.4rem; font-weight: 900;">&darr;</span>
+              <span style="font-family: var(--font-display); font-size: 0.68rem; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">COMPLETE LOOK</span>
+            </div>
+          </div>
+
+          <!-- STEP 2: THE RESULT -->
+          <div style="text-align: center;">
+            <span style="font-family: var(--font-display); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; color: var(--purple); text-transform: uppercase; display: block; margin-bottom: 8px;">
+              STEP 2 — THE RESULT
+            </span>
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid rgba(124,58,237,0.3); background: var(--white); margin-bottom: 14px; box-shadow: var(--shadow-md); max-width: 420px; margin-left: auto; margin-right: auto;">
+              <img src="../assets/pillar/outfit-practical-complete-look.webp" alt="Step 2: Complete Smart-Casual Look Outfit Outcome" style="width: 100%; height: auto; display: block;" width="802" height="600" loading="lazy" />
+            </div>
+            <!-- HTML Label -->
+            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; color: var(--text-primary); background: var(--white); padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); display: inline-block;">
+              ✨ COMPLETE SMART-CASUAL LOOK
+            </div>
+          </div>
+
         </div>
 
         <!-- HTML Structured Breakdown Cards -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
-          <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">1. STYLING CONTEXT &amp; WARDROBE INPUTS</p>
-            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 12px;">Context: <span style="font-weight: 500; color: var(--text-secondary);">Smart-Casual Office Event</span></p>
-            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">Available Wardrobe Garments:</p>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
-              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👔 Navy Shirt</li>
-              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👖 Beige Chinos</li>
-              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👞 Brown Loafers</li>
-              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">⌚ Leather Watch &amp; Belt</li>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;">
+          <div style="background: var(--bg); padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 10px 0;">1. STYLING CONTEXT &amp; WARDROBE INPUTS</p>
+            <p style="font-size: 0.98rem; color: var(--text-primary); font-weight: 700; margin-bottom: 14px;">Context: <span style="font-weight: 500; color: var(--text-secondary);">Smart-Casual Office Event</span></p>
+            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 8px;">Available Wardrobe:</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 8px;">👔 Navy Shirt</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 8px;">👖 Beige Chinos</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 8px;">👞 Brown Loafers</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 8px;">⌚ Watch &amp; Leather Belt</li>
             </ul>
           </div>
 
-          <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid rgba(124, 58, 237, 0.3);">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">2. COLOURITY AI OUTCOME</p>
-            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text-primary); margin: 0 0 12px 0; line-height: 1.4;">
+          <div style="background: var(--bg); padding: 28px; border-radius: var(--radius-lg); border: 1.5px solid rgba(124, 58, 237, 0.3);">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 10px 0;">2. COLOURITY AI OUTCOME</p>
+            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text-primary); margin: 0 0 14px 0; line-height: 1.4;">
               Navy Shirt + Beige Chinos + Brown Loafers = Polished Smart-Casual Look
             </p>
             <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; margin: 0 0 8px 0;">WHY IT WORKS</p>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
-              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Balanced complementary colour contrast (Navy &amp; Warm Beige)</li>
-              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Matched smart-casual formality level across shirt and footwear</li>
-              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Built 100% from items already hanging in the user's closet</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Balanced colour contrast (Deep Navy &amp; Warm Neutral Chinos)</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Consistent smart-casual formality across shirt and footwear</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Brown accessories add warmth and visual cohesion</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Suitable for a polished office setting or dinner event</li>
             </ul>
           </div>
         </div>
