@@ -2029,9 +2029,52 @@ section {
   margin-bottom: 24px;
 }
 
+.pillar-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* Pillar pages inherit the generic `section { padding: 100px 24px; }` rule
+   (site-wide, used for homepage bands like .how-it-works/.notify/.faq).
+   That 100px top+bottom padding is invisible dead space on plain structural
+   sections here — combined with each section's own margin-bottom it was
+   producing ~180-320px gaps between sections instead of the intended ~80px.
+   Sections that define their own inline background/padding (visual cards,
+   quote boxes, the FAQ block, CTA banners) are unaffected: inline styles
+   always win over this class regardless of specificity here, so this only
+   ever touches the plain, background-less structural sections. Scoped to
+   .pillar-main only — the homepage's own <section> usage is untouched. */
+.pillar-main > section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  /* Mobile: cap every top-level pillar block's margin-bottom to a single
+     tighter value (within the 40-64px target) instead of inheriting each
+     section's individual desktop margin (many are 80px, some higher).
+     !important is necessary here only because these margins are set as
+     inline styles throughout the four pillar pages' markup and can't be
+     reached responsively any other way without rewriting every occurrence
+     across four files. The last child is excluded so no extra gap is added
+     before the footer. */
+  .pillar-main > *:not(:last-child) {
+    margin-bottom: 48px !important;
+  }
+
+  /* A couple of sections also carry an inline margin-top (e.g. the
+     "practical example" blocks) which would otherwise win the margin
+     collapse against the capped margin-bottom above and reintroduce an
+     oversized gap. Neutralize those too, uniformly. */
+  .pillar-main > *:not(:first-child) {
+    margin-top: 0 !important;
+  }
+}
+
 .pillar-feature-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 48px;
   align-items: center;
   margin-bottom: 80px;
@@ -2040,6 +2083,17 @@ section {
   border-radius: var(--radius-xl);
   padding: 40px;
   box-shadow: var(--shadow-md);
+}
+
+/* Prevent a plain <section> wrapper (used for generic vertical rhythm
+   elsewhere on pillar pages) from double-applying its own padding/max-width
+   when it happens to wrap a pillar-feature-row directly — keeps every card's
+   width consistent regardless of markup nesting. */
+main.pillar-main > section:has(> .pillar-feature-row) {
+  padding: 0;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .pillar-feature-row.reverse {
@@ -2090,6 +2144,710 @@ section {
   height: auto;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
+}
+
+/* --- Contrast & Colour Depth: three-card component (Color Analysis page) --- */
+.contrast-intro-text {
+  width: 75%;
+  max-width: 900px;
+}
+
+.contrast-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+  /* bleed past the parent section's own 24px side padding so the row reads
+     as ~93-95% of the main content column instead of the tighter section width */
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.contrast-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contrast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contrast-card-header {
+  padding: 22px 20px 16px;
+  text-align: center;
+}
+
+.contrast-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.contrast-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contrast-card-body {
+  padding: 20px 22px 28px;
+  text-align: center;
+}
+
+.contrast-card-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.contrast-card-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.contrast-card-subtitle {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.contrast-card-descriptor {
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+.contrast-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.contrast-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.contrast-card-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- From Palette to Real Clothes: large single visual below the copy --- */
+.palette-visual-wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.palette-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .contrast-intro-text {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contrast-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .palette-visual-wrap {
+    margin-top: 32px;
+  }
+}
+
+/* --- From Palette to Real Clothes: lightweight legend under the visual ---
+   Pulled in close underneath the image (14px, down from a detached 28px) and
+   each column carries a thin top accent using that group's own on-image
+   tones, so the card reads as a continuation of the panel above it rather
+   than an unrelated row of text. Column widths mirror the image's three
+   equal thirds via the same repeat(3, 1fr) grid. */
+.palette-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.palette-legend-item {
+  position: relative;
+  background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(20,184,166,0.05));
+  border-radius: var(--radius-md);
+  padding: 22px 16px 18px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.palette-legend-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+
+.palette-legend-item--warm::before {
+  background: linear-gradient(90deg, #D9A441, #A54A2C, #6B7A3A);
+}
+
+.palette-legend-item--cool::before {
+  background: linear-gradient(90deg, #1B6B93, #1F7A5C, #7A2E4A);
+}
+
+.palette-legend-item--light::before {
+  background: linear-gradient(90deg, #F0E6D2, #D9A9A6, #B7C4CB);
+}
+
+.palette-legend-num {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 4px 0;
+}
+
+.palette-legend-title {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin: 0 0 10px 0;
+}
+
+.palette-legend-colors {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.palette-legend-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.palette-legend-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .palette-legend {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .palette-legend-note {
+    margin-top: 16px;
+  }
+}
+
+/* --- Your Colour Passport: real HTML/CSS result-card component --- */
+.passport-card {
+  max-width: 380px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.passport-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 64px rgba(124,58,237,0.16), 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.passport-header {
+  position: relative;
+  background: var(--gradient);
+  padding: 24px 26px;
+  overflow: hidden;
+}
+
+.passport-header::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -15%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+.passport-brand {
+  position: relative;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  margin: 0 0 6px 0;
+}
+
+.passport-product {
+  position: relative;
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.passport-body {
+  padding: 24px 26px 26px;
+}
+
+.passport-field + .passport-field {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.passport-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.passport-value {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(20,184,166,0.08));
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin: 0;
+}
+
+.passport-swatches {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.passport-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 52px;
+}
+
+.passport-swatch-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06), var(--shadow-sm);
+}
+
+.passport-swatch-dot--outline {
+  box-shadow: 0 0 0 1px var(--border), var(--shadow-sm);
+}
+
+.passport-swatch-name {
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.passport-disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .passport-card {
+    max-width: 100%;
+  }
+
+  .passport-swatches {
+    justify-content: center;
+  }
+}
+
+/* --- Everyday Styling Confidence: 2x2 real-photo scenario grid --- */
+.everyday-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.everyday-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.everyday-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.everyday-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.everyday-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.everyday-card-body {
+  padding: 14px 14px 16px;
+}
+
+.everyday-card-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: var(--purple);
+  margin-bottom: 8px;
+}
+
+.everyday-card-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.everyday-card-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.everyday-card-caption {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.everyday-callout {
+  margin-top: 22px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(20,184,166,0.05));
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.everyday-callout p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .everyday-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .everyday-callout {
+    margin-top: 18px;
+    padding: 14px 18px;
+  }
+}
+
+/* --- Digital Wardrobe page: pain-point quote list --- */
+.pain-quote-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px 28px;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.pain-quote-list li {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: 24px;
+  position: relative;
+}
+
+.pain-quote-list li::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+/* --- Digital Wardrobe page: "Why Digitise" problem cards + problem-solution bridge --- */
+.wd-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.wd-problem-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wd-problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.wd-problem-num {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--purple);
+  opacity: 0.6;
+}
+
+.wd-problem-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.wd-problem-quote {
+  font-size: 1.02rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 6px 0 0 0;
+}
+
+.wd-problem-note {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 4px 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .wd-problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wd-problem-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* --- Digital Wardrobe page: plain factual comparison list (no quote mark) --- */
+.compare-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.compare-list li {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.compare-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+/* --- Digital Wardrobe page: what-your-wardrobe-contains category chips --- */
+.category-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.category-chip {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: linear-gradient(135deg, rgba(124,58,237,0.07), rgba(20,184,166,0.07));
+  border-radius: 999px;
+  padding: 9px 18px;
+}
+
+/* --- Digital Wardrobe page: scanning step list (paired with a visual) --- */
+.scan-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.scan-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.scan-step-num {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  min-width: 34px;
+}
+
+.scan-step-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.scan-step-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Digital Wardrobe page: system-flow summary line (Colours -> Own -> Wear -> Buy) --- */
+.system-flow {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  margin: 22px 0 0 0;
+}
+
+.system-flow strong {
+  color: var(--purple);
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .pain-quote-list {
+    grid-template-columns: 1fr;
+  }
+
+  .system-flow {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
 }
 
 .concept-flow-box {

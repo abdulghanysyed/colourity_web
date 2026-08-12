@@ -118,7 +118,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.6" />
+  <link rel="stylesheet" href="../style.css?v=1.1.7" />
 </head>
 <body>
 
@@ -161,7 +161,7 @@
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
-  <main style="max-width: 1000px; margin: 0 auto; padding: 60px 24px;">
+  <main class="pillar-main">
 
     <div style="text-align: center; margin-bottom: 72px;">
       <img src="../assets/pillar/color-analysis-hero.webp" alt="Coordinated clothing colours arranged as a personal fashion palette" style="max-width: 720px; width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" width="720" height="540" loading="eager" />
@@ -244,30 +244,114 @@
     </section>
 
     <!-- ===== 5. UNDERSTAND CONTRAST & COLOUR DEPTH ===== -->
-    <div class="pillar-feature-row">
-      <div class="pillar-feature-text">
-        <span class="section-tag">Going Deeper</span>
-        <h3>Understand Contrast &amp; Colour Depth</h3>
-        <p><strong>Depth</strong> describes how light or deep your overall colouring is, from fair to deep. <strong>Contrast</strong> describes how different your hair, skin, and eye colours are from each other — from low contrast (similar tones throughout) to high contrast (a strong difference, like dark hair with fair skin).</p>
-        <p>As a general starting point, higher-contrast colouring tends to suit clearer, more saturated colour combinations, while lower-contrast colouring tends to suit softer, more blended tones — though your exact Colourity palette accounts for your specific mix of undertone, depth, and contrast together, not just one factor alone.</p>
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">Going Deeper</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Understand Contrast &amp; Colour Depth</h2>
+      <p class="contrast-intro-text" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;"><strong>Depth</strong> describes how light or deep your overall colouring is, from fair to deep. <strong>Contrast</strong> describes how different your hair, skin, and eye colours are from each other — from low contrast (similar tones throughout) to high contrast (a strong difference, like dark hair with fair skin).</p>
+      <p class="contrast-intro-text" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px;">As a general starting point, higher-contrast colouring tends to suit clearer, more saturated colour combinations, while lower-contrast colouring tends to suit softer, more blended tones — though your exact Colourity palette accounts for your specific mix of undertone, depth, and contrast together, not just one factor alone.</p>
+
+      <div class="contrast-card-grid">
+        <div class="contrast-card">
+          <div class="contrast-card-header">
+            <div class="contrast-card-num">01</div>
+            <span class="contrast-card-label">Low Contrast</span>
+            <span class="contrast-card-subtitle">Soft + blended</span>
+          </div>
+          <div class="contrast-card-img-wrap">
+            <img class="contrast-card-img" src="../assets/pillar/low_contrast_person.png" alt="Portrait illustrating a low natural contrast appearance" width="453" height="460" loading="lazy" />
+          </div>
+          <div class="contrast-card-body">
+            <p class="contrast-card-descriptor">Similar tones, gentle difference</p>
+            <div class="contrast-swatches">
+              <span class="contrast-swatch" style="background: #C9A9A6;"></span>
+              <span class="contrast-swatch" style="background: #A8B89C;"></span>
+              <span class="contrast-swatch" style="background: #B7C4CB;"></span>
+              <span class="contrast-swatch" style="background: #D9C9A8;"></span>
+              <span class="contrast-swatch" style="background: #B49B9E;"></span>
+            </div>
+            <p class="contrast-card-text">Softer, muted and blended colours harmonise beautifully.</p>
+          </div>
+        </div>
+
+        <div class="contrast-card">
+          <div class="contrast-card-header">
+            <div class="contrast-card-num">02</div>
+            <span class="contrast-card-label">Medium Contrast</span>
+            <span class="contrast-card-subtitle">Balanced</span>
+          </div>
+          <div class="contrast-card-img-wrap">
+            <img class="contrast-card-img" src="../assets/pillar/medium_contrast_person.png" alt="Portrait illustrating a medium natural contrast appearance" width="456" height="460" loading="lazy" />
+          </div>
+          <div class="contrast-card-body">
+            <p class="contrast-card-descriptor">Noticeable but balanced difference</p>
+            <div class="contrast-swatches">
+              <span class="contrast-swatch" style="background: #C1694F;"></span>
+              <span class="contrast-swatch" style="background: #3E8E85;"></span>
+              <span class="contrast-swatch" style="background: #C9A227;"></span>
+              <span class="contrast-swatch" style="background: #6B4C6B;"></span>
+              <span class="contrast-swatch" style="background: #4A6B8A;"></span>
+            </div>
+            <p class="contrast-card-text">Balanced, medium-depth colours create natural harmony.</p>
+          </div>
+        </div>
+
+        <div class="contrast-card">
+          <div class="contrast-card-header">
+            <div class="contrast-card-num">03</div>
+            <span class="contrast-card-label">High Contrast</span>
+            <span class="contrast-card-subtitle">Clear + defined</span>
+          </div>
+          <div class="contrast-card-img-wrap">
+            <img class="contrast-card-img" src="../assets/pillar/high_contrast_person.png" alt="Portrait illustrating a high natural contrast appearance" width="457" height="460" loading="lazy" />
+          </div>
+          <div class="contrast-card-body">
+            <p class="contrast-card-descriptor">Strong difference, clear definition</p>
+            <div class="contrast-swatches">
+              <span class="contrast-swatch" style="background: #C41E3A;"></span>
+              <span class="contrast-swatch" style="background: #046A38;"></span>
+              <span class="contrast-swatch" style="background: #14213D;"></span>
+              <span class="contrast-swatch" style="background: #A31545;"></span>
+              <span class="contrast-swatch" style="background: #1E56A0;"></span>
+            </div>
+            <p class="contrast-card-text">Clear, rich and saturated colours bring out your natural radiance.</p>
+          </div>
+        </div>
       </div>
-      <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-palette.webp" alt="Infographic explaining hair-to-skin contrast levels, showing high contrast (dark hair, fair skin) and low contrast (light hair, light skin) examples with best-in and avoid colour guidance" width="680" height="453" loading="lazy" />
-      </div>
-    </div>
+    </section>
 
     <!-- ===== 6. FROM PALETTE TO REAL CLOTHES ===== -->
-    <div class="pillar-feature-row reverse">
-      <div class="pillar-feature-text">
-        <span class="section-tag">In Practice</span>
-        <h3>From Palette to Real Clothes</h3>
-        <p>Knowing your palette only matters if it translates into what's actually in your wardrobe. A warm, deep palette might translate into mustard, rust, or olive green; a cool, vivid palette might lean toward berry, peacock blue, or emerald; a lighter neutral palette might favour cream, dusty rose, or soft grey.</p>
-        <p>These are examples of how a palette can translate into real, wearable pieces — not a claim that these exact colours suit everyone. The value of colour analysis is understanding which specific colours harmonise with <em>your</em> individual colouring, then applying that logic across the kurtas, sarees, shirts, and jackets already in your closet.</p>
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">In Practice</span>
+      <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">From Palette to Real Clothes</h3>
+      <p class="contrast-intro-text" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Knowing your palette only matters if it translates into what's actually in your wardrobe. A warm, deep palette might translate into mustard, rust, or olive green; a cool, vivid palette might lean toward berry, peacock blue, or emerald; a lighter neutral palette might favour cream, dusty rose, or soft grey.</p>
+      <p class="contrast-intro-text" style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0;">These are examples of how a palette can translate into real, wearable pieces — not a claim that these exact colours suit everyone. The value of colour analysis is understanding which specific colours harmonise with <em>your</em> individual colouring, then applying that logic across the kurtas, sarees, shirts, and jackets already in your closet.</p>
+
+      <div class="palette-visual-wrap">
+        <img class="palette-visual" src="../assets/pillar/wide_clean_editorial_fashion_layout_photo_graphic.png" alt="Three coordinated wardrobe examples showing warm, cool and light neutral colour palettes translated into real clothing." loading="lazy" />
       </div>
-      <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-outfit.webp" alt="Personal colour palette translated into five real styled outfits, showing neutrals, colours and accent swatches alongside the matching garments" width="680" height="453" loading="lazy" />
+
+      <div class="palette-legend">
+        <div class="palette-legend-item palette-legend-item--warm">
+          <p class="palette-legend-num">01</p>
+          <p class="palette-legend-title">Warm &amp; Deep</p>
+          <p class="palette-legend-colors">Mustard &middot; Rust &middot; Olive &middot; Warm neutrals</p>
+          <p class="palette-legend-desc">Examples of warmer, deeper colour combinations.</p>
+        </div>
+        <div class="palette-legend-item palette-legend-item--cool">
+          <p class="palette-legend-num">02</p>
+          <p class="palette-legend-title">Cool &amp; Vivid</p>
+          <p class="palette-legend-colors">Peacock Blue &middot; Emerald &middot; Berry &middot; Deep Navy</p>
+          <p class="palette-legend-desc">Examples of cooler, clearer colour combinations.</p>
+        </div>
+        <div class="palette-legend-item palette-legend-item--light">
+          <p class="palette-legend-num">03</p>
+          <p class="palette-legend-title">Light &amp; Neutral</p>
+          <p class="palette-legend-colors">Cream &middot; Dusty Rose &middot; Soft Grey &middot; Taupe</p>
+          <p class="palette-legend-desc">Examples of lighter, softer neutral combinations.</p>
+        </div>
       </div>
-    </div>
+      <p class="palette-legend-note">Examples, not rules — your Colourity palette is personalised to your own colouring.</p>
+    </section>
 
     <!-- ===== 7. YOUR COLOUR PASSPORT ===== -->
     <div class="pillar-feature-row">
@@ -278,25 +362,44 @@
         <p>It's built to be the thing you actually refer back to: a quick, saved reference for when you're shopping, packing, or simply deciding what to wear — instead of trying to remember your results from memory.</p>
       </div>
       <div class="pillar-feature-img-wrapper">
-        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; max-width: 360px; margin: 0 auto;">
-          <div style="background: var(--gradient); padding: 22px 24px;">
-            <p style="color: rgba(255,255,255,0.85); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.7rem; margin: 0 0 6px 0;">Colourity</p>
-            <p style="color: white; font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; margin: 0;">Colour Passport</p>
+        <div class="passport-card" role="group" aria-label="Illustrative Colour Passport example showing a Warm and Deep colour profile">
+          <div class="passport-header">
+            <p class="passport-brand">Colourity</p>
+            <p class="passport-product">Colour Passport</p>
           </div>
-          <div style="padding: 26px 24px;">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin: 0 0 6px 0;">Your Season</p>
-            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--text-primary); margin: 0 0 22px 0;">Warm &amp; Deep</p>
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin: 0 0 12px 0;">Your Palette</p>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <span style="width: 36px; height: 36px; border-radius: 50%; background: #D9A441; display: inline-block; box-shadow: var(--shadow-sm);" title="Mustard"></span>
-              <span style="width: 36px; height: 36px; border-radius: 50%; background: #1B6B93; display: inline-block; box-shadow: var(--shadow-sm);" title="Peacock Blue"></span>
-              <span style="width: 36px; height: 36px; border-radius: 50%; background: #6B7A3A; display: inline-block; box-shadow: var(--shadow-sm);" title="Mehendi Green"></span>
-              <span style="width: 36px; height: 36px; border-radius: 50%; background: #7A2E4A; display: inline-block; box-shadow: var(--shadow-sm);" title="Berry"></span>
-              <span style="width: 36px; height: 36px; border-radius: 50%; background: #F0E6D2; border: 1px solid var(--border); display: inline-block; box-shadow: var(--shadow-sm);" title="Cream"></span>
+          <div class="passport-body">
+            <div class="passport-field">
+              <p class="passport-label">Your Profile</p>
+              <p class="passport-value">Warm &amp; Deep</p>
+            </div>
+            <div class="passport-field">
+              <p class="passport-label">Your Palette</p>
+              <ul class="passport-swatches">
+                <li class="passport-swatch">
+                  <span class="passport-swatch-dot" style="background: #D9A441;" aria-hidden="true"></span>
+                  <span class="passport-swatch-name">Mustard</span>
+                </li>
+                <li class="passport-swatch">
+                  <span class="passport-swatch-dot" style="background: #1B6B93;" aria-hidden="true"></span>
+                  <span class="passport-swatch-name">Peacock Blue</span>
+                </li>
+                <li class="passport-swatch">
+                  <span class="passport-swatch-dot" style="background: #6B7A3A;" aria-hidden="true"></span>
+                  <span class="passport-swatch-name">Mehendi Green</span>
+                </li>
+                <li class="passport-swatch">
+                  <span class="passport-swatch-dot" style="background: #7A2E4A;" aria-hidden="true"></span>
+                  <span class="passport-swatch-name">Berry</span>
+                </li>
+                <li class="passport-swatch">
+                  <span class="passport-swatch-dot passport-swatch-dot--outline" style="background: #F0E6D2;" aria-hidden="true"></span>
+                  <span class="passport-swatch-name">Cream</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 14px;">Illustrative example — your own Colour Passport reflects your personal scan results.</p>
+        <p class="passport-disclaimer">Illustrative example — your own Colour Passport reflects your personal scan results.</p>
       </div>
     </div>
 
@@ -326,7 +429,59 @@
         <p>The goal isn't a stricter dress code. It's fewer moments of doubt.</p>
       </div>
       <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/color-analysis-style.webp" alt="Four everyday styling scenarios using the same colour palette: at work, on the go, date night, and weekend vibes" width="680" height="188" loading="lazy" />
+        <div class="everyday-grid">
+          <div class="everyday-card">
+            <div class="everyday-card-img-wrap">
+              <img class="everyday-card-img" src="../assets/pillar/at_work.png" alt="Woman in a polished work outfit at a desk" loading="lazy" />
+            </div>
+            <div class="everyday-card-body">
+              <span class="everyday-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path></svg>
+              </span>
+              <span class="everyday-card-label">At Work</span>
+              <p class="everyday-card-caption">Look focused, trustworthy and effortlessly professional.</p>
+            </div>
+          </div>
+          <div class="everyday-card">
+            <div class="everyday-card-img-wrap">
+              <img class="everyday-card-img" src="../assets/pillar/on_the_go.png" alt="Person in a casual everyday outfit while out and about" loading="lazy" />
+            </div>
+            <div class="everyday-card-body">
+              <span class="everyday-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+              </span>
+              <span class="everyday-card-label">On The Go</span>
+              <p class="everyday-card-caption">Feel fresh and confident in your everyday moments.</p>
+            </div>
+          </div>
+          <div class="everyday-card">
+            <div class="everyday-card-img-wrap">
+              <img class="everyday-card-img" src="../assets/pillar/date_night.png" alt="Person in an elegant evening outfit at dinner" loading="lazy" />
+            </div>
+            <div class="everyday-card-body">
+              <span class="everyday-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 20.2s-7.2-4.4-9.6-8.9C.9 7.7 2.6 4 6.4 4c2 0 3.6 1.1 5.6 3.4C14 5.1 15.6 4 17.6 4c3.8 0 5.5 3.7 4 7.3-2.4 4.5-9.6 8.9-9.6 8.9z"></path></svg>
+              </span>
+              <span class="everyday-card-label">Date Night</span>
+              <p class="everyday-card-caption">Look radiant and leave a lasting impression.</p>
+            </div>
+          </div>
+          <div class="everyday-card">
+            <div class="everyday-card-img-wrap">
+              <img class="everyday-card-img" src="../assets/pillar/weekend_vibes.png" alt="Person in a relaxed weekend outfit at home" loading="lazy" />
+            </div>
+            <div class="everyday-card-body">
+              <span class="everyday-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+              </span>
+              <span class="everyday-card-label">Weekend Vibes</span>
+              <p class="everyday-card-caption">Stay comfortable and stylish, your way.</p>
+            </div>
+          </div>
+        </div>
+        <div class="everyday-callout">
+          <p>When your colours work for you, everything follows — your wardrobe, your outfit, your confidence, your day.</p>
+        </div>
       </div>
     </div>
 
