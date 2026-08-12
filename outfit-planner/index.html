@@ -19,6 +19,12 @@
   <meta property="og:image" content="https://colourity.com/assets/pillar/outfit-planner-hero.webp" />
   <meta property="og:site_name" content="Colourity" />
 
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Outfit Planner — Generate Outfits From Clothes You Own | Colourity" />
+  <meta name="twitter:description" content="Colourity AI Outfit Planner combines your digitised clothes into complete looks for any occasion." />
+  <meta name="twitter:image" content="https://colourity.com/assets/pillar/outfit-planner-hero.webp" />
+
   <!-- ===== SCHEMA.ORG: WebPage ===== -->
   <script type="application/ld+json">
   {
@@ -68,15 +74,39 @@
         "name": "What is an AI outfit planner?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "An AI outfit planner helps you decide what to wear by combining wardrobe pieces into complete looks based on relevant styling context, such as occasion and colour. Colourity's Outfit Planner builds these combinations from your own digitised wardrobe rather than generating generic fashion ideas."
+          "text": "An AI outfit planner is a personal styling system that combines available wardrobe pieces into complete, coordinated outfits based on styling context, such as occasion, weather, colour harmony, and personal preferences. Colourity's Outfit Planner builds these combinations directly from your own digitised wardrobe."
         }
       },
       {
         "@type": "Question",
-        "name": "Can Colourity create outfits from clothes I already own?",
+        "name": "How does an AI outfit planner work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Colourity's Outfit Planner builds outfit combinations using the garments already saved in your digital wardrobe."
+          "text": "An AI outfit planner evaluates clothing attributes—category, colour tone, pattern, formality, and fabric—and applies colour-science rules to assemble compatible items into full looks tailored to your specific occasion or daily style needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can an AI outfit planner create outfits from clothes I already own?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Colourity is specifically designed to generate outfits from clothes you already own. Once you upload your items into your digital wardrobe, Colourity recommends looks using your actual closet inventory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Colourity plan outfits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Colourity combines your personal colour profile, digital wardrobe inventory, selected occasion context, and weather inputs to match tops, bottoms, shoes, and layering pieces into harmonious outfit combinations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors influence an outfit recommendation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Outfit recommendations are influenced by skin tone colour harmony, item formality level, occasion, weather conditions, pattern compatibility, and available wardrobe inventory."
         }
       },
       {
@@ -84,7 +114,7 @@
         "name": "How is Colourity different from a random outfit generator?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Colourity uses deterministic colour-science and matching rules — colour harmony, pattern compatibility, and formality tiers computed from your garments' attributes — rather than generating a new answer at random each time. This creates consistency in what you're recommended."
+          "text": "Colourity uses deterministic colour-science and matching rules—colour harmony, pattern compatibility, and formality tiers computed from your garments' attributes—rather than generating a random guess each time. This creates consistent, explainable recommendations."
         }
       },
       {
@@ -92,15 +122,7 @@
         "name": "Can I plan an outfit for a specific occasion?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The Outfit Wizard lets you choose a base garment where supported and an occasion, and Colourity builds a compatible outfit from your available wardrobe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get a daily outfit suggestion?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Today's Pick surfaces a daily outfit suggestion on Home, with the ability to log what you actually wore where supported."
+          "text": "Yes. The Outfit Wizard lets you choose a base garment and an occasion (such as work, casual, or festive), and Colourity builds a compatible outfit from your available wardrobe."
         }
       },
       {
@@ -108,23 +130,7 @@
         "name": "Does Colourity consider weather?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, for Surprise Me. It pulls current weather conditions so it doesn't suggest the wrong garment for the day."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if I don't have enough clothes in my wardrobe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Outfit combinations are built from what's currently in your digital wardrobe, so the more garments you've added, the more combinations become available. If a look is missing a piece, that's exactly the kind of gap Scan Before You Buy and Shop the Gap are designed to help with."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I explore complete outfit combinations?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Explore Outfits & Styles is a browsable feed of full outfit looks, including tappable hotspots over each garment so you can see the individual pieces that make up a look."
+          "text": "Yes. For features like Surprise Me, Colourity factors in current weather conditions so it doesn't suggest heavy outerwear on a hot day or light sleeveless pieces in cold weather."
         }
       }
     ]
@@ -134,7 +140,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=1.1.7" />
+  <link rel="stylesheet" href="../style.css?v=1.1.8" />
 </head>
 <body>
 
@@ -147,7 +153,7 @@
       <div class="nav-links">
         <a href="../color-analysis/">Color Analysis</a>
         <a href="../digital-wardrobe/">Digital Wardrobe</a>
-        <a href="../outfit-planner/">Outfit Planner</a>
+        <a href="../outfit-planner/" class="active">Outfit Planner</a>
         <a href="../scan-before-you-buy/">Scan Before Buy</a>
         <a href="../blog/">Blog</a>
         <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="nav-cta" target="_blank" rel="noopener">Get Colourity</a>
@@ -167,258 +173,477 @@
   </nav>
 
   <!-- ========== HERO HEADER ========== -->
-  <header style="padding: 140px 24px 60px 24px; text-align: center; background: var(--gradient-soft);">
-    <div style="max-width: 800px; margin: 0 auto;">
+  <header style="padding: 140px 24px 40px 24px; text-align: center; background: var(--gradient-soft);">
+    <div style="max-width: 820px; margin: 0 auto;">
       <span class="section-tag">Colourity Feature Pillar</span>
-      <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px;">AI Outfit Planner</h1>
-      <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 24px auto; line-height: 1.6;">Turn the clothes you already own into complete outfit ideas for different occasions and moments.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-primary" target="_blank" rel="noopener">Get Colourity On Google Play</a>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; color: var(--text-primary); margin-bottom: 16px; line-height: 1.15;">AI Outfit Planner</h1>
+      <p style="font-size: 1.18rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 28px auto; line-height: 1.6; font-weight: 500;">
+        Turn the clothes you already own into complete outfit ideas for different occasions and moments.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-primary" target="_blank" rel="noopener">Get Colourity On Google Play</a>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--purple); font-weight: 700; letter-spacing: 0.02em; margin-top: 8px;">
+        Outfits from the clothes you already own.
+      </p>
     </div>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main class="pillar-main">
 
-    <div style="text-align: center; margin-bottom: 72px;">
-      <img src="../assets/pillar/outfit-planner-hero.webp" alt="Complete styled outfit outcome combining navy jacket, top, trousers and footwear" style="max-width: 720px; width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" width="1024" height="1024" loading="eager" />
+    <!-- ===== 1. HERO VISUAL ASSET (Natural Aspect Ratio) ===== -->
+    <div style="text-align: center; margin-bottom: 64px;">
+      <img src="../assets/pillar/outfit-planner-hero.webp" alt="Colourity AI Outfit Planner recommendations showing personal wardrobe rack and smartphone interface" style="max-width: 960px; width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border);" width="1024" height="391" loading="eager" />
     </div>
 
     <!-- ===== 2. YOUR OUTFIT PLANNER STARTS WITH YOUR WARDROBE ===== -->
     <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md); text-align: center;">
-      <span class="section-tag">Before You Start</span>
-      <h2 style="font-size: 1.7rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">Your Outfit Planner Starts With Your Wardrobe</h2>
-      <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; margin: 0 auto 28px auto;">Outfit Planner doesn't generate outfits out of thin air. It works from the garments already saved in your digital wardrobe.</p>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 28px;">
-        <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 10px 20px;">Your Digital Wardrobe</span>
-        <span style="color: var(--text-muted);">+</span>
-        <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 10px 20px;">Your Outfit Need</span>
-        <span style="color: var(--text-muted);">+</span>
-        <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 10px 20px;">Colourity's Matching System</span>
-        <span style="color: var(--text-muted);">=</span>
-        <span style="background: var(--gradient); color: white; border-radius: 50px; padding: 10px 20px;">Outfit Recommendation</span>
+      <span class="section-tag">Core Engine Principle</span>
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Your Outfit Planner Starts With Your Wardrobe</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px; margin: 0 auto 32px auto;">
+        Colourity's Outfit Planner does not generate theoretical outfit ideas out of thin air. It operates directly on the clothes saved in your personal digital wardrobe, matching your real tops, bottoms, footwear, and accessories.
+      </p>
+      
+      <!-- HTML/CSS Workflow Flow (Not an image) -->
+      <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 0.92rem; margin-bottom: 32px;">
+        <div style="background: var(--bg); border: 1.5px solid var(--border); border-radius: 50px; padding: 12px 22px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>👗</span> YOUR DIGITAL WARDROBE
+        </div>
+        <span style="color: var(--purple); font-size: 1.3rem; font-weight: 900;">&rarr;</span>
+        <div style="background: var(--bg); border: 1.5px solid var(--border); border-radius: 50px; padding: 12px 22px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>🎯</span> YOUR OUTFIT NEED
+        </div>
+        <span style="color: var(--purple); font-size: 1.3rem; font-weight: 900;">&rarr;</span>
+        <div style="background: var(--bg); border: 1.5px solid var(--border); border-radius: 50px; padding: 12px 22px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>⚡</span> COLOURITY AI
+        </div>
+        <span style="color: var(--purple); font-size: 1.3rem; font-weight: 900;">&rarr;</span>
+        <div style="background: var(--gradient); color: white; border-radius: 50px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-sm);">
+          <span>✨</span> COMPLETE LOOK
+        </div>
       </div>
-      <p style="font-size: 0.95rem; color: var(--text-secondary);">Don't have your wardrobe digitised yet? <a href="../digital-wardrobe/" style="color: var(--purple); font-weight: 600; text-decoration: none;">Start by building your Digital Wardrobe &rarr;</a></p>
+
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0;">
+        Don't have your closet added yet? <a href="../digital-wardrobe/" style="color: var(--purple); font-weight: 700; text-decoration: none;">Start by building your Digital Wardrobe &rarr;</a>
+      </p>
     </section>
 
-    <!-- ===== 3. WHAT IS AN AI OUTFIT PLANNER? ===== -->
+    <!-- ===== 3. WHAT IS AN AI OUTFIT PLANNER? (GEO / SEO Standalone Answer) ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">The Basics</span>
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is an AI Outfit Planner?</h2>
-      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 28px;">
-        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">An AI outfit planner helps you decide what to wear by combining available wardrobe pieces into complete looks based on relevant styling context, such as occasion and colour.</p>
+      <span class="section-tag">GEO &amp; SEO Guide</span>
+      <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">What Is an AI Outfit Planner?</h2>
+      
+      <!-- Standalone answer box for search engines & AI overviews -->
+      <div style="background: var(--white); border: 1.5px solid rgba(124, 58, 237, 0.3); border-radius: var(--radius-lg); padding: 32px 36px; box-shadow: var(--shadow-sm); margin-bottom: 32px;">
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--purple); margin: 0 0 12px 0;">Definition</h3>
+        <p style="font-size: 1.08rem; color: var(--text-primary); line-height: 1.7; margin: 0; font-weight: 500;">
+          An <strong>AI outfit planner</strong> is a digital styling system that evaluates available clothing items and pairs them into complete, coordinated outfits based on styling parameters including skin tone colour harmony, occasion context, formality levels, weather conditions, and personal preferences.
+        </p>
       </div>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 720px;">Not every outfit planner works the same way. Colourity focuses on combinations built from your own wardrobe, rather than simply generating generic fashion ideas.</p>
-      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <div class="synergy-card" style="text-align: left;">
-          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Generic Outfit Inspiration</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">"Here is an outfit you could wear, or buy." Not connected to what's actually in your closet.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px;">
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">How does an AI outfit planner work?</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+            It analyzes the attributes of each garment—category, colour tone, pattern, formality, and fabric—and computes compatible top-to-bottom combinations for specific styling needs.
+          </p>
         </div>
-        <div class="synergy-card" style="text-align: left; border-color: rgba(124,58,237,0.35);">
-          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--purple); margin-bottom: 10px;">Colourity</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">"Here is an outfit you can create using what you already own." Built from your digitised wardrobe.</p>
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Can it use clothes I already own?</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+            Yes. Unlike generic shopping apps that push new items, Colourity's AI outfit planner builds looks directly from your uploaded digital closet inventory.
+          </p>
+        </div>
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">What factors influence a recommendation?</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+            Key inputs include skin undertone harmony, occasion formality (work, casual, festive), weather parameters, pattern contrast, and piece availability.
+          </p>
+        </div>
+      </div>
+
+      <!-- Difference comparison -->
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="synergy-card" style="text-align: left; padding: 28px;">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Generic Outfit Inspiration</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+            "Here is an outfit from a magazine or store." Unconnected to what you actually have hanging in your bedroom closet.
+          </p>
+        </div>
+        <div class="synergy-card" style="text-align: left; padding: 28px; border-color: rgba(124,58,237,0.35); background: linear-gradient(135deg, rgba(124,58,237,0.03) 0%, rgba(59,130,246,0.03) 100%);">
+          <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--purple); margin-bottom: 10px;">Colourity AI Outfit Engine</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+            "Here is an outfit you can wear today using your existing clothes." Built from your digitised wardrobe inventory.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ===== 4. THREE WAYS TO GET AN OUTFIT ===== -->
     <section style="margin-bottom: 80px;">
-      <span class="section-tag">How You Get One</span>
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Three Ways to Get an Outfit</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; max-width: 720px;">Colourity offers three distinct ways to land on an outfit, depending on how much control you want.</p>
-      <div class="synergy-grid">
-        <div class="synergy-card" style="text-align: left;">
-          <div class="synergy-num" style="font-size: 1.6rem;">01</div>
-          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Outfit Wizard</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">Choose a base garment where supported, then choose an occasion. Colourity builds a compatible outfit from your available wardrobe — full control over the starting point.</p>
+      <span class="section-tag">Flexible Styling Modes</span>
+      <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Three Ways to Get an Outfit</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px; max-width: 720px;">
+        Whether you want full control over a specific staple item or a zero-effort recommendation, Colourity offers three distinct modes:
+      </p>
+
+      <div class="synergy-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <!-- Card 1 -->
+        <div class="synergy-card" style="text-align: left; padding: 32px 28px;">
+          <div class="synergy-num" style="font-size: 1.6rem; margin-bottom: 12px;">01</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px;">Outfit Wizard</h3>
+          
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHAT IT DOES</span>
+            <p style="font-size: 0.92rem; color: var(--text-primary); margin: 0; line-height: 1.5;">Pick a starting base garment (e.g., your beige trousers) and an occasion. Colourity builds a complete look around it.</p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHEN TO USE IT</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">When you know one item you definitely want to wear today and need compatible pairings.</p>
+          </div>
+
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; display: block; margin-bottom: 2px;">WHY IT HELPS</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Gives you total control over the hero piece while solving matching shoes and layers.</p>
+          </div>
         </div>
-        <div class="synergy-card" style="text-align: left;">
-          <div class="synergy-num" style="font-size: 1.6rem;">02</div>
-          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Surprise Me</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">A one-tap outfit suggestion from your wardrobe, weather-aware so you're not suggested the wrong garment for the day — for when you don't want to build one manually.</p>
+
+        <!-- Card 2 -->
+        <div class="synergy-card" style="text-align: left; padding: 32px 28px;">
+          <div class="synergy-num" style="font-size: 1.6rem; margin-bottom: 12px;">02</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px;">Surprise Me</h3>
+          
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHAT IT DOES</span>
+            <p style="font-size: 0.92rem; color: var(--text-primary); margin: 0; line-height: 1.5;">Generates a complete, weather-aware outfit suggestion from your wardrobe with a single tap.</p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHEN TO USE IT</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">When you suffer from morning decision fatigue and don't want to build a look manually.</p>
+          </div>
+
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; display: block; margin-bottom: 2px;">WHY IT HELPS</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Discovers forgotten clothing combinations in your closet instantly.</p>
+          </div>
         </div>
-        <div class="synergy-card" style="text-align: left;">
-          <div class="synergy-num" style="font-size: 1.6rem;">03</div>
-          <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">Today's Pick</h4>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">A daily, ready-made outfit suggestion surfaced on Home, with the ability to log what you actually wore that day where supported.</p>
+
+        <!-- Card 3 -->
+        <div class="synergy-card" style="text-align: left; padding: 32px 28px;">
+          <div class="synergy-num" style="font-size: 1.6rem; margin-bottom: 12px;">03</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px;">Today's Pick</h3>
+          
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHAT IT DOES</span>
+            <p style="font-size: 0.92rem; color: var(--text-primary); margin: 0; line-height: 1.5;">Surfaces a daily curated recommendation directly on your app home screen.</p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; display: block; margin-bottom: 2px;">WHEN TO USE IT</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Every morning as your default starting point for getting dressed.</p>
+          </div>
+
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; display: block; margin-bottom: 2px;">WHY IT HELPS</span>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Builds a seamless daily dressing routine with option to log what you wore.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 5. HOW COLOURITY BUILDS A LOOK ===== -->
-    <div class="pillar-feature-row">
-      <div class="pillar-feature-text">
-        <span class="section-tag">The Logic</span>
-        <h3>How Colourity Builds a Look</h3>
-        <p>Once you ask for an outfit, Colourity works through your available wardrobe and pairs individual pieces — tops, bottoms, and footwear — into a complete look. Where supported, this can also include outerwear and layering pieces, not just a top and bottom.</p>
-        <p>Where verified, the matching considers things like colour compatibility, occasion, formality, and which pieces are actually available in your wardrobe.</p>
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-family: var(--font-display); font-weight: 700; color: var(--text-primary); font-size: 0.82rem; margin-top: 20px;">
-          <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 8px 16px;">Your Wardrobe</span>
-          <span style="color: var(--text-muted); padding-left: 16px;">&darr;</span>
-          <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 8px 16px;">Colourity Matching</span>
-          <span style="color: var(--text-muted); padding-left: 16px;">&darr;</span>
-          <span style="background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 8px 16px;">Top + Bottom + Footwear</span>
-          <span style="color: var(--text-muted); padding-left: 16px;">&darr;</span>
-          <span style="background: var(--gradient); color: white; border-radius: 50px; padding: 8px 16px;">Complete Look</span>
+    <!-- ===== 5. HOW COLOURITY BUILDS A LOOK (Visual + HTML Flow) ===== -->
+    <section style="margin-bottom: 80px;">
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
+        <span class="section-tag">System Logic</span>
+        <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">How Colourity Builds a Look</h2>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 32px;">
+          When you request an outfit recommendation, Colourity evaluates your entire digital wardrobe inventory and evaluates piece-by-piece compatibility—combining top, bottom, shoes, and accessories into one cohesive look.
+        </p>
+
+        <!-- HTML/CSS Flow Header Connector -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); font-size: 0.88rem; margin-bottom: 28px; background: var(--bg); padding: 16px 20px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+          <span style="color: var(--purple);">TOP</span>
+          <span>+</span>
+          <span style="color: var(--purple);">BOTTOM</span>
+          <span>+</span>
+          <span style="color: var(--purple);">SHOES</span>
+          <span>+</span>
+          <span style="color: var(--purple);">ACCESSORY</span>
+          <span style="color: var(--purple); font-size: 1.2rem;">&rarr;</span>
+          <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">COMPLETE LOOK</span>
+        </div>
+
+        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
+        <div style="text-align: center; margin-bottom: 24px;">
+          <img src="../assets/pillar/outfit-planner-build-look.webp" alt="How Colourity builds a look: Top plus bottom plus shoes plus accessories equals complete look" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="358" loading="lazy" />
+        </div>
+
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin: 0; text-align: center; max-width: 760px; margin: 0 auto;">
+          The system evaluates color depth, undertone harmony, pattern scale, and formality tiers across all categories to ensure every item in the outfit works in harmony.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 6. WHY THE RECOMMENDATIONS ARE CONSISTENT (Deterministic Science) ===== -->
+    <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
+      <span class="section-tag">Deterministic Rules</span>
+      <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Why the Recommendations Are Consistent</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 24px;">
+        Colourity relies on deterministic colour-science and matching rules computed from garment attributes—such as skin tone contrast ratios, formality levels, and pattern compatibility—rather than generating random combinations.
+      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+        <div style="background: var(--bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="font-size: 1.2rem; margin-bottom: 6px;">🎨</div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Skin Undertone Harmony</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Ensures outfit colours complement your biological seasonal palette.</p>
+        </div>
+
+        <div style="background: var(--bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="font-size: 1.2rem; margin-bottom: 6px;">👔</div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Formality Matching</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Prevents pairing formal blazers with casual athletic wear.</p>
+        </div>
+
+        <div style="background: var(--bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="font-size: 1.2rem; margin-bottom: 6px;">☀️</div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Weather Context</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Factors temperature and season into garment selection.</p>
+        </div>
+
+        <div style="background: var(--bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="font-size: 1.2rem; margin-bottom: 6px;">📦</div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Wardrobe Availability</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Builds looks strictly from available clothing in your closet.</p>
         </div>
       </div>
-      <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/outfit-planner-combination.webp" alt="Navy blazer and formal trousers outfit combination" width="680" height="510" loading="lazy" />
-      </div>
-    </div>
-
-    <!-- ===== 6. WHY THE RECOMMENDATIONS ARE CONSISTENT ===== -->
-    <section style="margin-bottom: 80px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
-      <span class="section-tag">Why Trust It</span>
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Why the Recommendations Are Consistent</h2>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px; margin-bottom: 0;">Colourity uses defined colour-science and matching rules for outfit pairing, rather than generating a completely new answer at random each time. That doesn't mean every recommendation is guaranteed to be perfect for every taste — it means the same wardrobe and the same occasion will produce consistent, explainable pairings, instead of a different guess every time you ask.</p>
     </section>
 
     <!-- ===== 7. OCCASION & WEATHER AWARE RECOMMENDATIONS ===== -->
-    <div class="pillar-feature-row reverse">
-      <div class="pillar-feature-text">
-        <span class="section-tag">Real Situations</span>
-        <h3>Occasion &amp; Weather Aware Recommendations</h3>
-        <p>You don't just get an outfit — you can ask for one suited to the situation. An everyday casual look, a work outfit, or a festive occasion look each draw on different pieces from your wardrobe, matched to the right formality level. Surprise Me also factors in current weather, so you're not suggested a garment that doesn't suit the day.</p>
+    <section style="margin-bottom: 80px;">
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
+        <span class="section-tag">Contextual Styling</span>
+        <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Occasion &amp; Weather Aware Recommendations</h2>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 28px;">
+          Different situations require different outfit choices. An everyday casual look, a professional office presentation, a festive wedding function, or a cold morning commute each draw on distinct garment combinations matched to the appropriate formality tier and weather context.
+        </p>
+
+        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
+        <div style="text-align: center; margin-bottom: 20px;">
+          <img src="../assets/pillar/outfit-planner-occasion.webp" alt="Occasion and weather aware recommendations showing casual, work, festive and weather-appropriate outfits" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="335" loading="lazy" />
+        </div>
+
+        <!-- HTML Context Labels -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: var(--text-primary);">
+          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">☕ Casual Day</div>
+          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">💼 Work Office</div>
+          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">✨ Festive Function</div>
+          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">❄️ Weather Aware</div>
+        </div>
       </div>
-      <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/outfit-planner-occasion.webp" alt="Wedding guest festive occasion outfit styling" width="680" height="510" loading="lazy" />
-      </div>
-    </div>
+    </section>
 
     <!-- ===== 8. EXPLORE OUTFITS & STYLES ===== -->
-    <div class="pillar-feature-row">
-      <div class="pillar-feature-text">
-        <span class="section-tag">Browse &amp; Learn</span>
-        <h3>Explore Outfits &amp; Styles</h3>
-        <p>Beyond building outfits on demand, Explore Outfits & Styles is a browsable feed of complete outfit looks. Tappable hotspots over each garment let you see the individual pieces that make up a look — connecting outfit inspiration back to your own wardrobe rather than leaving it as a disconnected photo.</p>
-      </div>
-      <div class="pillar-feature-img-wrapper">
-        <img class="pillar-feature-img" src="../assets/pillar/outfit-planner-looks.webp" alt="Multiple distinct styling look variations" width="680" height="510" loading="lazy" />
-      </div>
-    </div>
+    <section style="margin-bottom: 80px;">
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
+        <span class="section-tag">Style Inspiration</span>
+        <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Explore Outfits &amp; Styles</h2>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 28px;">
+          Beyond building outfits on demand, Explore Outfits &amp; Styles allows you to browse complete outfit lookbook inspirations across ethnic, casual, smart-casual, and formal directions. Hotspots on individual pieces allow you to see the component tops, bottoms, and outerwear that make up each look.
+        </p>
 
-    <!-- ===== 9. PRACTICAL OUTFIT EXAMPLE ===== -->
-    <section style="margin-bottom: 80px; margin-top: 80px;">
-      <span class="section-tag">In Practice</span>
-      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 24px;">A Practical Example</h2>
-      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-        <div>
-          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">You Own</p>
-          <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; display: flex; flex-direction: column; gap: 8px;">
-            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">Navy shirt</li>
-            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">Beige chinos</li>
-            <li style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500;">Brown loafers</li>
-          </ul>
-          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">You Need</p>
-          <p style="font-size: 0.98rem; color: var(--text-primary); font-weight: 500; margin: 0;">A smart-casual work outfit</p>
-        </div>
-        <div style="border-left: 1px solid var(--border); padding-left: 40px;">
-          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">Colourity Combines</p>
-          <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text-primary); margin: 0 0 20px 0; line-height: 1.5;">Navy shirt + beige chinos + brown loafers = smart-casual look</p>
-          <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin: 0 0 12px 0;">Why It Works</p>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
-            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">— Balanced colour relationship between navy and beige</li>
-            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">— Appropriate formality level for the occasion</li>
-            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">— A complete outfit from pieces already in the wardrobe</li>
-          </ul>
+        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
+        <div style="text-align: center;">
+          <img src="../assets/pillar/outfit-planner-looks.webp" alt="Explore outfits and styles showing multiple full-body model looks across ethnic, casual, and formal styles" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="343" loading="lazy" />
         </div>
       </div>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">This is one illustrative example of the logic Colourity applies — not the only combination that would work, and not a claim that these exact pieces suit everyone.</p>
     </section>
 
-    <!-- ===== 10. YOU MAY HAVE MORE OUTFITS THAN YOU THINK ===== -->
-    <section style="margin-bottom: 80px; text-align: center; background: var(--gradient-soft); padding: 56px 24px; border-radius: var(--radius-xl);">
-      <h2 style="font-size: 1.9rem; font-weight: 800; margin-bottom: 14px;">You May Have More Outfits Than You Think</h2>
-      <p style="color: var(--text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.6;">"I have nothing to wear" is rarely about literally having no clothes — it's usually about not seeing the combinations that already exist in your closet. A <a href="../digital-wardrobe/" style="color: var(--purple); font-weight: 600; text-decoration: none;">digitised wardrobe</a> makes those combinations visible, and Outfit Planner turns them into an actual look.</p>
+    <!-- ===== 9. PRACTICAL EXAMPLE (Visual + HTML Structural Breakdown) ===== -->
+    <section style="margin-bottom: 80px;">
+      <span class="section-tag">Workflow Demonstration</span>
+      <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 20px;">A Practical Example</h2>
+      
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 40px; margin-bottom: 24px;">
+        
+        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
+        <div style="text-align: center; margin-bottom: 32px;">
+          <img src="../assets/pillar/outfit-planner-practical.webp" alt="Practical outfit example showing navy shirt plus beige chinos plus brown loafers combining into a complete look" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="305" loading="lazy" />
+        </div>
+
+        <!-- HTML Structured Breakdown Cards -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+          <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">1. STYLING CONTEXT &amp; WARDROBE INPUTS</p>
+            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 12px;">Context: <span style="font-weight: 500; color: var(--text-secondary);">Smart-Casual Office Event</span></p>
+            <p style="font-size: 0.95rem; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">Available Wardrobe Garments:</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👔 Navy Shirt</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👖 Beige Chinos</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">👞 Brown Loafers</li>
+              <li style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center; gap: 6px;">⌚ Leather Watch &amp; Belt</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid rgba(124, 58, 237, 0.3);">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 800; margin: 0 0 8px 0;">2. COLOURITY AI OUTCOME</p>
+            <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text-primary); margin: 0 0 12px 0; line-height: 1.4;">
+              Navy Shirt + Beige Chinos + Brown Loafers = Polished Smart-Casual Look
+            </p>
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 800; margin: 0 0 8px 0;">WHY IT WORKS</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Balanced complementary colour contrast (Navy &amp; Warm Beige)</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Matched smart-casual formality level across shirt and footwear</li>
+              <li style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">✓ Built 100% from items already hanging in the user's closet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.88rem; color: var(--text-muted); text-align: center; margin: 0;">
+        Note: This practical example demonstrates the workflow system logic—it is an illustrative demonstration rather than a guarantee that this exact combination will be recommended for every user.
+      </p>
     </section>
 
-    <!-- ===== 11. FAQ ===== -->
+    <!-- ===== 10. THE CONNECTED STYLING ECOSYSTEM ===== -->
+    <section style="margin-bottom: 80px; background: var(--gradient-soft); padding: 56px 36px; border-radius: var(--radius-xl); text-align: center;">
+      <span class="section-tag">System Synergy</span>
+      <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Part of a Connected Personal Styling Ecosystem</h2>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 32px auto; line-height: 1.65;">
+        The AI Outfit Planner connects seamlessly with the rest of the Colourity platform to make dressing effortless:
+      </p>
+
+      <!-- Ecosystem Chain (HTML/CSS) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 960px; margin: 0 auto 32px auto; text-align: left;">
+        
+        <a href="../color-analysis/" style="text-decoration: none; color: inherit;" class="ecosystem-card">
+          <div style="font-size: 1.4rem; margin-bottom: 8px;">🎨</div>
+          <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">1. YOUR COLOURS</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Know which colours suit your skin tone &rarr;</p>
+        </a>
+
+        <a href="../digital-wardrobe/" style="text-decoration: none; color: inherit;" class="ecosystem-card">
+          <div style="font-size: 1.4rem; margin-bottom: 8px;">👗</div>
+          <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">2. YOUR WARDROBE</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Know what clothes you already own &rarr;</p>
+        </a>
+
+        <div style="background: var(--white); border: 2px solid var(--purple); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm);">
+          <div style="font-size: 1.4rem; margin-bottom: 8px;">✨</div>
+          <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: var(--purple); margin-bottom: 4px;">3. AI OUTFIT PLANNER</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Know what to wear every day</p>
+        </div>
+
+        <a href="../scan-before-you-buy/" style="text-decoration: none; color: inherit;" class="ecosystem-card">
+          <div style="font-size: 1.4rem; margin-bottom: 8px;">🛍️</div>
+          <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">4. SCAN BEFORE YOU BUY</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Know whether new items fit &rarr;</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== 11. FAQ ACCORDION (GEO / SEO) ===== -->
     <section class="faq" style="border-radius: var(--radius-xl); margin: 0 -24px 80px -24px; padding: 72px 24px;">
       <div class="faq-bg"></div>
       <div class="section-header">
-        <span class="section-tag">Common Questions</span>
-        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 10px 0 0 0;">Frequently Asked Questions</h2>
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin: 10px 0 0 0;">Outfit Planning FAQs</h2>
       </div>
       <div class="faq-list">
+        
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             What is an AI outfit planner?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
-            <p>An AI outfit planner helps you decide what to wear by combining wardrobe pieces into complete looks based on relevant styling context, such as occasion and colour. Colourity's Outfit Planner builds these combinations from your own digitised wardrobe rather than generating generic fashion ideas.</p>
+            <p>An AI outfit planner is a personal styling system that combines available wardrobe pieces into complete, coordinated outfits based on styling context, such as occasion, weather, colour harmony, and personal preferences. Colourity's Outfit Planner builds these combinations directly from your own digitised wardrobe.</p>
           </div>
         </div>
+
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            Can Colourity create outfits from clothes I already own?
+            How does an AI outfit planner work?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Yes. Colourity's Outfit Planner builds outfit combinations using the garments already saved in your digital wardrobe.</p>
+            <p>An AI outfit planner evaluates clothing attributes—category, colour tone, pattern, formality, and fabric—and applies colour-science rules to assemble compatible items into full looks tailored to your specific occasion or daily style needs.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can an AI outfit planner create outfits from clothes I already own?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Colourity is specifically designed to generate outfits from clothes you already own. Once you upload your items into your digital wardrobe, Colourity recommends looks using your actual closet inventory.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does Colourity plan outfits?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Colourity combines your personal colour profile, digital wardrobe inventory, selected occasion context, and weather inputs to match tops, bottoms, shoes, and layering pieces into harmonious outfit combinations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What factors influence an outfit recommendation?
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Outfit recommendations are influenced by skin tone colour harmony, item formality level, occasion, weather conditions, pattern compatibility, and available wardrobe inventory.</p>
+          </div>
+        </div>
+
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How is Colourity different from a random outfit generator?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Colourity uses deterministic colour-science and matching rules — colour harmony, pattern compatibility, and formality tiers computed from your garments' attributes — rather than generating a new answer at random each time. This creates consistency in what you're recommended.</p>
+            <p>Colourity uses deterministic colour-science and matching rules—colour harmony, pattern compatibility, and formality tiers computed from your garments' attributes—rather than generating a random guess each time. This creates consistent, explainable recommendations.</p>
           </div>
         </div>
+
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             Can I plan an outfit for a specific occasion?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Yes. The Outfit Wizard lets you choose a base garment where supported and an occasion, and Colourity builds a compatible outfit from your available wardrobe.</p>
+            <p>Yes. The Outfit Wizard lets you choose a base garment and an occasion (such as work, casual, or festive), and Colourity builds a compatible outfit from your available wardrobe.</p>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Can I get a daily outfit suggestion?
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Today's Pick surfaces a daily outfit suggestion on Home, with the ability to log what you actually wore where supported.</p>
-          </div>
-        </div>
+
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             Does Colourity consider weather?
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="faq-answer">
-            <p>Yes, for Surprise Me. It pulls current weather conditions so it doesn't suggest the wrong garment for the day.</p>
+            <p>Yes. For features like Surprise Me, Colourity factors in current weather conditions so it doesn't suggest heavy outerwear on a hot day or light sleeveless pieces in cold weather.</p>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            What happens if I don't have enough clothes in my wardrobe?
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Outfit combinations are built from what's currently in your digital wardrobe, so the more garments you've added, the more combinations become available. If a look is missing a piece, that's exactly the kind of gap Scan Before You Buy and Shop the Gap are designed to help with.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Can I explore complete outfit combinations?
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Explore Outfits & Styles is a browsable feed of full outfit looks, including tappable hotspots over each garment so you can see the individual pieces that make up a look.</p>
-          </div>
-        </div>
+
       </div>
     </section>
 
-    <!-- ===== 12. FOUND A GAP? → SCAN BEFORE YOU BUY ===== -->
+    <!-- ===== 12. FOUND A GAP IN YOUR WARDROBE? ===== -->
     <div style="text-align: center; background: var(--gradient-soft); padding: 56px 24px; border-radius: var(--radius-xl); margin-bottom: 48px;">
       <h2 style="font-size: 1.9rem; font-weight: 800; margin-bottom: 14px;">Found a Gap in Your Wardrobe?</h2>
-      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">If an outfit recommendation highlights something you don't own, the next question is: should you buy it? Scan Before You Buy checks a potential purchase against your existing wardrobe and colour profile before you spend.</p>
+      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">
+        If an outfit recommendation highlights a piece you don't own, evaluate potential new purchases with Scan Before You Buy to make sure every new addition pairs with your existing wardrobe.
+      </p>
       <a href="../scan-before-you-buy/" class="pillar-feature-link" style="justify-content: center; font-size: 1.05rem; margin-bottom: 20px;">
         See how Scan Before You Buy works
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
@@ -440,12 +665,13 @@
       </ul>
     </section>
 
-    <!-- ===== 14. CTA ===== -->
+    <!-- ===== 14. FINAL CTA ===== -->
     <div style="text-align: center; background: var(--gradient-soft); padding: 48px 24px; border-radius: var(--radius-xl);">
       <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Plan Your Outfits Effortlessly</h2>
       <p style="color: var(--text-secondary); margin-bottom: 24px;">Download Colourity on Android to get started for free.</p>
       <a href="https://play.google.com/store/apps/details?id=com.colourity.android&amp;pcampaignid=web_share" class="btn-glow-large" target="_blank" rel="noopener" style="padding: 16px 36px; font-weight: 700; border-radius: 50px; text-decoration: none;">Get Colourity App</a>
     </div>
+
   </main>
 
   <!-- ========== FOOTER ========== -->
