@@ -427,21 +427,61 @@
       <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 44px 40px; box-shadow: var(--shadow-md);">
         <span class="section-tag">Contextual Styling</span>
         <h2 style="font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Occasion &amp; Weather Aware Recommendations</h2>
-        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 28px;">
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 32px;">
           Different situations require different outfit choices. An everyday casual look, a professional office presentation, a festive wedding function, or a cold morning commute each draw on distinct garment combinations matched to the appropriate formality tier and weather context.
         </p>
 
-        <!-- High-Res Visual Asset (Natural Aspect Ratio) -->
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="../assets/pillar/outfit-planner-occasion.webp" alt="Occasion and weather aware recommendations showing casual, work, festive and weather-appropriate outfits" style="max-width: 900px; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border);" width="1024" height="335" loading="lazy" />
-        </div>
+        <!-- 4-Column Responsive Grid: Photo -> HTML Icon -> Title -> Supporting Line -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          
+          <!-- Card 1: Casual Day -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="width: 100%; overflow: hidden;">
+              <img src="../assets/pillar/outfit-planner-occasion-casual.webp" alt="Casual day outfit photo" style="width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border);" width="355" height="416" loading="lazy" />
+            </div>
+            <div style="padding: 20px 18px; text-align: left; flex-grow: 1;">
+              <div style="font-size: 1.3rem; margin-bottom: 6px;">☕</div>
+              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0;">Casual Day</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Relaxed, everyday dressing for your plans.</p>
+            </div>
+          </div>
 
-        <!-- HTML Context Labels -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: var(--text-primary);">
-          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">☕ Casual Day</div>
-          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">💼 Work Office</div>
-          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">✨ Festive Function</div>
-          <div style="background: var(--bg); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">❄️ Weather Aware</div>
+          <!-- Card 2: Work Office -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="width: 100%; overflow: hidden;">
+              <img src="../assets/pillar/outfit-planner-occasion-work.webp" alt="Work office outfit photo" style="width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border);" width="344" height="416" loading="lazy" />
+            </div>
+            <div style="padding: 20px 18px; text-align: left; flex-grow: 1;">
+              <div style="font-size: 1.3rem; margin-bottom: 6px;">💼</div>
+              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0;">Work Office</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Polished combinations for professional settings.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Festive Function -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="width: 100%; overflow: hidden;">
+              <img src="../assets/pillar/outfit-planner-occasion-festive.webp" alt="Festive function outfit photo" style="width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border);" width="344" height="416" loading="lazy" />
+            </div>
+            <div style="padding: 20px 18px; text-align: left; flex-grow: 1;">
+              <div style="font-size: 1.3rem; margin-bottom: 6px;">✨</div>
+              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0;">Festive Function</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">More elevated combinations for celebrations and events.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Weather Aware -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="width: 100%; overflow: hidden;">
+              <img src="../assets/pillar/outfit-planner-occasion-weather.webp" alt="Weather aware outfit photo" style="width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border);" width="350" height="416" loading="lazy" />
+            </div>
+            <div style="padding: 20px 18px; text-align: left; flex-grow: 1;">
+              <div style="font-size: 1.3rem; margin-bottom: 6px;">❄️</div>
+              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0;">Weather Aware</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Adjust layers and clothing choices to the conditions.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
