@@ -59,6 +59,14 @@ def validate_all_blogs():
         if 'favicon' not in html and 'logo.png' not in html:
             errors.append("Missing favicon reference")
 
+        # 7. Check presence in feed.xml (Pinterest Auto-Publish & RSS Syndication)
+        feed_xml_path = r'D:\colourity Landing Page\feed.xml'
+        if os.path.exists(feed_xml_path):
+            with open(feed_xml_path, 'r', encoding='utf-8') as ff:
+                feed_data = ff.read()
+            if f'https://colourity.com/blog/{slug}/' not in feed_data:
+                errors.append("Missing from feed.xml (Pinterest/RSS auto-publishing)")
+
         if errors:
             failures.append((slug, errors))
             print(f"[FAIL] blog/{slug}/ -> {', '.join(errors)}")
