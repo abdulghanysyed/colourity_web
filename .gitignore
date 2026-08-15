@@ -14,6 +14,7 @@
 
 # Scripts & logs
 *.py
+!scripts/**/*.py
 *.log
 verify_howitworks.png
 verify_hero.png
