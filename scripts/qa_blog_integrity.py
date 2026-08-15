@@ -36,6 +36,8 @@ def validate_all_blogs():
             errors.append("Missing .fixed-social-share component")
         if 'whatsapp' not in html or 'pinterest' not in html:
             errors.append("Incomplete social share channels")
+        if 'pinterest.com/pin/create/button/' in html and 'media=' not in html:
+            errors.append("Pinterest button missing required 'media=' image parameter")
 
         # 2. Check Canonical (supports href before rel or rel before href)
         expected_url = f"https://colourity.com/blog/{slug}/"
