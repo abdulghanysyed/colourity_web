@@ -996,7 +996,8 @@ section {
   color: var(--text-muted);
 }
 
-.footer-links-group {
+.footer-links-group,
+.footer-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(120px, 1fr));
   gap: 32px;
@@ -1360,7 +1361,8 @@ section {
     gap: 32px;
   }
 
-  .footer-links-group {
+  .footer-links-group,
+  .footer-links {
     gap: 24px;
   }
 }
@@ -1459,7 +1461,8 @@ section {
     max-width: 480px;
   }
 
-  .footer-links-group {
+  .footer-links-group,
+  .footer-links {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
   }
@@ -1484,7 +1487,8 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .footer-links-group {
+  .footer-links-group,
+  .footer-links {
     grid-template-columns: 1fr;
     gap: 28px;
   }
